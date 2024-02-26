@@ -1,0 +1,16 @@
+**/.idea/
+**/cmake-build-debug/
+**/__pycache__/
+**/bin/
+**/out/
+**/target/
+*.mp4
+*.avi
+*.tmp
+*.pyc
+*.o
+*.zip
+# LaTeX files
+*.aux
+*.log
+*.synctex.gz
