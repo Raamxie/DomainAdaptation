@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<section class="parallax">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Thesis</a>
+				</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Informations</a></li>
+						<li class="active"><a href="#">Diary</a></li>
+						<li><a href="Sources.html">Sources</a></li>
+						<li ><a href="Progress.html">Progress</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://github.com/Raamxie/DomainAdaptation" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+				<img src="Body.png" id="body" class="anim" alt="">
+				<img src="Asset_1.svg" id="measurement1" class="anim" alt="">
+				<div id="main">
+
+					<article class="post featured">
+						<header class="major">
+							<span class="date">March 4, 2024</span>
+							<h3></h3>
+							<p>Added content to this page.</p>
+						</header>
+						<div class="commits3">
+						</div>
+						<script>
+							$(document).ready(function(){
+
+								var startDate = "2024-03-04";
+								var endDate = "2024-03-10";
+								var params = {
+									since: startDate + 'T00:00:00Z',
+									until: endDate + 'T23:59:59Z'
+								};
+
+								$.ajax({
+									url: `https://api.github.com/repos/Raamxie/DomainAdaptation/commits`,
+									type: 'GET',
+									data: params,
+									success: function(data){
+										displayCommits(data);
+									},
+									error: function(xhr, status, error){
+										console.log("Failed to fetch commits.");
+									}
+								});
+
+
+								function displayCommits(commits){
+									var container = $(".commits3");
+									var commitsDiv = $("<div class='commits'></div>");
+									commitsDiv.append("<h3>Commits:</h3><ul>");
+									commits.forEach(function(commit){
+
+										if (commit.length === 0) {
+											commitsDiv.append("<p>No commits found in the specified date range.</p>");
+										} else {
+											const line = document.createElement('li')
+											line.innerHTML = `<a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>`;
+											commitsDiv.append(line);
+										}
+										container.append(commitsDiv);
+									});
+								}
+							});
+						</script>
+						<div id="commits"></div>
+					</article>
+
+					<article class="post featured">
+						<header class="major">
+							<span class="date">February 26, 2024</span>
+							<h3></h3>
+							<p>Cloned and trained CycleGAN for educational purposes. Studied the implementation.<br>Created and removed presentation since it was not used.</p>
+						</header>
+						<div class="commits2">
+						</div>
+						<script>
+							$(document).ready(function(){
+
+								var startDate = "2024-02-26";
+								var endDate = "2024-03-03";
+								var params = {
+									since: startDate + 'T00:00:00Z',
+									until: endDate + 'T23:59:59Z'
+								};
+
+								$.ajax({
+									url: `https://api.github.com/repos/Raamxie/DomainAdaptation/commits`,
+									type: 'GET',
+									data: params,
+									success: function(data){
+										displayCommits(data);
+									},
+									error: function(xhr, status, error){
+										console.log("Failed to fetch commits.");
+									}
+								});
+
+
+								function displayCommits(commits){
+									var container = $(".commits2");
+									var commitsDiv = $("<div class='commits'></div>");
+									commitsDiv.append("<h3>Commits:</h3><ul>");
+									commits.forEach(function(commit){
+
+										if (commit.length === 0) {
+											commitsDiv.append("<p>No commits found in the specified date range.</p>");
+										} else {
+											const line = document.createElement('li')
+											line.innerHTML = `<a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>`;
+											commitsDiv.append(line);
+										}
+										container.append(commitsDiv);
+									});
+								}
+							});
+						</script>
+					</article>
+
+					<article class="post featured">
+						<header class="major">
+							<span class="date">February 19, 2024</span>
+							<h3></h3>
+							<p>Looked through possible options of implementation. Prepared device for training purposes. <br> Hosted this page.</p>
+						</header>
+						<div class="commits1">
+						</div>
+						<script>
+							$(document).ready(function(){
+
+								var startDate = "2024-02-19";
+								var endDate = "2024-02-25";
+								var params = {
+									since: startDate + 'T00:00:00Z',
+									until: endDate + 'T23:59:59Z'
+								};
+
+								$.ajax({
+									url: `https://api.github.com/repos/Raamxie/DomainAdaptation/commits`,
+									type: 'GET',
+									data: params,
+									success: function(data){
+										displayCommits(data);
+									},
+									error: function(xhr, status, error){
+										console.log("Failed to fetch commits.");
+									}
+								});
+
+
+								function displayCommits(commits){
+									var container = $(".commits1");
+									var commitsDiv = $("<div class='commits'></div>");
+									commitsDiv.append("<h3>Commits:</h3><ul>");
+									commits.forEach(function(commit){
+
+										if (commit.length === 0) {
+											commitsDiv.append("<p>No commits found in the specified date range.</p>");
+										} else {
+											const line = document.createElement('li')
+											line.innerHTML = `<a href="${commit.html_url}" target="_blank">${commit.commit.message}</a>`;
+											commitsDiv.append(line);
+										}
+										container.append(commitsDiv);
+									});
+								}
+							});
+						</script>
+					</article>
+				</div>
+			</section>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/ScrollParallax.js"></script>
+
+
+	</body>
+</html>
