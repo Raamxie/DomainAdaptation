@@ -52,13 +52,7 @@
 
 								var endDate = "2024-03-10" + 'T23:59:59Z';
 
-
-								const token = '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';
-
 								fetch(`https://api.github.com/repos/Raamxie/DomainAdaptation/issues?state=all`, {
-									headers: {
-										Authorization: `token ${token}`
-									}
 								})
 										.then(response => {
 											if (!response.ok) { // Check for successful response
@@ -136,12 +130,9 @@
 
 								var startDate = "2024-02-26" + 'T00:00:00Z';
 								var endDate = "2024-03-03" + 'T23:59:59Z';
-								const token = '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';
 
 								fetch(`https://api.github.com/repos/Raamxie/DomainAdaptation/issues?state=all&since=${startDate}`, {
-									headers: {
-										Authorization: `token ${token}`
-									}
+
 								})
 										.then(response => {
 											if (!response.ok) { // Check for successful response
@@ -218,12 +209,8 @@
 
 								var startDate = "2024-02-19" + 'T00:00:00Z';
 								var endDate = "2024-02-25" + 'T23:59:59Z';
-								const token = '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';
 
 								fetch(`https://api.github.com/repos/Raamxie/DomainAdaptation/issues?state=all&since=${startDate}`, {
-									headers: {
-										Authorization: `token ${token}`
-									}
 								})
 										.then(response => {
 											if (!response.ok) { // Check for successful response
