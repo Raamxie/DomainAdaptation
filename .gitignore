@@ -4,6 +4,7 @@
 **/bin/
 **/out/
 **/target/
+**/Surreact-APose/
 *.mp4
 *.avi
 *.tmp
