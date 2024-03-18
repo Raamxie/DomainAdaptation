@@ -39,6 +39,168 @@
 
 					<article class="post featured">
 						<header class="major">
+							<span class="date">March 18, 2024</span>
+							<h3></h3>
+							<p>Prepared presentation. Started training network.</p>
+						</header>
+						</div>
+						<script>
+							$(document).ready(function() {
+
+								var startDate = "2024-03-18" + 'T00:00:00Z';
+
+								var endDate = "2024-03-24" + 'T23:59:59Z';
+
+								fetch(`https://api.github.com/repos/Raamxie/DomainAdaptation/issues?state=all`, {
+								})
+										.then(response => {
+											if (!response.ok) { // Check for successful response
+												throw new Error(`HTTP error! status: ${response.status}`);
+											}
+											return response.json();
+										})
+										.then(data => {
+
+											const newIssues = [];
+											const closedIssues = [];
+
+											data.forEach(issue => {
+												if (issue.created_at < endDate && issue.created_at >= startDate){
+													newIssues.push(issue);
+												}
+												if (issue.closed_at < endDate && issue.closed_at >= startDate){
+													closedIssues.push(issue)
+												}
+											});
+
+											displayIssues(newIssues, closedIssues);
+										})
+										.catch(error => console.error("Failed to fetch issues:", error));
+
+								function displayIssues(newIssues, closedIssues) {
+									const container = $(".issues3");
+									container.empty(); // Clear previous content
+
+									if (newIssues.length > 0){
+										// New Issues Section
+										const newIssuesDiv = $("<div class='issues new-issues'></div>");
+										newIssuesDiv.append("<h3>New Issues:</h3><ul>");
+										newIssues.forEach(issue => {
+											const line = document.createElement("li");
+											line.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a>`;
+											newIssuesDiv.append(line);
+										});
+										container.append(newIssuesDiv);
+									}
+
+
+									// Closed Issues Section (always displayed)
+
+									if (closedIssues.length > 0) {
+										const closedIssuesDiv = $("<div class='issues closed-issues'></div>");
+										closedIssuesDiv.append("<h3>Closed Issues:</h3><ul>");
+										// Display closed issues if any
+										closedIssues.forEach(issue => {
+											const line = document.createElement("li");
+											line.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a>`;
+											closedIssuesDiv.append(line);
+										});
+										container.append(closedIssuesDiv);
+									}
+
+
+								}
+							});
+
+						</script>
+						<div id="commits"></div>
+					</article>
+
+					
+
+					<article class="post featured">
+						<header class="major">
+							<span class="date">March 11, 2024</span>
+							<h3></h3>
+							<p>Set up testing neural network. Prepared dataset. Learned Keras, Pytorch.</p>
+						</header>
+						<div class="issues3">
+						</div>
+						<script>
+							$(document).ready(function() {
+
+								var startDate = "2024-03-11" + 'T00:00:00Z';
+
+								var endDate = "2024-03-17" + 'T23:59:59Z';
+
+								fetch(`https://api.github.com/repos/Raamxie/DomainAdaptation/issues?state=all`, {
+								})
+										.then(response => {
+											if (!response.ok) { // Check for successful response
+												throw new Error(`HTTP error! status: ${response.status}`);
+											}
+											return response.json();
+										})
+										.then(data => {
+
+											const newIssues = [];
+											const closedIssues = [];
+
+											data.forEach(issue => {
+												if (issue.created_at < endDate && issue.created_at >= startDate){
+													newIssues.push(issue);
+												}
+												if (issue.closed_at < endDate && issue.closed_at >= startDate){
+													closedIssues.push(issue)
+												}
+											});
+
+											displayIssues(newIssues, closedIssues);
+										})
+										.catch(error => console.error("Failed to fetch issues:", error));
+
+								function displayIssues(newIssues, closedIssues) {
+									const container = $(".issues3");
+									container.empty(); // Clear previous content
+
+									if (newIssues.length > 0){
+										// New Issues Section
+										const newIssuesDiv = $("<div class='issues new-issues'></div>");
+										newIssuesDiv.append("<h3>New Issues:</h3><ul>");
+										newIssues.forEach(issue => {
+											const line = document.createElement("li");
+											line.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a>`;
+											newIssuesDiv.append(line);
+										});
+										container.append(newIssuesDiv);
+									}
+
+
+									// Closed Issues Section (always displayed)
+
+									if (closedIssues.length > 0) {
+										const closedIssuesDiv = $("<div class='issues closed-issues'></div>");
+										closedIssuesDiv.append("<h3>Closed Issues:</h3><ul>");
+										// Display closed issues if any
+										closedIssues.forEach(issue => {
+											const line = document.createElement("li");
+											line.innerHTML = `<a href="${issue.html_url}" target="_blank">${issue.title}</a>`;
+											closedIssuesDiv.append(line);
+										});
+										container.append(closedIssuesDiv);
+									}
+
+
+								}
+							});
+
+						</script>
+						<div id="commits"></div>
+					</article>
+
+					
+					<article class="post featured">
+						<header class="major">
 							<span class="date">March 4, 2024</span>
 							<h3></h3>
 							<p>Added content to this page. Set up project. Looked for new sources. Started working on the code.<br>Maintained GitHub page.</p>
