@@ -5,6 +5,7 @@
 **/out/
 **/target/
 **/Surreact-APose/
+**/bodym-dataset/
 *.mp4
 *.avi
 *.tmp
