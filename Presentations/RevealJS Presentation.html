@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">
+		<link rel="stylesheet" href="dist/theme/blood.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+
+
+
+
+
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section style="text-align: left">
+					<h2 class="r-stretch">Automatic Human Anthropometric Body Measurements Estimation</h2>
+					<h5>Michal Baránek</h5>
+					<h5>Mgr. Dana Škorvánková</h5>
+
+				</section>
+				<aside class="notes">Hello there</aside>
+				<section>
+					<section>
+						<h3>Introduction</h3>
+					</section>
+
+					<section>
+						<aside class="notes">Antropometria je vedný odbor zaoberajúci sa meraním ľudského tela a jeho častí.
+							<br>V tejto práci sa budem snažiť pomocou neuronovej siete odhadnúť miery ľudského tela.
+							<br>Konkrétnym mieram sa budem venovať o chvíľu.
+
+							<br><br>
+							Tieto namerané hodnoty majú pre nás veľký význam a to hlavne v odvetviach ako:<br>
+							moda, medicina
+						</aside>
+						<br>
+						<div class="fragment fade-up" data-fragment-index="1" style="text-align: left">
+							<div class="fragment shrink" data-fragment-index="3">
+								<div class="fragment semi-fade-out" data-fragment-index="3">
+									<h6>Anthropometry</h6>
+									<ul style="padding-left: 100px" class="r-stretch">
+
+										<li class="fragment fade-up" data-fragment-index="2">Human body</li>
+
+									</ul>
+								</div>
+								</div>
+						</div>
+
+						<div class="fragment fade-up" data-fragment-index="3" style="text-align: left">
+							<div class="fragment shrink" data-fragment-index="6">
+								<div class="fragment semi-fade-out" data-fragment-index="6">
+									<h6>Importance</h6>
+
+									<ul style="padding-left: 100px" class="r-stretch">
+										<li class="fragment fade-up" data-fragment-index="4">Fashion industry</li>
+										<li class="fragment fade-up" data-fragment-index="5">Medicine</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+					<section>
+						<div class="fragment fade-up" data-fragment-index="1">
+							<h6>Goal</h6>
+							<p>Use neural network to predict anthropometric measurements.</p>
+						</div>
+					</section>
+
+					<section>
+						<div class="fragment fade-up" data-fragment-index="1">
+							<h6>Advantages</h6>
+							<ul style="padding-left: 100px" class="r-stretch">
+								<li class="fragment fade-up" data-fragment-index="2">Price</li>
+								<li class="fragment fade-up" data-fragment-index="3">Comfort</li>
+								<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+								<li class="fragment fade-up" data-fragment-index="5">Accessibility</li>
+
+							</ul>
+							<ul style="padding-left: 100px" class="r-stretch">
+								<li class="fragment fade-up" data-fragment-index="6">Accuracy</li>
+								<li class="fragment fade-up" data-fragment-index="7">Time</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="fragment fade-up" data-fragment-index="1">
+							<h6>Disadvantages</h6>
+							<ul style="padding-left: 100px" class="r-stretch">
+								<li class="fragment fade-up" data-fragment-index="2">Extreme body shapes</li>
+								<li class="fragment fade-up" data-fragment-index="3">Body deformations</li>
+								<li class="fragment fade-up" data-fragment-index="4">Misuse</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Datasets</h3>
+					</section>
+
+					<section>
+						<h6>Surreact</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Synthetic dataset</li>
+							<li class="fragment fade-up" data-fragment-index="3">Generated using SMPL</li>
+							<li class="fragment fade-up" data-fragment-index="4">16 + 1 measurements</li>
+							<li class="fragment fade-up" data-fragment-index="5">79998 front + 79998 side images</li>
+							<li class="fragment fade-up" data-fragment-index="6">RGB images</li>
+							<li class="fragment fade-up" data-fragment-index="7">1:1 image to measurement ratio</li>
+
+						</ul>
+					</section>
+
+					<section>
+						<h6>BodyM</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Measured on photogrammetry scans</li>
+							<li class="fragment fade-up" data-fragment-index="3">14 + 2 measurements</li>
+							<li class="fragment fade-up" data-fragment-index="4">8978 front + 8978 side images</li>
+							<li class="fragment fade-up" data-fragment-index="5">Binary silhouettes</li>
+							<li class="fragment fade-up" data-fragment-index="6">~3.6:1 image to measurement ratio</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Measurements</h3>	
+				</section>
+
+				<section>
+					<section>
+						<h3>Obstacles</h3>
+					</section>
+
+					<section>
+						<h6>Data availability</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Not enough ground truth data</li>
+							<li class="fragment fade-up" data-fragment-index="3">Costly to obtain</li>
+							<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+						</ul>
+					</section>
+
+					<section>
+						<h6>Data availability - Solution</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Use synthetic dataset</li>
+							<li class="fragment fade-up" data-fragment-index="3">Train network</li>
+							<li class="fragment fade-up" data-fragment-index="4">Adapt to perform on real data</li>
+						</ul>
+					</section>
+
+					<section>
+						<h6>BodyM Dataset</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Unclear measurements</li>
+							<li class="fragment fade-up" data-fragment-index="3">Sparse data</li>
+							<li class="fragment fade-up" data-fragment-index="4">Complicated structure</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+
+
+				<section>
+					<section>
+						<h3>Current work</h3>
+					</section>
+
+					<section>
+						<h6>Prepared dataset</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Transformed RGB image to silhouette</li>
+							<li class="fragment fade-up" data-fragment-index="3">Fixed incorrectly saved data</li>
+							<li class="fragment fade-up" data-fragment-index="4">Rescaled images</li>
+							<li class="fragment fade-up" data-fragment-index="5">Created custom data loading</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+					<h3>Started training</h3>
+					</section>
+					<section data-background-iframe="http://localhost:6006/?darkMode=true#scalars&runSelectionState=eyJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3RyYWluIjp0cnVlLCJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3ZhbGlkYXRlIjp0cnVlLCJTdXJyZWFjdCA3OTk5OHM1ZTEwMDAwdi90cmFpbiI6ZmFsc2UsIlN1cnJlYWN0IDc5OTk4czVlMTAwMDB2L3ZhbGlkYXRlIjpmYWxzZSwidHJhaW4iOmZhbHNlLCJ2YWxpZGF0aW9uIjpmYWxzZX0%3D&_smoothingWeight=0"
+							 data-background-interactive="">
+					</section>
+				</section>
+
+				<section>Issues</section>
+				<section>Sources</section>
+				<section>Future work</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slidenumber:true,
+				showSlideNumber:true,
+				hideInactiveCursor:true,
+				preloadIframes:true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes]
+
+			});
+		</script>
+	</body>
+</html>
