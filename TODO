@@ -1,0 +1,25 @@
+využite - mocap a VR
+neurálnu nie a neurónovú
+hand measurement presná lokácia a presné postupy nie sú jasné
+time - vieme získať viac mier naraz
+body shapes sú z časti vyriešené syntetickým datasetom
+Pridať obrázky k datasetom a porovnanie measurementov
+
+ratio použiť different person each
+pridať zdroje na spodok slidu
+
+pridať spôsob úpravy do sil.
+
+obrázky z dát
+obrázky postupu prípravy dát
+
+pridať sieť
+
+skúsiť dáta v cm nie m
+
+
+Testy
+otestovať sanity siete
+
+mean squared error použiť na loss
+decay learning rate (cos)
