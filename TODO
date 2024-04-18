@@ -1,8 +1,3 @@
-využite - mocap a VR
-neurálnu nie a neurónovú
-hand measurement presná lokácia a presné postupy nie sú jasné
-time - vieme získať viac mier naraz
-body shapes sú z časti vyriešené syntetickým datasetom
 Pridať obrázky k datasetom a porovnanie measurementov
 
 ratio použiť different person each
@@ -15,11 +10,19 @@ obrázky postupu prípravy dát
 
 pridať sieť
 
-skúsiť dáta v cm nie m
 
 
-Testy
-otestovať sanity siete
 
-mean squared error použiť na loss
-decay learning rate (cos)
+TRAINING BAD
+0b76da5015c803aa52d261c68ef80d2d.png
+2bdf0d2809368c3baa494c98f1fec717.png
+2e3c673b5f04b177f41487e357ba2df2.png
+5defac72da990ef9d43642ac33c9c566.png
+9afd2e1d4f293a1e0e09157bc287b88e
+9d1df177f35e5da0754780d283ac113d.png
+050b324c4425dc9f5ecb0e34a0c123ae.png
+50d048396b97dca6f1f9e0e5cfc4c579.png
+54d6140d2d9fa8b0d991cf8d8e198964.png -side and terrible
+76f7951a14bb860ff6c04067d98c84a1.png
+77ba0e0750cacae5168a331bec851543.png - side and terrible
+2200 stop
