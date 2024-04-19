@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blood.css">
+		<link rel="stylesheet" href="css/customStyles.scss">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="plugin/reveal-onetimer/onetimer.js"></script>
+	</head>
+
+
+
+
+
+
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section style="text-align: left">
+					<h2 class="r-stretch">Automatic Human Anthropometric Body Measurements Estimation</h2>
+					<h5>Michal Baránek</h5>
+					<h5>Mgr. Dana Škorvánková</h5>
+
+				</section>
+
+
+				<section>
+					<h3>Introduction</h3>
+					<section></section>
+
+					<section>
+						<aside class="notes">Antropometria je vedný odbor zaoberajúci sa meraním ľudského tela a jeho častí.
+							<br>V tejto práci sa budem snažiť pomocou neuronovej siete odhadnúť miery ľudského tela.
+							<br>Konkrétnym mieram sa budem venovať o chvíľu.
+
+							<br><br>
+							Tieto namerané hodnoty majú pre nás veľký význam a to hlavne v odvetviach ako:<br>
+							moda, medicina
+						</aside>
+						<h3 style="visibility: hidden">hello</h3>
+						<br>
+						<div style="display: flex">
+							<div style=" flex: 50%">
+							<div class="fragment fade-up" data-fragment-index="1" style="text-align: left" >
+								<div class="fragment shrink" data-fragment-index="3">
+									<div class="fragment semi-fade-out" data-fragment-index="3">
+										<h6>Anthropometry</h6>
+										<ul style="padding-left: 100px" class="r-stretch">
+
+											<li class="fragment fade-up" data-fragment-index="2">Human body</li>
+
+										</ul>
+									</div>
+									</div>
+							</div>
+
+
+
+							<div class="fragment fade-up" data-fragment-index="3" style="text-align: left; flex: 50%">
+								<div class="fragment shrink" data-fragment-index="8">
+									<div class="fragment semi-fade-out" data-fragment-index="8">
+										<h6>Importance</h6>
+
+											<ul style="flex: 50%" class="r-stretch">
+												<li class="fragment fade-up" data-fragment-index="4">Fashion industry</li>
+												<li	class="fragment fade-up" data-fragment-index="5">Motion capture</li>
+												<li	class="fragment fade-up" data-fragment-index="6">Virtual reality</li>
+												<li class="fragment fade-up" data-fragment-index="7">Medicine</li>
+											</ul>
+
+
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="r-stack ">
+								<img src="measuring.jpg" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="4">
+								<img src="Mocap2.png" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="5">
+								<img src="VR.jpg" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="6">
+
+
+							</div>
+						</div>
+					</section>
+
+					<section>
+
+						<div class="fragment fade-up" data-fragment-index="1">
+							<h6>Goal</h6>
+							<p>Use neural network to predict anthropometric measurements.</p>
+						</div>
+					</section>
+
+					<section>
+						<h3 style="visibility: hidden">hello</h3>
+						<div class="fragment fade-up" data-fragment-index="1">
+							<aside class="notes">Accuracy - máme presné miesto merania, time - viac mier tela naraz</aside>
+							<h6>Advantages</h6>
+							<ul style="padding-left: 100px" class="r-stretch">
+								<li class="fragment fade-up" data-fragment-index="2">Price</li>
+								<li class="fragment fade-up" data-fragment-index="3">Comfort</li>
+								<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+								<li class="fragment fade-up" data-fragment-index="5">Accessibility</li>
+								<li class="fragment fade-up" data-fragment-index="6">Accuracy</li>
+								<li class="fragment fade-up" data-fragment-index="7">Time</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<h3 style="visibility: hidden">hello</h3>
+						<div class="fragment fade-up" data-fragment-index="1">
+							<h6>Disadvantages</h6>
+							<ul style="padding-left: 100px" class="r-stretch">
+								<li class="fragment fade-up" data-fragment-index="3">Body deformations</li>
+								<li class="fragment fade-up" data-fragment-index="4">Misuse</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+
+
+				<section>
+					<h3>Obstacles</h3>
+					<section></section>
+					<section>
+						<h6 class="fragment fade-up" data-fragment-index="1">Data availability</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Not enough ground truth data</li>
+							<li class="fragment fade-up" data-fragment-index="3">Costly to obtain</li>
+							<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+						</ul>
+					</section>
+
+					<section>
+						<h6 class="fragment fade-up" data-fragment-index="1">Data availability - Solution</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Use synthetic dataset</li>
+							<li class="fragment fade-up" data-fragment-index="3">Train network</li>
+							<li class="fragment fade-up" data-fragment-index="4">Adapt to perform on real data</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+				<section>
+					<h3>Datasets</h3>
+					<section></section>
+					<section>
+						<h6 class="fragment fade-up" data-fragment-index="1">Surreact</h6>
+						<div style="display: flex">
+							<div style="flex: 70%">
+								<ul style="padding-left: 100px" class="r-stretch">
+									<li class="fragment fade-up" data-fragment-index="2">Synthetic dataset</li>
+									<li class="fragment fade-up" data-fragment-index="3">Generated using SMPL</li>
+									<li class="fragment fade-up" data-fragment-index="4">16 + 1 measurements</li>
+									<li class="fragment fade-up" data-fragment-index="5">79998 front + 79998 side images</li>
+									<li class="fragment fade-up" data-fragment-index="6">RGB images</li>
+									<li class="fragment fade-up" data-fragment-index="7">Different person each measurement</li>
+
+								</ul>
+							</div>
+							<div style="flex: 30%;">
+								<img src="Surreact%20Example.png" alt="Surreact example" class="fragment" data-fragment-index="1">
+							</div>
+						</div>
+						<footer><p style="font-size: small" class="fragment">Skorvankova, Dana & Riečický, Adam & Madaras, Martin. (2021). Automatic Estimation of Anthropometric Human Body Measurements. </p></footer>
+					</section>
+
+					<section>
+						<h6 class="fragment fade-up" data-fragment-index="1">BodyM</h6>
+						<div style="display: flex">
+							<div style="flex: 70%">
+								<ul style="padding-left: 100px" class="r-stretch">
+									<li class="fragment fade-up" data-fragment-index="2">Measured on photogrammetry scans</li>
+									<li class="fragment fade-up" data-fragment-index="3">14 + 2 measurements</li>
+									<li class="fragment fade-up" data-fragment-index="4">8978 front + 8978 side images</li>
+									<li class="fragment fade-up" data-fragment-index="5">Binary silhouettes</li>
+									<li class="fragment fade-up" data-fragment-index="6">One person has around 3 images</li>
+								</ul>
+							</div>
+							<div style="flex: 30%;">
+								<img src="BodyM%20Example.png" alt="BodyM example" class="fragment" data-fragment-index="1">
+							</div>
+						</div>
+						<footer><p style="font-size: small" class="fragment">Human Body Measurement Estimation with Adversarial Augmentation by <br>Nataniel Ruiz, Miriam Bellver, Timo Bolkart, Ambuj Arora, Ming C. Lin, Javier Romero and Raja Bala </p></footer>
+					</section>
+
+					<section>
+						<h6 class="fragment fade-up" data-fragment-index="1">BodyM Issues</h6>
+						<div style=" display: grid; grid-template-columns: repeat(2,1fr)">
+							<ul class="grid-item">
+								<li class="fragment fade-up" data-fragment-index="2">Unclear measurements</li>
+								<li class="fragment fade-up" data-fragment-index="3">Complicated structure</li>
+								<li class="fragment fade-up" data-fragment-index="4">Sparse data</li>
+							</ul>
+
+							<div class="grid-item fragment" style="grid-row: span 2" data-fragment-index="3">
+
+								<img src="BodyM%20Structure.svg" alt="BodyM dataset structure" width="308" height="360">
+							</div>
+							<div class="grid-item fragment" data-fragment-index="2">
+								<img src="BadMeasurements.png" alt="Example of how unclear measurements are" width="163" height="228">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3 style="visibility: hidden">hello</h3>
+						<h6>Measurement Comparison</h6>
+						<img src="DatasetComparation.svg" class="fragment" alt="Comparation of measurements of datasets">
+					</section>
+				</section>
+
+<!--				<section>-->
+<!--					<h3>Measurements</h3>-->
+<!--					<section></section>-->
+<!--					<section>-->
+<!--						<h3 style="visibility: hidden">hello</h3>-->
+<!--						<img src="Measurements.png" alt="Containing measurements" class="r-stretch">-->
+<!--					</section>-->
+
+
+<!--				</section>-->
+
+				<section>
+					<h3>Network overview</h3>
+					<img src="model.png" alt="Model layout" class="fragment fade-up r-fit-text">
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h3>Current work</h3>
+					</section>
+					<section data-auto-animate>
+						<h3>Current work</h3>
+						<h3 style="visibility: hidden">hello</h3>
+						<h6 class="fragment fade-up" data-fragment-index="1">Prepared dataset</h6>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Transformed RGB image to silhouette</li>
+							<li class="fragment fade-up" data-fragment-index="3">Rescaled images</li>
+							<li class="fragment fade-up" data-fragment-index="4">Fixed incorrectly saved data</li>
+							<li class="fragment fade-up" data-fragment-index="5">Created custom data loading</li>
+						</ul>
+						<img src="Image%20edit.drawio.svg" alt="Edit pipeline" class="fragment fade-up" data-fragment-index="2">
+					</section>
+
+					<section>
+						<h6>Started training</h6>
+					</section>
+<!--					<section data-background-iframe="http://localhost:6006/?darkMode=true#scalars&runSelectionState=eyJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3RyYWluIjp0cnVlLCJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3ZhbGlkYXRlIjp0cnVlLCJTdXJyZWFjdCA3OTk5OHM1ZTEwMDAwdi90cmFpbiI6ZmFsc2UsIlN1cnJlYWN0IDc5OTk4czVlMTAwMDB2L3ZhbGlkYXRlIjpmYWxzZSwidHJhaW4iOmZhbHNlLCJ2YWxpZGF0aW9uIjpmYWxzZX0%3D&_smoothingWeight=0"-->
+<!--							 data-background-interactive="">-->
+<!--					</section>-->
+					<section>Graphs here</section>
+
+				</section>
+
+				<section>
+					<h3>Future work</h3>
+					<section></section>
+					<section>
+						<div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink" data-fragment-index="2">Imminent future</h3></div>
+
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="3">Test performance on bodym dataset</li>
+							<li class="fragment fade-up" data-fragment-index="4">Compare results and find issues</li>
+						</ul>
+					</section>
+					<section>
+						<div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink" data-fragment-index="2">Distant future</h3></div>
+						<ul style="padding-left: 100px" class="r-stretch">
+							<li class="fragment fade-up" data-fragment-index="2">Try enhancing data with height</li>
+							<li class="fragment fade-up" data-fragment-index="3">Try using frontal and lateral view</li>
+							<li class="fragment fade-up" data-fragment-index="4">Look into specific errors</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h1 class="r-fit-text">Thanks for your patience</h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/toc-progress/toc-progress.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				slideNumber:'c.t',
+				hideInactiveCursor:true,
+				preloadIframes:true,
+				oneTimer: {immediateMode: true},
+				pdfMaxPagesPerSlide: 1,
+				pdfSeparateFragments: false,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, OneTimer]
+
+			});
+		</script>
+	</body>
+</html>

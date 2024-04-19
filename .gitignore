@@ -6,6 +6,8 @@
 **/target/
 **/Surreact-APose/
 **/bodym-dataset/
+**/docs/RevealJS/.git
+**/docs/RevealJS/.github
 *.mp4
 *.avi
 *.tmp
