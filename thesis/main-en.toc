@@ -1,2 +1,30 @@
 \contentsline {chapter}{Introduction}{1}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Overview}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Problem specification}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Traditional methods}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Obstacles}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Neural network}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Keras}{3}{section.1.5}%
+\contentsline {section}{\numberline {1.6}OpenCV}{3}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Related Work}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Super()}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Adversarial Body Sim}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Suggested approach}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Dataset overview}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Surreact}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Description}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}SMPL}{9}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}BodyM}{9}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Overview}{9}{subsection.4.2.1}%
+\contentsline {chapter}{\numberline {5}Development}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Start with Keras}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}First broken model}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Working network}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Figuring out measurements}{11}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Optimalizations}{11}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Including BodyM in training}{11}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Adding height}{11}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Adding lateral image}{11}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Combinations}{11}{subsection.5.5.4}%
+\contentsline {chapter}{\numberline {6}Results}{13}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{15}{chapter.7}%
