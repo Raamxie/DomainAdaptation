@@ -9,7 +9,7 @@ This method is mentioned because BodyM dataset uses this method to provide groun
 One of the issues when working with human body measurements is the lack of real world data. The process of measuring is time-consuming and requires privacy measures to take place to protect subjects' personal information. This can be avoided by using synthetic datasets.\\
 Moreover the time complexity to train a neural network can be reduced by using powerful device which is not available.
 \section{Problem specification}
-
+The goal of this thesis is to expand on body measurements estimation with the use of neural networks. Mainly to explore different data augmentation methods to provide better results when training is done on synthetic dataset.
 \section{SMPL}
 SMPL is short for Skinned Multi-Person Linear model. This model is based on skinning and blend shapes. The model has been trained on thousands of 3D body scans to create a realistic human model. Full explanation of functions and workflow of this model is out of scope of this work.
 
@@ -18,11 +18,21 @@ Neural network is code built on premises of how human brains work. It consists o
 Neurons are then organised into layers. They are usually divided into input, output and hidden layers. The function of the hidden layers is to perform the operations needed to calculate output from the input data.\\
 The process of training adjusts the weights of the connections. This automatic process of adjusting is usually based on comparing the output and correct value we provide for the network and minimising the difference.\\
 This process helps the network to find complex relationships or patterns that may not  be as understandable for humans. \\\\
+
+\subsubsection{Hyperparameter}
+Hyperparameter is a parameter that is not learned but chosen by developer.  These parameters do not change over time. These can be - choice of optimizer, learning rate,  number of layers, filter size and more.\\\\
 Our model is mainly built on the following layers:
 \subsubsection{Convolution layer}
 The convolution operation consists of moving small filter called kernel along the image computing the dot product between kernel and input producing activation map for said filter.  The values in kernel are learnable parameters meaning they are adjusted over the training process.
 \subsubsection{Max Pooling layer}
-Max pooling is operation of down-sampling 
+Max pooling is an operation of non-linear down-sampling. This means that the output image of this layer is usually smaller than the input. This helps to reduce parameters for next convolutional layer, providing faster training.  This layer is defined by two hyperparameters:
+\begin{itemize}
+	\item \textbf{Filter size} determines how many rows and columns are influenced. In case the filter reaches out of the array, only valid values are taken into consideration.
+	\item \textbf{Stride} determines how many columns will the filter move.
+\end{itemize}
+The higher these hyperparameters' values are the smaller will the output be.\\
+%CHECK IF FIELD IS THE CORRECT TERM
+This layer iterates over input field and looks at subfield with size of filter size. In this subfield it finds the largest number and writes only the largest number into the output field. After this, the filter moves by stride columns left until all columns were checked. In that case the filter moves back to first column of the input field and then moves down by the stride.\\ This process is repeated until whole input field is iterated.
 \subsubsection{ReLU}
 \subsection{Linear regression}
 In this thesis we will be using linear regression to predict human body measurements. The predictions are based on assumption of linear connection between variables. 
