@@ -1,0 +1,122 @@
+%% Creator: Inkscape 1.3.2 (091e20ef0f, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'DatasetComparation_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{545.93998718bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.70200024)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.38465766,0.67589847){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Surreact\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.63468515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}head circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.59347182){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}neck circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.5522585){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}shoulder-to-shoulder\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.51104518){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}arm span\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.46983186){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}shoulder-to-wrist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.42861854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}torso\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.38740522){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}bicep circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.3461919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}wrist circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.30497858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}chest circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.26376526){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}waist circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.22255193){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}pelvis circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.18133861){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}leg length\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.14012529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}inner leg length\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.09891197){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}thigh circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.05769865){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}knee circumference\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.29673591,0.01648533){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}calf length\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.61819982,0.67589847){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}BodyM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.63468515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ankle\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.59347182){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}arm-length\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.5522585){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}bicep\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.51104518){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}calf\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.46983186){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}chest\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.42861854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}forearm\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.38740522){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}height\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.3461919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}hip\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.30497858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}leg-length\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.26376526){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}shoulder-breadth\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.22255193){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}shoulder-to-crotch\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.18133861){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}thigh\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.14012529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}waist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{DatasetComparation_svg-tex.pdf}}%
+    \put(0.53027806,0.09891197){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}wrist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{DatasetComparation_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%
