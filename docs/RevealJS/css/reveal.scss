@@ -565,7 +565,7 @@ $controlsArrowAngleActive: 36deg;
 .reveal .progress {
 	position: absolute;
 	display: none;
-	height: 3px;
+	height: 1vh !important;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -600,14 +600,14 @@ $controlsArrowAngleActive: 36deg;
 .reveal .slide-number {
 	position: absolute;
 	display: block;
-	right: 8px;
-	bottom: 8px;
+	right: 26px;
+	bottom: 37px;
 	z-index: 31;
 	font-family: Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 0.6em;
 	line-height: 1;
 	color: #fff;
-	background-color: rgba( 0, 0, 0, 0.4 );
+	background-color: rgba( 0, 0, 0, 0.0 );
 	padding: 5px;
 }
 
@@ -1578,7 +1578,7 @@ $overlayHeaderPadding: 5px;
 
 	.reveal > .overlay.overlay-help .viewport .viewport-inner table {
 		border: 1px solid #fff;
-		border-collapse: collapse;
+		border-collapse: separate;
 		font-size: 16px;
 	}
 

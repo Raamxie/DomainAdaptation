@@ -8,6 +8,7 @@
 **/bodym-dataset/
 **/docs/RevealJS/.git
 **/docs/RevealJS/.github
+**/BoMN/Export/
 *.mp4
 *.avi
 *.tmp

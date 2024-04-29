@@ -1,319 +1,593 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/blood.css">
-		<link rel="stylesheet" href="css/customStyles.scss">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<script src="plugin/reveal-onetimer/onetimer.js"></script>
-	</head>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/blood.css">
+    <link rel="stylesheet" href="css/customStyles.scss">
 
 
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="plugin/reveal-onetimer/onetimer.js"></script>
+    <script type="text/javascript" src="dist/reveal.js"></script>
+    <script src="plugin/appearance/appearance.js"></script>
+</head>
 
 
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section style="text-align: left">
+            <h3 class="r-stretch">Comparing Synthetic and Real Data for Anthropometric Measurements Estimation <br></h3>
+            <h5>Michal Baránek</h5>
+            <h5>Mgr. Dana Škorvánková</h5>
+
+        </section>
 
 
+        <section>
+            <h3>Introduction</h3>
+            <section>
+                <h3 style="visibility: hidden">hello</h3>
+                <br>
+                <div style="display: grid;
+						grid-template-columns: max-content 1fr 1fr;
+						grid-template-rows: 12vh 12vh;
+						grid-template-areas:'Text Image1 Image2'
+											'Text Image3 Image2';
+						justify-content: center">
+                    <div style="grid-area: Text">
+                        <div class="fragment fade-up" data-fragment-index="1" style="text-align: left">
+                            <div class="fragment shrink" data-fragment-index="3">
+                                <div class="fragment semi-fade-out" data-fragment-index="3">
+                                    <h6>Anthropometry</h6>
+                                    <ul class="r-stretch">
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section style="text-align: left">
-					<h2 class="r-stretch">Automatic Human Anthropometric Body Measurements Estimation</h2>
-					<h5>Michal Baránek</h5>
-					<h5>Mgr. Dana Škorvánková</h5>
+                                        <li class="fragment fade-up" data-fragment-index="2">Human body</li>
 
-				</section>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-
-				<section>
-					<h3>Introduction</h3>
-					<section></section>
-
-					<section>
-						<aside class="notes">Antropometria je vedný odbor zaoberajúci sa meraním ľudského tela a jeho častí.
-							<br>V tejto práci sa budem snažiť pomocou neuronovej siete odhadnúť miery ľudského tela.
-							<br>Konkrétnym mieram sa budem venovať o chvíľu.
-
-							<br><br>
-							Tieto namerané hodnoty majú pre nás veľký význam a to hlavne v odvetviach ako:<br>
-							moda, medicina
-						</aside>
-						<h3 style="visibility: hidden">hello</h3>
-						<br>
-						<div style="display: flex">
-							<div style=" flex: 50%">
-							<div class="fragment fade-up" data-fragment-index="1" style="text-align: left" >
-								<div class="fragment shrink" data-fragment-index="3">
-									<div class="fragment semi-fade-out" data-fragment-index="3">
-										<h6>Anthropometry</h6>
-										<ul style="padding-left: 100px" class="r-stretch">
-
-											<li class="fragment fade-up" data-fragment-index="2">Human body</li>
-
-										</ul>
-									</div>
-									</div>
-							</div>
+                        <div class="fragment fade-up" data-fragment-index="3" style="text-align: left">
+                            <div class="fragment shrink" data-fragment-index="8">
+                                <div class="fragment semi-fade-out" data-fragment-index="8">
+                                    <h6>Importance</h6>
+                                    <ul class="r-stretch">
+                                        <li class="fragment fade-up" data-fragment-index="4">Fashion industry</li>
+                                        <li class="fragment fade-up" data-fragment-index="5">Motion capture</li>
+                                        <li class="fragment fade-up" data-fragment-index="6">Virtual reality</li>
+                                    </ul>
 
 
-
-							<div class="fragment fade-up" data-fragment-index="3" style="text-align: left; flex: 50%">
-								<div class="fragment shrink" data-fragment-index="8">
-									<div class="fragment semi-fade-out" data-fragment-index="8">
-										<h6>Importance</h6>
-
-											<ul style="flex: 50%" class="r-stretch">
-												<li class="fragment fade-up" data-fragment-index="4">Fashion industry</li>
-												<li	class="fragment fade-up" data-fragment-index="5">Motion capture</li>
-												<li	class="fragment fade-up" data-fragment-index="6">Virtual reality</li>
-												<li class="fragment fade-up" data-fragment-index="7">Medicine</li>
-											</ul>
-
-
-									</div>
-								</div>
-							</div>
-							</div>
-							<div class="r-stack ">
-								<img src="measuring.jpg" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="4">
-								<img src="Mocap2.png" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="5">
-								<img src="VR.jpg" style="flex: 50%;max-width:40%;max-height: 70vh" class="fragment navigate-up" data-fragment-index="6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="measuring.jpg" class="fragment navigate-up grid-item" data-fragment-index="4"
+                         style="grid-area: Image1; height: 100%; justify-self: center" alt="Tailor measuring woman">
+                    <img src="Mocap2.png" class="fragment navigate-up grid-item" data-fragment-index="5"
+                         style="grid-area: Image2;height: 100%; justify-self: center"
+                         alt="Xixiyu Sakana wearing mocap suit">
+                    <img src="VR.jpg" class="fragment navigate-up" data-fragment-index="6"
+                         style="grid-area: Image3; height: 100%; justify-self: center" alt="Woman wearing VR glasses">
 
 
-							</div>
-						</div>
-					</section>
+                </div>
+            </section>
+            <section>
 
-					<section>
+                <div class="fade-in-then-out">
+                    <p>Traditional measuring methods are obsolete</p>
+                </div>
+            </section>
 
-						<div class="fragment fade-up" data-fragment-index="1">
-							<h6>Goal</h6>
-							<p>Use neural network to predict anthropometric measurements.</p>
-						</div>
-					</section>
+            <section>
 
-					<section>
-						<h3 style="visibility: hidden">hello</h3>
-						<div class="fragment fade-up" data-fragment-index="1">
-							<aside class="notes">Accuracy - máme presné miesto merania, time - viac mier tela naraz</aside>
-							<h6>Advantages</h6>
-							<ul style="padding-left: 100px" class="r-stretch">
-								<li class="fragment fade-up" data-fragment-index="2">Price</li>
-								<li class="fragment fade-up" data-fragment-index="3">Comfort</li>
-								<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
-								<li class="fragment fade-up" data-fragment-index="5">Accessibility</li>
-								<li class="fragment fade-up" data-fragment-index="6">Accuracy</li>
-								<li class="fragment fade-up" data-fragment-index="7">Time</li>
-							</ul>
-						</div>
-					</section>
-					<section>
-						<h3 style="visibility: hidden">hello</h3>
-						<div class="fragment fade-up" data-fragment-index="1">
-							<h6>Disadvantages</h6>
-							<ul style="padding-left: 100px" class="r-stretch">
-								<li class="fragment fade-up" data-fragment-index="3">Body deformations</li>
-								<li class="fragment fade-up" data-fragment-index="4">Misuse</li>
-							</ul>
-						</div>
-					</section>
-				</section>
+                <div class="fade-in-then-out">
+                    <p>Let's use neural networks instead</p>
+                </div>
+            </section>
 
+            <section>
+                <h3 style="visibility: hidden">hello</h3>
+                <div>
+                    <div class="fragment fade-up" data-fragment-index="1">
+                        <aside class="notes">Accuracy - máme presné miesto merania, time - viac mier tela naraz</aside>
+                        <h6>Advantages</h6>
+                        <ul class="r-stretch">
+                            <li class="fragment fade-up" data-fragment-index="2">Price</li>
+                            <li class="fragment fade-up" data-fragment-index="3">Comfort</li>
+                            <li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+                            <li class="fragment fade-up" data-fragment-index="5">Accessibility</li>
+                            <li class="fragment fade-up" data-fragment-index="6">Accuracy</li>
+                            <li class="fragment fade-up" data-fragment-index="7">Time</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3 style="visibility: hidden">hello</h3>
+                <div class="fragment fade-up" data-fragment-index="1">
+                    <h6>Disadvantages</h6>
+                    <ul style="padding-left: 100px" class="r-stretch">
+                        <li class="fragment fade-up" data-fragment-index="3">Body deformations</li>
+                        <li class="fragment fade-up" data-fragment-index="4">Misuse</li>
+                    </ul>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr">
+                        <figure class="fragment" data-fragment-index="3" style="height: 15vh">
+                            <img src="images/Deformations/handsfree.jpg" class="grid-item" alt="Woman without arms">
+                        </figure>
+                        <figure class="fragment" data-fragment-index="4">
+                            <img src="images/surveilance.webp" class="grid-item" style="margin-bottom: 0;height: 15vh"
+                                 alt="Man with surveillance camera feed">
+                            <figcaption><p style="font-size: 0.2em; margin-top: 0">AP Photo/Mark Schiefelbein
+                                <p></figcaption>
+                        </figure>
 
+                    </div>
+                </div>
+            </section>
+        </section>
 
-				<section>
-					<h3>Obstacles</h3>
-					<section></section>
-					<section>
-						<h6 class="fragment fade-up" data-fragment-index="1">Data availability</h6>
-						<ul style="padding-left: 100px" class="r-stretch">
-							<li class="fragment fade-up" data-fragment-index="2">Not enough ground truth data</li>
-							<li class="fragment fade-up" data-fragment-index="3">Costly to obtain</li>
-							<li class="fragment fade-up" data-fragment-index="4">Privacy</li>
-						</ul>
-					</section>
+        <section>
 
-					<section>
-						<h6 class="fragment fade-up" data-fragment-index="1">Data availability - Solution</h6>
-						<ul style="padding-left: 100px" class="r-stretch">
-							<li class="fragment fade-up" data-fragment-index="2">Use synthetic dataset</li>
-							<li class="fragment fade-up" data-fragment-index="3">Train network</li>
-							<li class="fragment fade-up" data-fragment-index="4">Adapt to perform on real data</li>
-						</ul>
-					</section>
+            <div>
+                <h6>Goal</h6>
+                <div class="fade-up">
+                    <ul class="r-stretch">
+                        <li class="fragment fade-up" data-fragment-index="1">Analyse domain gap</li>
+                        <li class="fragment fade-up" data-fragment-index="2">Explore methods of data augmentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-				</section>
+        <section>
+            <h3>Obstacles</h3>
+            <section>
+                <h6 class="fragment fade-up" data-fragment-index="1">Data availability</h6>
+                <ul style="padding-left: 100px" class="r-stretch">
+                    <li class="fragment fade-up" data-fragment-index="2">Not enough ground truth data</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Costly to obtain</li>
+                    <li class="fragment fade-up" data-fragment-index="4">Privacy</li>
+                </ul>
+            </section>
 
+            <section>
+                <h6 class="fragment fade-up" data-fragment-index="1">Data availability - Solution</h6>
+                <ul style="padding-left: 100px" class="r-stretch">
+                    <li class="fragment fade-up" data-fragment-index="2">Use synthetic dataset</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Train network</li>
+                    <li class="fragment fade-up" data-fragment-index="4"><b>Adapt to perform on real data</b></li>
+                </ul>
+            </section>
 
-				<section>
-					<h3>Datasets</h3>
-					<section></section>
-					<section>
-						<h6 class="fragment fade-up" data-fragment-index="1">Surreact</h6>
-						<div style="display: flex">
-							<div style="flex: 70%">
-								<ul style="padding-left: 100px" class="r-stretch">
-									<li class="fragment fade-up" data-fragment-index="2">Synthetic dataset</li>
-									<li class="fragment fade-up" data-fragment-index="3">Generated using SMPL</li>
-									<li class="fragment fade-up" data-fragment-index="4">16 + 1 measurements</li>
-									<li class="fragment fade-up" data-fragment-index="5">79998 front + 79998 side images</li>
-									<li class="fragment fade-up" data-fragment-index="6">RGB images</li>
-									<li class="fragment fade-up" data-fragment-index="7">Different person each measurement</li>
-
-								</ul>
-							</div>
-							<div style="flex: 30%;">
-								<img src="Surreact%20Example.png" alt="Surreact example" class="fragment" data-fragment-index="1">
-							</div>
-						</div>
-						<footer><p style="font-size: small" class="fragment">Skorvankova, Dana & Riečický, Adam & Madaras, Martin. (2021). Automatic Estimation of Anthropometric Human Body Measurements. </p></footer>
-					</section>
-
-					<section>
-						<h6 class="fragment fade-up" data-fragment-index="1">BodyM</h6>
-						<div style="display: flex">
-							<div style="flex: 70%">
-								<ul style="padding-left: 100px" class="r-stretch">
-									<li class="fragment fade-up" data-fragment-index="2">Measured on photogrammetry scans</li>
-									<li class="fragment fade-up" data-fragment-index="3">14 + 2 measurements</li>
-									<li class="fragment fade-up" data-fragment-index="4">8978 front + 8978 side images</li>
-									<li class="fragment fade-up" data-fragment-index="5">Binary silhouettes</li>
-									<li class="fragment fade-up" data-fragment-index="6">One person has around 3 images</li>
-								</ul>
-							</div>
-							<div style="flex: 30%;">
-								<img src="BodyM%20Example.png" alt="BodyM example" class="fragment" data-fragment-index="1">
-							</div>
-						</div>
-						<footer><p style="font-size: small" class="fragment">Human Body Measurement Estimation with Adversarial Augmentation by <br>Nataniel Ruiz, Miriam Bellver, Timo Bolkart, Ambuj Arora, Ming C. Lin, Javier Romero and Raja Bala </p></footer>
-					</section>
-
-					<section>
-						<h6 class="fragment fade-up" data-fragment-index="1">BodyM Issues</h6>
-						<div style=" display: grid; grid-template-columns: repeat(2,1fr)">
-							<ul class="grid-item">
-								<li class="fragment fade-up" data-fragment-index="2">Unclear measurements</li>
-								<li class="fragment fade-up" data-fragment-index="3">Complicated structure</li>
-								<li class="fragment fade-up" data-fragment-index="4">Sparse data</li>
-							</ul>
-
-							<div class="grid-item fragment" style="grid-row: span 2" data-fragment-index="3">
-
-								<img src="BodyM%20Structure.svg" alt="BodyM dataset structure" width="308" height="360">
-							</div>
-							<div class="grid-item fragment" data-fragment-index="2">
-								<img src="BadMeasurements.png" alt="Example of how unclear measurements are" width="163" height="228">
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h3 style="visibility: hidden">hello</h3>
-						<h6>Measurement Comparison</h6>
-						<img src="DatasetComparation.svg" class="fragment" alt="Comparation of measurements of datasets">
-					</section>
-				</section>
-
-<!--				<section>-->
-<!--					<h3>Measurements</h3>-->
-<!--					<section></section>-->
-<!--					<section>-->
-<!--						<h3 style="visibility: hidden">hello</h3>-->
-<!--						<img src="Measurements.png" alt="Containing measurements" class="r-stretch">-->
-<!--					</section>-->
+        </section>
 
 
-<!--				</section>-->
+        <section>
+            <h3>Datasets</h3>
+            <section>
+                <h6 class="fragment fade-up" data-fragment-index="1">Surreact</h6>
+                <div style="display: flex">
+                    <div style="flex: 70%">
+                        <ul style="padding-left: 100px" class="r-stretch">
+                            <li class="fragment fade-up" data-fragment-index="2">Synthetic dataset</li>
+                            <li class="fragment fade-up" data-fragment-index="3">Generated using SMPL</li>
+                            <li class="fragment fade-up" data-fragment-index="4">16 + 1 measurements</li>
+                            <li class="fragment fade-up" data-fragment-index="5">79998 front + 79998 side images</li>
+                            <li class="fragment fade-up" data-fragment-index="6">RGB images</li>
+                            <li class="fragment fade-up" data-fragment-index="7">Different person each measurement</li>
 
-				<section>
-					<h3>Network overview</h3>
-					<section><img src="model.png" alt="Model layout" class="fragment fade-up r-fit-text"></section>
+                        </ul>
+                    </div>
+                    <div style="flex: 30%;">
+                        <img src="Surreact%20Example.png" alt="Surreact example" class="fragment"
+                             data-fragment-index="1">
+                    </div>
+                </div>
+                <footer><p style="font-size: small" class="fragment" data-fragment-index="1">Gül Varol, Ivan Laptev and
+                    Cordelia Schmid, Andrew Zisserman, Synthetic Humans for Action Recognition from Unseen Viewpoints,
+                    IJCV 2021.</p>
+                    <p style="font-size: small" class="fragment" data-fragment-index="1">Skorvankova, Dana & Riečický,
+                        Adam & Madaras,
+                        Martin. (2021). Automatic Estimation of Anthropometric Human Body Measurements. </p></footer>
+            </section>
 
-				</section>
+            <section>
+                <h6 class="fragment fade-up" data-fragment-index="1">BodyM</h6>
+                <div style="display: flex">
+                    <div style="flex: 70%">
+                        <ul style="padding-left: 100px" class="r-stretch">
+                            <li class="fragment fade-up" data-fragment-index="2">Measured on photogrammetry scans</li>
+                            <li class="fragment fade-up" data-fragment-index="3">14 + 2 measurements</li>
+                            <li class="fragment fade-up" data-fragment-index="4">8978 front + 8978 side images</li>
+                            <li class="fragment fade-up" data-fragment-index="5">Binary silhouettes</li>
+                            <li class="fragment fade-up" data-fragment-index="6">One person has around 3 images</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 30%;">
+                        <img src="BodyM%20Example.png" alt="BodyM example" class="fragment" data-fragment-index="1">
+                    </div>
+                </div>
+                <footer><p style="font-size: small" class="fragment" data-fragment-index="1">Human Body Measurement
+                    Estimation with Adversarial
+                    Augmentation by <br>Nataniel Ruiz, Miriam Bellver, Timo Bolkart, Ambuj Arora, Ming C. Lin, Javier
+                    Romero and Raja Bala </p></footer>
+            </section>
+
+            <section>
+                <h6 class="fragment fade-up" data-fragment-index="1">BodyM Issues</h6>
+                <div style=" display: grid; grid-template-columns: repeat(2,1fr)">
+                    <ul class="grid-item">
+                        <li class="fragment fade-up" data-fragment-index="2">Unclear measurements</li>
+                        <li class="fragment fade-up" data-fragment-index="3">Complicated structure</li>
+                        <li class="fragment fade-up" data-fragment-index="4">Not enough data</li>
+                        <li class="fragment fade-up" data-fragment-index="5">Invalid data</li>
+                    </ul>
+
+                    <div class="grid-item fragment" style="grid-row: span 2" data-fragment-index="3">
+                        <img src="BodyM%20Structure.svg" alt="BodyM dataset structure" width="308" height="360">
+                    </div>
+                    <div class="grid-item fragment" data-fragment-index="2">
+                        <img src="BadMeasurements.png" alt="Example of how unclear measurements are" width="163"
+                             height="228">
+                    </div>
+                </div>
+            </section>
+            <h3 style="visibility: hidden">hi</h3>
+            <section>
+                <h3 style="visibility: hidden">hi</h3>
+                <h6 class="r-stretch">Incomplete Data</h6>
+                <div style="display: grid; grid-template-columns: auto auto auto">
+                    <img src="images/BadData/Incomplete/0b76da5015c803aa52d261c68ef80d2d.png"
+                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="500"
+                         style="height: 30vh; justify-self: center">
+                    <img src="images/BadData/Incomplete/2bdf0d2809368c3baa494c98f1fec717.png"
+                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="1000"
+                         style="height: 30vh; justify-self: center">
+                    <img src="images/BadData/Incomplete/2e3c673b5f04b177f41487e357ba2df2.png"
+                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="1500"
+                         style="height: 30vh; justify-self: center">
+                </div>
+            </section>
+
+            <section>
+                <h3 style="visibility: hidden">hi</h3>
+                <h6 class="r-stretch">Variable Pose</h6>
+                <div style="display: grid; grid-template-columns: auto auto">
+                    <img src="images/BadData/Uneven/fe386748bb89af86c6e307d592c752a9.png" alt="A pose with spread legs"
+                         class="grid-item animate__fadeInUp" data-delay="500"
+                         style="height: 30vh; justify-self: center">
+                    <img src="images/BadData/Uneven/fec4f8fcca82714e71cc052fb89d899e.png" alt="A pose wih legs together"
+                         class="grid-item animate__fadeInUp" data-delay="1000"
+                         style="height: 30vh; justify-self: center">
+                </div>
+            </section>
+
+            <section>
+                <h3 style="visibility: hidden">hi</h3>
+                <h6 class="r-stretch">Unidentifiable Data</h6>
+                <div style="display: grid; grid-template-columns: auto auto">
+                    <img src="images/BadData/Random/54d6140d2d9fa8b0d991cf8d8e198964.png"
+                         alt="Something perhaps human looking" class="grid-item animate__fadeInUp" data-delay="500"
+                         style="height: 30vh; justify-self: center">
+                    <img src="images/BadData/Random/77ba0e0750cacae5168a331bec851543.png"
+                         alt="Something perhaps human looking" class="grid-item animate__fadeInUp" data-delay="1000"
+                         style="height: 30vh; justify-self: center">
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h3>Measurements</h3>
+            <section>
+                <h3 style="visibility: hidden">Measurements</h3>
+                <h6>Surreact</h6>
+                <img src="Measurements.png" class="fragment" alt="Surreact measurements" style="height: 35vh">
+            </section>
+
+            <section>
+                <h3 style="visibility: hidden">Measurements</h3>
+                <h6>BodyM</h6>
+                <img src="BodyM.svg" class="fragment" alt="Surreact measurements" style="height: 35vh">
+            </section>
+
+            <section data-auto-animate>
+                <h3 style="visibility: hidden">Measurements</h3>
+                <h6 style="margin-bottom: 0">Comparison</h6>
+                <div style="display: grid; grid-template-columns: auto auto auto" class="r-stretch">
+                    <img src="Blank.png" alt="Surreact example" class="grid-item r-stretch" style="height: 35vh"
+                         data-id="img">
+                    <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important">
+                        <li style="font-size: large; text-align: center"><strong>Surreact</strong></li>
+                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr1">
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>head circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>neck circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder to shoulder</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>arm span</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder to wrist</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>torso</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>bicep circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>wrist circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>chest circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>waist circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>pelvis circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>leg length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>inner leg length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>thigh circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>knee circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3% 3% 0.5%;"><b>calf length</b></li>
+                    </ul>
+                    <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
+                        <li style="font-size: large; text-align: center"><strong>BodyM</strong></li>
+                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr2">
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>ankle</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>arm length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>bicep</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>calf</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>chest</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>forearm</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>hip</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>leg length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder breath</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder to crotch</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>thigh</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>waist</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>wrist</b></li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h3 style="visibility: hidden">Measurements</h3>
+                <h6 style="margin-bottom: 0">Comparison</h6>
+                <div style="display: grid; grid-template-columns: auto auto auto" class="r-stretch">
+                    <img src="MeasurementsBodyOnly.png" alt="Surreact example" class="grid-item r-stretch"
+                         style="height: 35vh" data-id="img">
+                    <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
+                        <li style="font-size: large; text-align: center"><strong>Surreact</strong></li>
+                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr1">
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #54c1ad !important;"><b>chest
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c256ac !important;"><b>waist
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #d3cf6b !important;"><b>pelvis
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c65b11 !important;"><b>bicep
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #3e7685 !important;"><b>thigh
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #a6d18c !important;"><b>shoulder
+                            to wrist</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #92a8db !important;"><b>leg
+                            length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #6c6c6c !important;"><b>calf
+                            length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #fc75cf !important;"><b>wrist
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #000000 !important;"><b>shoulder
+                            to shoulder</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>torso</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>head
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>arm span</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>knee
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>neck
+                            circumference</b></li>
+                        <li style="font-size: large; text-align: center; color: red; margin: 3% 3% 0.5%;"><b>inner leg
+                            length</b></li>
+                    </ul>
+                    <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
+                        <li style="font-size: large; text-align: center"><strong>BodyM</strong></li>
+                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr2">
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #54c1ad !important;"><b>chest</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c256ac !important;"><b>waist</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #d3cf6b !important;">
+                            <b>hip</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c65b11 !important;"><b>bicep</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #3e7685 !important;"><b>thigh</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #a6d18c !important;"><b>arm
+                            length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #92a8db !important;"><b>leg
+                            length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #6c6c6c !important;">
+                            <b>calf</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #fc75cf !important;"><b>wrist</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #000000 !important;"><b>shoulder
+                            breath</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>ankle</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>shoulder to
+                            crotch</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>forearm</b></li>
+                    </ul>
+
+                </div>
+            </section>
+        </section>
 
 
-				<section>
-					<h3>Current work</h3>
-					<section>
-					</section>
-					<section data-auto-animate>
-						<h3 style="visibility: hidden">hello</h3>
-						<h6 class="fragment fade-up" data-fragment-index="1">Prepared dataset</h6>
-						<ul style="padding-left: 100px" class="r-stretch">
-							<li class="fragment fade-up" data-fragment-index="2">Transformed RGB image to silhouette</li>
-							<li class="fragment fade-up" data-fragment-index="3">Rescaled images</li>
-							<li class="fragment fade-up" data-fragment-index="4">Fixed incorrectly saved data</li>
-							<li class="fragment fade-up" data-fragment-index="5">Created custom data loading</li>
-						</ul>
-						<img src="Image%20edit.drawio.svg" alt="Edit pipeline" class="fragment fade-up" data-fragment-index="2">
-					</section>
+        <section>
+            <h3>Network overview</h3>
+            <section><img src="BoMN_Architecture.svg" alt="Model layout"></section>
 
-					<section>
-						<h6>Started training</h6>
-					</section>
-<!--					<section data-background-iframe="http://localhost:6006/?darkMode=true#scalars&runSelectionState=eyJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3RyYWluIjp0cnVlLCJTdXJyZWFjdCAtIDMwMDAwczE1ZTI1MDB2L3ZhbGlkYXRlIjp0cnVlLCJTdXJyZWFjdCA3OTk5OHM1ZTEwMDAwdi90cmFpbiI6ZmFsc2UsIlN1cnJlYWN0IDc5OTk4czVlMTAwMDB2L3ZhbGlkYXRlIjpmYWxzZSwidHJhaW4iOmZhbHNlLCJ2YWxpZGF0aW9uIjpmYWxzZX0%3D&_smoothingWeight=0"-->
-<!--							 data-background-interactive="">-->
-<!--					</section>-->
-					<section>Graphs here</section>
+        </section>
 
-				</section>
 
-				<section>
-					<h3>Future work</h3>
-					<section></section>
-					<section>
-						<div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink" data-fragment-index="2">Imminent future</h3></div>
-						<ul style="padding-left: 100px" class="r-stretch">
-							<li class="fragment fade-up" data-fragment-index="3">Test performance on bodym dataset</li>
-							<li class="fragment fade-up" data-fragment-index="4">Compare results and find issues</li>
-							<li style="visibility: hidden">hi</li>
-						</ul>
-					</section>
-					<section>
-						<div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink" data-fragment-index="2">Distant future</h3></div>
-						<ul style="padding-left: 100px"  class="r-stretch">
-							<li class="fragment fade-up" data-fragment-index="2">Try enhancing data with height</li>
-							<li class="fragment fade-up" data-fragment-index="3">Try using frontal and lateral view</li>
-							<li class="fragment fade-up" data-fragment-index="4">Look into specific errors</li>
-						</ul>
-					</section>
-				</section>
+        <section>
+            <h3>Current work</h3>
+            <section data-auto-animate>
+                <h3 style="visibility: hidden">hello</h3>
+                <h6 class="fragment fade-up" data-fragment-index="1">Prepared dataset</h6>
+                <ul style="padding-left: 100px" class="r-stretch">
+                    <li class="fragment fade-up" data-fragment-index="2">Preprocessed images</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Fixed incorrectly saved data</li>
+                    <li class="fragment fade-up" data-fragment-index="4">Created custom data loading</li>
+                </ul>
+                <img src="PreprocessPipeline.svg" alt="Edit pipeline" class="fragment fade-up" data-fragment-index="2">
+            </section>
 
-				<section>
-					<h1 class="r-fit-text">Thanks for your patience</h1>
-				</section>
+            <section>
+                <h6>Started training</h6>
 
-			</div>
-		</div>
+            </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/toc-progress/toc-progress.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				slideNumber:'c.t',
-				hideInactiveCursor:true,
-				preloadIframes:true,
-				oneTimer: {immediateMode: true},
-				pdfMaxPagesPerSlide: 1,
-				pdfSeparateFragments: false,
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, OneTimer]
+            <section>
+                <h6>Training on pure Surreact</h6>
+                <table class="r-fit-text" style="font-size: smaller">
+                    <thead style="font-size: smaller">
+                    <tr>
+                        <th></th>
+                        <th>Arm</th>
+                        <th>Bicep</th>
+                        <th>Calf</th>
+                        <th>Chest</th>
+                        <th>Leg</th>
+                        <th>Pelvis</th>
+                        <th>Shoulders</th>
+                        <th>Thigh</th>
+                        <th>Waist</th>
+                        <th>Wrist</th>
+                    </tr>
+                    </thead>
+                    <tbody style="font-size: smaller">
+                    <tr>
+                        <td>Surreact - Error(CM)</td>
+                        <th>3.7</th>
+                        <th>4.0</th>
+                        <th>3.3</th>
+                        <th>10.8</th>
+                        <th>5.6</th>
+                        <th>8.8</th>
+                        <th>4.2</th>
+                        <th>5.0</th>
+                        <th>13.8</th>
+                        <th>1.6</th>
+                    </tr>
+                    <tr>
+                        <td>BodyM - Error(CM)</td>
+                        <th>3.1</th>
+                        <th>3.5</th>
+                        <th>4.7</th>
+                        <th>12.4</th>
+                        <th>5.7</th>
+                        <th>9.2</th>
+                        <th>3.1</th>
+                        <th>4.9</th>
+                        <th>9.9</th>
+                        <th>1.7</th>
+                    </tr>
+                    </tbody>
+                </table>
+                <footer><p style="font-size: small">Errors are in cm</footer>
+            </section>
+            <section>
+                <h3 style="visibility: hidden">hello</h3>
+                <h6>Training on pure Surreact</h6>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr">
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_shoulder_to_wrist_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Arm</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_bicep_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Bicep</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_calf_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Calf</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_chest_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Chest</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_leg_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Leg</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="TestResults/SurreactOverfit/epoch_pelvis_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
+                        <figcaption><p style="font-size: small; margin: 0">Pelvis</p></figcaption>
+                    </figure>
+                </div>
+                <footer>
+                    <p style="font-size: small; color: #076ca6; margin: 0">Validation</p>
+                    <p style="font-size: small; color: #f66d42; margin: 0">Train</p>
+                </footer>
+            </section>
 
-			});
-		</script>
-	</body>
+
+        </section>
+
+        <section>
+            <h3>Future work</h3>
+            <section>
+                <div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink"
+                                                                          data-fragment-index="2">ASAP</h3></div>
+                <ul style="padding-left: 100px" class="r-stretch">
+                    <li class="fragment fade-up" data-fragment-index="3">Fix neural network</li>
+                    <li class="fragment fade-up" data-fragment-index="4">Compare performance on datasets</li>
+                    <li class="fragment fade-up" data-fragment-index="5">Continue preparing network with frontal and lateral images</li>
+                    <li class="fragment fade-up" data-fragment-index="6">Train network augmented with real data</li>
+                </ul>
+            </section>
+            <section>
+                <h3 style="visibility: hidden">Future work</h3>
+                <div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink"
+                                                                          data-fragment-index="2">More approaches</h3>
+                </div>
+                <ul style="padding-left: 100px" class="r-stretch">
+                    <li class="fragment fade-up" data-fragment-index="2">Enhance data with height</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Combinations of mentioned approaches</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h1 style="font-size: xxx-large">Questions</h1>
+        </section>
+
+        <section>
+            <h1 class="r-fit-text">Thanks for your patience</h1>
+        </section>
+
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/toc-progress/toc-progress.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        slideNumber: 'c.t',
+        hideInactiveCursor: true,
+        preloadIframes: true,
+        pdfMaxPagesPerSlide: 1,
+        pdfSeparateFragments: false,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, Appearance]
+
+    });
+</script>
+</body>
 </html>
