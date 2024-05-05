@@ -1,3 +1,9 @@
 \chapter{Related Work}
-\section{Super()}
-\section{Adversarial Body Sim}
+%\section{Automatic Estimation of Anthropometric Human Body Measurements}
+%This thesis builds on foundations laid out by article from \cite{super}. This article delves into estimating body measurements on different data types. As this thesis works with 2D data only, we will use only relevant parts. Moreover, the article provides us with annotations for synthetic dataset by Surreact \cite{surreact}. 
+There have already been multiple attempts to estimate human body measurements from a single image.  The solution proposed in \cite{HBDE1} provides us with a method which estimates subject's height using single uncalibrated image. Another approach  \cite{KeepItSMPL} uses joints position estimation to create a 3D mesh used for further evaluation.
+
+\section{Neural Anthropometer}
+An important article is the \cite{source} which proposes a method to tackle this task. Its Neural Anthropometer provides a valuable approach which will we use as backbone our convolutional neural network architecture. We do not need everything used in this article as we already have annotated synthetic dataset provided by \cite{super}. To keep the network as small as possible due to resource consumption and training difficulty increase with size. The proposed architecture starts with a binary image silhouette input. This is then processed by a convolutional layer. Number of channels was based on number of values on output. The output tensor is then passed through ReLU \cite{relu} along with batch optimization. Subsequently, a max pooling layer is used followed by a  convolutional layer. The output is then once again processed by max pooling layer with configuration same as before.  The result is then flattened to a tensor which is passed to a fully connected layer and a ReLU. As the last layer a regressor is used to provide the measurements estimation.
+
+Since this thesis isn't about tweaking architecture for better results, but rather, it's all about data augmentation, and this architecture gives us the effectiveness and precision sufficient for demonstration purposes, we will build  upon this architecture.

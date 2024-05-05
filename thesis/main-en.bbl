@@ -1,3 +1,75 @@
 \begin{thebibliography}{}
 
+\bibitem[BenAbdelkader and Yacoob, 2008]{HBDE1}
+BenAbdelkader, C. and Yacoob, Y. (2008).
+\newblock Statistical body height estimation from a single image.
+\newblock In {\em 2008 8th IEEE International Conference on Automatic Face \&
+  Gesture Recognition}, pages 1--7.
+
+\bibitem[Bogo et~al., 2016]{KeepItSMPL}
+Bogo, F., Kanazawa, A., Lassner, C., Gehler, P., Romero, J., and Black, M.~J.
+  (2016).
+\newblock Keep it smpl: Automatic estimation of 3d human pose and shape from a
+  single image.
+
+\bibitem[Bradski, 2000]{opencv}
+Bradski, G. (2000).
+\newblock {The OpenCV Library}.
+\newblock {\em Dr. Dobb's Journal of Software Tools}.
+
+\bibitem[Chollet et~al., 2015]{keras}
+Chollet, F. et~al. (2015).
+\newblock Keras.
+\newblock \url{https://github.com/keras-team/keras}.
+
+\bibitem[Gholamalinezhad and Khosravi, 2020]{pooling}
+Gholamalinezhad, H. and Khosravi, H. (2020).
+\newblock Pooling methods in deep neural networks, a review.
+
+\bibitem[Harris et~al., 2020]{numpy}
+Harris, C.~R., Millman, K.~J., van~der Walt, S.~J., Gommers, R., Virtanen, P.,
+  Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N.~J., Kern, R.,
+  Picus, M., Hoyer, S., van Kerkwijk, M.~H., Brett, M., Haldane, A., del
+  R{\'{i}}o, J.~F., Wiebe, M., Peterson, P., G{\'{e}}rard-Marchant, P.,
+  Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., and Oliphant,
+  T.~E. (2020).
+\newblock Array programming with {NumPy}.
+\newblock {\em Nature}, 585(7825):357--362.
+
+\bibitem[Loper et~al., 2015]{smpl}
+Loper, M., Mahmood, N., Romero, J., Pons-Moll, G., and Black, M.~J. (2015).
+\newblock {SMPL}: A skinned multi-person linear model.
+\newblock {\em ACM Trans. Graphics (Proc. SIGGRAPH Asia)}, 34(6):248:1--248:16.
+
+\bibitem[Nair and Hinton, 2010]{relu}
+Nair, V. and Hinton, G.~E. (2010).
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em Proceedings of the 27th international conference on machine
+  learning (ICML-10)}, pages 807--814.
+
+\bibitem[O'Shea and Nash, 2015]{convolutional}
+O'Shea, K. and Nash, R. (2015).
+\newblock An introduction to convolutional neural networks.
+
+\bibitem[Ruiz et~al., 2022]{BodyM}
+Ruiz, N., Bellver, M., Bolkart, T., Arora, A., Lin, M.~C., Romero, J., and
+  Bala, R. (2022).
+\newblock Human body measurement estimation with adversarial augmentation.
+
+\bibitem[Skorvankova et~al., 2021]{super}
+Skorvankova, D., Riečický, A., and Madaras, M. (2021).
+\newblock Automatic estimation of anthropometric human body measurements.
+
+\bibitem[Tejeda and Mayer, 2021]{source}
+Tejeda, Y.~G. and Mayer, H.~A. (2021).
+\newblock A neural anthropometer learning from body dimensions computed on
+  human 3d meshes.
+\newblock {\em 2021 IEEE Symposium Series on Computational Intelligence
+  (SSCI)}, pages 1--8.
+
+\bibitem[Varol et~al., 2021]{surreact}
+Varol, G., Laptev, I., Schmid, C., and Zisserman, A. (2021).
+\newblock Synthetic humans for action recognition from unseen viewpoints.
+\newblock In {\em IJCV}.
+
 \end{thebibliography}
