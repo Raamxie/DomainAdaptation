@@ -19,3 +19,6 @@
 *.aux
 *.log
 *.synctex.gz
+
+#BigNChunky
+BoMN/models/checkpoint.model.keras
