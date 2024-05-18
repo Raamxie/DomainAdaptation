@@ -1,38 +1,42 @@
 \contentsline {chapter}{Introduction}{1}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Overview}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Traditional measuring methods}{3}{section.1.1}%
-\contentsline {subsubsection}{Hand measurement}{3}{section*.9}%
-\contentsline {subsubsection}{Digital measuring on 3D model}{3}{section*.10}%
-\contentsline {section}{\numberline {1.2}Obstacles}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Problem specification}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}SMPL}{4}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Neural network}{4}{section.1.5}%
-\contentsline {subsubsection}{Hyperparameter}{4}{section*.11}%
-\contentsline {subsubsection}{Convolution layer}{5}{section*.12}%
-\contentsline {subsubsection}{Max Pooling layer}{5}{section*.13}%
+\contentsline {section}{\numberline {1.1}Measuring}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Hand measurement}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Digital measuring on 3D model}{3}{subsection.1.1.2}%
+\contentsline {subsubsection}{Photogrammetry scanner}{4}{section*.9}%
+\contentsline {subsubsection}{3D scanner}{4}{section*.10}%
+\contentsline {subsection}{\numberline {1.1.3}Using point clouds}{4}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}SMPL}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Neural network}{5}{section.1.3}%
+\contentsline {subsubsection}{Hyperparameter}{5}{section*.11}%
+\contentsline {subsubsection}{Loss functions \cite {loss}}{5}{section*.12}%
+\contentsline {subsubsection}{Performance metrics}{6}{section*.13}%
 \contentsline {subsubsection}{Overfitting}{6}{section*.14}%
-\contentsline {section}{\numberline {1.6}Keras \cite {keras}}{6}{section.1.6}%
-\contentsline {section}{\numberline {1.7}OpenCV \cite {opencv}}{6}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Photogrammetry}{6}{section.1.8}%
-\contentsline {chapter}{\numberline {2}Related Work}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Neural Anthropometer}{7}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Dataset overview}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}SURREACT}{9}{section.3.1}%
-\contentsline {subsubsection}{Description}{9}{section*.15}%
-\contentsline {subsubsection}{Measurements}{9}{section*.16}%
-\contentsline {subsubsection}{SMPL}{10}{section*.17}%
-\contentsline {section}{\numberline {3.2}BodyM}{10}{section.3.2}%
-\contentsline {subsubsection}{Description}{10}{section*.18}%
-\contentsline {subsubsection}{Measurements}{10}{section*.19}%
-\contentsline {subsubsection}{Issues}{10}{section*.20}%
-\contentsline {chapter}{\numberline {4}Development}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Suggested approach}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Setting up network}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Figuring out measurements}{11}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Optimalizations}{11}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Including BodyM in training}{11}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Adding height}{11}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Adding lateral image}{11}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Combinations}{11}{subsection.4.4.4}%
-\contentsline {chapter}{\numberline {5}Results}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.6}%
+\contentsline {subsubsection}{Convolution layer}{6}{section*.15}%
+\contentsline {subsubsection}{Max Pooling layer}{7}{section*.16}%
+\contentsline {section}{\numberline {1.4}Used software}{8}{section.1.4}%
+\contentsline {subsubsection}{Keras \cite {keras}}{8}{section*.17}%
+\contentsline {subsubsection}{OpenCV \cite {opencv}}{8}{section*.18}%
+\contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pose estimation}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Neural Anthropometer}{9}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Proposed solution}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem specification}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Obstacles}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Datasets}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}SURREACT}{12}{subsection.3.3.1}%
+\contentsline {subsubsection}{Description}{12}{section*.19}%
+\contentsline {subsection}{\numberline {3.3.2}BodyM}{12}{subsection.3.3.2}%
+\contentsline {subsubsection}{Description}{12}{section*.20}%
+\contentsline {subsubsection}{Measurements}{14}{section*.21}%
+\contentsline {subsubsection}{Issues}{14}{section*.22}%
+\contentsline {chapter}{\numberline {4}Development}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Setting up network}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Figuring out measurements}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Optimalizations}{15}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Including BodyM in training}{15}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Adding height}{15}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Adding lateral image}{15}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Combinations}{15}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Results}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{19}{chapter.6}%

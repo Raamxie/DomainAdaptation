@@ -1,0 +1,62 @@
+BoMN - SynthDataset
+
+Chest                   12.969753
+Waist                   12.267052
+Pelvis                  21.959730
+Bicep                    5.131864
+Thigh                    7.724612
+Shoulder to wrist        9.187830
+Leg                     11.054706
+Calf                     8.322315
+Wrist                    3.622772
+Shoulder to shoulder     5.315090
+
+Mean:                    9.755572
+
+
+BoMN+Height - SynthDataset
+
+Chest                   11.035191
+Waist                    9.522965
+Pelvis                  15.873354
+Bicep                    4.086318
+Thigh                    7.096371
+Shoulder to wrist        4.304339
+Leg                      6.001729
+Calf                     4.852385
+Wrist                    1.818408
+Shoulder to shoulder     3.497019
+
+Mean:                    6.8088074
+
+
+BoMN+Height - SynthDataset
+
+Chest                   48.308441
+Waist                   37.018948
+Pelvis                  37.676544
+Bicep                   13.964552
+Thigh                   24.440739
+Shoulder to wrist       19.636013
+Leg                     27.528814
+Calf                    11.571895
+Wrist                    6.591658
+Shoulder to shoulder    66.394699
+
+Mean: 29.313232
+
+
+ResNet+Height - SynthDataset
+
+Chest                    9.114962
+Waist                    9.908626
+Pelvis                  13.783411
+Bicep                    4.571771
+Thigh                    7.177918
+Shoulder to wrist        4.964475
+Leg                      7.368289
+Calf                     4.912276
+Wrist                    2.274405
+Shoulder to shoulder     9.756857
+
+Mean: 7.3832994

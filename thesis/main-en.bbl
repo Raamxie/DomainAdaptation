@@ -1,17 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[BenAbdelkader and Yacoob, 2008]{HBDE1}
-BenAbdelkader, C. and Yacoob, Y. (2008).
-\newblock Statistical body height estimation from a single image.
-\newblock In {\em 2008 8th IEEE International Conference on Automatic Face \&
-  Gesture Recognition}, pages 1--7.
-
-\bibitem[Bogo et~al., 2016]{KeepItSMPL}
-Bogo, F., Kanazawa, A., Lassner, C., Gehler, P., Romero, J., and Black, M.~J.
-  (2016).
-\newblock Keep it smpl: Automatic estimation of 3d human pose and shape from a
-  single image.
-
 \bibitem[Bradski, 2000]{opencv}
 Bradski, G. (2000).
 \newblock {The OpenCV Library}.
@@ -25,6 +13,13 @@ Chollet, F. et~al. (2015).
 \bibitem[Gholamalinezhad and Khosravi, 2020]{pooling}
 Gholamalinezhad, H. and Khosravi, H. (2020).
 \newblock Pooling methods in deep neural networks, a review.
+
+\bibitem[Haleem et~al., 2022]{3dScan}
+Haleem, A., Javaid, M., Singh, R.~P., Rab, S., Suman, R., Kumar, L., and Khan,
+  I.~H. (2022).
+\newblock Exploring the potential of 3d scanning in industry 4.0: An overview.
+\newblock {\em International Journal of Cognitive Computing in Engineering},
+  3:161--171.
 
 \bibitem[Harris et~al., 2020]{numpy}
 Harris, C.~R., Millman, K.~J., van~der Walt, S.~J., Gommers, R., Virtanen, P.,
@@ -67,9 +62,19 @@ Tejeda, Y.~G. and Mayer, H.~A. (2021).
 \newblock {\em 2021 IEEE Symposium Series on Computational Intelligence
   (SSCI)}, pages 1--8.
 
+\bibitem[Terven et~al., 2023]{loss}
+Terven, J., Cordova-Esparza, D.~M., Ramirez-Pedraza, A., and Chavez-Urbiola,
+  E.~A. (2023).
+\newblock Loss functions and metrics in deep learning.
+
 \bibitem[Varol et~al., 2021]{surreact}
 Varol, G., Laptev, I., Schmid, C., and Zisserman, A. (2021).
 \newblock Synthetic humans for action recognition from unseen viewpoints.
 \newblock In {\em IJCV}.
+
+\bibitem[Xu et~al., 2021]{pointcloudMultiple}
+Xu, T., An, D., Jia, Y., and Yue, Y. (2021).
+\newblock A review: Point cloud-based 3d human joints estimation.
+\newblock {\em Sensors}, 21(5).
 
 \end{thebibliography}

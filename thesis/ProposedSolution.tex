@@ -1,0 +1,75 @@
+\chapter{Proposed solution}
+
+\section{Problem specification}
+The goal of this thesis is to expand on body measurements estimation with the use of neural networks. Mainly to explore different data augmentation methods to provide better results when training is done on synthetic dataset.
+
+\section{Obstacles}
+One of the issues when working with human body measurements is the lack of real world data. The process of measuring is time-consuming and requires privacy measures to take place to protect subjects' personal information. This can be avoided by using synthetic datasets.\\
+Moreover the time complexity to train a neural network can be reduced by using powerful device which is not available.
+\newpage
+
+In this section, we'll explore the datasets utilized within this thesis. Our focus will be on 2D front-facing and profile human binary silhouettes. This form was chosen upon the data provided by the BodyM dataset. The subjects are positioned in an a-pose, ensuring greater consistency in the samples.
+\section{Datasets}
+\subsection{SURREACT}
+\subsubsection{Description}
+SURREACT \cite{surreact} is a synthetic dataset built on SMPL model. The main goal of the work was to explore benefits of using synthetic data for  human action recognition.  The study aimed to answer whether the synthetic data could potentially improve accuracy of already existing methods. This theory was confirmed and even shown improvements over other state-of-the-art action recognition methods. This is however not as important for this thesis as we are not going to use the features that were added.
+
+The dataset introduced by ~\cite{super} is an extension of the SURREACT dataset, incorporating the data generation techniques and a custom annotation method. This thesis utilizes a modified version of this dataset. The original dataset comprises 50,000 human scans, meshes, annotations, and other data of subjects in the T-Pose. In contrast, our customized version offers 79,999 frontal and 79,999 lateral images with annotations, featuring subjects in the A-Pose.  They are saved in RGBA format with dimensions of 320x240 without background thus eliminating the need of segmentation. Measurements are saved in .npy file format requiring us to use NumPy~\cite{numpy} to read these values.
+
+\begin{table}
+	\caption[...]{Definition of annotated anthropometric body measurements. Note that the 3D model is expected to capture the human body in the default T-pose, with Y-axis representing the vertical axis, and Z-axis pointing towards the camera.}
+	\label{tab:cas}
+	\begin{center}
+		\footnotesize
+		\begin{tabularx}{\textwidth}{lX}\hline
+			Body measurement & Definition\\\hline
+			Head circumference & circumference taken on the Y-axis at the level in the middle between the head skeleton joint and the top of the head (the intersection plane is slightly rotated along X-axis to match the natural head posture)\\
+			Neck circumference & circumference taken at the Y-axis level in 1/3 distance between the neck joint and the head joint (the intersection plane is slightly rotated along X-axis to match the natural posture)\\
+			Shoulder-to-shoulder & distance between left and right shoulder skeleton joint\\
+			Arm span & distance between the left and right fingertip in T-pose (the X-axis range of the model)\\
+			Shoulder-to-wrist & distance between the shoulder and the wrist joint (sleeve length)\\
+			Torso length & distance between the neck and the pelvis joint\\
+			Bicep circumference & circumference taken using an intersection plane which normal is perpendicular to X-axis, at the X coordinate in the middle between the shoulder and the elbow joint\\
+			Wrist circumference & circumference taken using an intersection plane which normal is perpendicular to X-axis, at the X coordinate of the wrist joint\\
+			Chest circumference & circumference taken at the Y-axis level of the maximal intersection of a model and the mesh signature within the chest region, constrained by axilla and the chest (upper spine) joint\\
+			Waist circumference & circumference taken at the Y-axis level of the minimal intersection of a model and the mesh signature within the waist region – around the natural waist line (mid-spine joint); the region is scaled relative to the model stature\\
+			Pelvis circumference & circumference taken at the Y-axis level of the maximal intersection of a model and the mesh signature within the pelvis region, constrained by the pelvis joint and hip joint\\
+			Leg length & distance between the pelvis and ankle joint\\
+			Inner leg length & distance between the crotch and the ankle joint (crotch height); while the Y coordinate being incremented, the crotch is detected in the first iteration after having a single intersection with the mesh signature, instead of two distinct intersections (the first intersection above legs)\\
+			Thigh circumference & circumference taken at the Y-axis level in the middle between the hip and the knee joint\\
+			Knee circumference & circumference taken at the Y coordinate of the knee joint\\
+			Calf length & distance between the knee joint and the ankle joint\\\hline
+		\end{tabularx}
+	\end{center}
+\end{table}
+
+\subsection{BodyM}
+\subsubsection{Description}
+This public body measurement dataset~\cite{BodyM} contains measurement and image data from real human subjects. The subjects were photographed in a well-lit indoor setup, resulting in the data being less prone to segmentation inaccuracies. Subjects also wore tight-fitting clothing to better reflect the measurements. After the pictures were taken, the subjects were scanned using Treedy photogrammetric scanner and fitted to the SMPL mesh. Measurements were then taken on said meshes. It also promises a wide ethnicity distribution  
+\subsubsection{Measurements}
+Information provided by BodyM dataset  paper are following:
+
+\begin{center}
+	\begin{tabular}{c}
+		\hline
+		Body measurement\\
+		\hline
+		\hline
+		Ankle girth\\
+		Arm-length\\
+		Bicep girth\\ 
+		Calf girth\\ 
+		Chest girth\\ 
+		Forearm girth\\
+		Head-to-heel length\\
+		hip girth\\
+		leg-length\\
+		shoulder-breadth\\
+		shoulder-to-crotch length\\
+		thigh girth\\
+		waist girth\\
+		wrist girth 
+	\end{tabular}
+\end{center}
+\subsubsection{Issues}
+The paper has not provided us with any information regarding the measurement location. This requires us to believe that the measurements were taken in accordance to the norm.

@@ -1,27 +1,41 @@
 \chapter{Overview}
 
-
-\section{Traditional measuring methods}
-Human body can be measured using many different approaches. All of these have their advantages and disadvantages. In this thesis we only need to introduce two of them.
-
-\subsubsection{Hand measurement}
-This is the traditional method of using tape measure for obtaining measurements. This approach usually needs one extra person that performs the measurement on the subject. This way the measurements are more precise than the subject using the tape measure without help. The measurements however have to be taken at specific locations to provide correct information in further processing. The locations vary depending on the use and thus there is no universal guide for their measurement. Whereas the professionals are familiar with them, the subjects are usually not as informed. This creates space for human error we are trying to avoid.
-
-\subsubsection{Digital measuring on 3D model}
-This method is mentioned because BodyM dataset uses this method to provide ground truth values. Is it based on photogrammetry scanner which creates precise meshes of scanned object. After the human body get acquired from the scanner they are registered to SMPL \cite{smpl} mesh topology. We can then use the resulting mesh for calculating the measurements.
+Contents of this chapter will provide definitions and explanations to terms and methods used in following chapters. This will hopefully help to understand the topic discussed in this thesis.
 
 
-\section{Obstacles}
-One of the issues when working with human body measurements is the lack of real world data. The process of measuring is time-consuming and requires privacy measures to take place to protect subjects' personal information. This can be avoided by using synthetic datasets.\\
-Moreover the time complexity to train a neural network can be reduced by using powerful device which is not available.
+\section{Measuring}
+Measuring locations vary depending on the use and thus there is no universal guide. The professionals should be familiar with the measurements required in their field of application, but the subjects themselves are usually not as informed. This can then result into incorrect measurement.
+
+Human body can be measured using different methods. These are usually dependent on input data and thus not every method can be used in every situation.  
+
+\subsection{Hand measurement}
+This is the traditional method of using tape or any alike measuring device for obtaining measurements. The approach usually needs one extra person that performs the measurement on the subject. Due to measurements requiring to be taken at specific locations to provide correct information, a person without help is more prone to obtaining incorrect measurements.
 
 
-\section{Problem specification}
-The goal of this thesis is to expand on body measurements estimation with the use of neural networks. Mainly to explore different data augmentation methods to provide better results when training is done on synthetic dataset.
+\subsection{Digital measuring on 3D model}
+Another method used for obtaining measurements is by using scanning technology. One of approaches uses devices such as photogrammetry scanners creates realistic meshes of scanned subject. The data can then be registered to SMPL \cite{smpl} mesh topology. We can then use the resulting mesh for calculating the required measurements. This is also the case of \cite{BodyM}, which uses these measurements as ground truth data.
+\subsubsection{Photogrammetry scanner}
+This method utilises photographs from different angles and positions to calculate and create a mesh. The device to take photos does not need any extra functionality to produce images processable into final model. However, photogrammetry scanners are being developed to provide ease of use and quality over common cameras. One of such features is a multi-camera system. Main advantage is when the subject is a living being, offering photos from multiple angles in the same instant. This prevents to faulty models due to unwilling movement of the subject.
+\\
+
+Different approach uses 3D scanning devices. These are more expensive than equipment required for photogrammetry, but can provide precise models. The result of scan using a 3D scanner is a point cloud or a set of data points depicting shape and size of subject~\cite{3dScan}. This can be used directly as and input for further processing.
+\subsubsection{3D scanner}
+Multiple technologies are used in 3D scanners. For example structured and laser based scanners use light to measure location of points. These devices throw blue light and cameras to record the reflection to obtain distance of point on the subject from the measuring device. While laser based devices produces lines on the subject the structured light based devices project a grid
+
+
+\subsection{Using point clouds}
+Not all scans are registered to a mesh topology. Some approaches have tried to use point cloud representation. An overview of methods used is provided by \cite{pointcloudMultiple}. 
+%WOULD NEED TO WRITE MORE
+
+
+
+
+
 
 
 \section{SMPL}
-SMPL is short for Skinned Multi-Person Linear model. This model is based on skinning and blend shapes. The model has been trained on thousands of 3D body scans to create a realistic human model. Full explanation of functions and workflow of this model is out of scope of this work.
+SMPL~\cite{smpl} is short for Skinned Multi-Person Linear model. Its capabilities include generation of animated human bodies with various body shapes in specific poses. Moreover, the model is able to deform naturally. This soft-tissue motion produces results much closer to real tissue. SMPL builds on blend shapes which are represented by a vector of concatenated vertex offsets. Other than vertices the SMPL model also uses joints, which essentially create the skeleton of the model. Topology of said model does not depend on sex of resulting model.
+
 
 
 \section{Neural network}
@@ -32,6 +46,24 @@ This process helps the network to find complex relationships or patterns that ma
 
 \subsubsection{Hyperparameter}
 Hyperparameter is a parameter that is not learned but chosen by developer.  These parameters do not change over time. These can be - choice of optimizer, learning rate,  number of layers, filter size and more.\\\\
+\subsubsection{Loss functions \cite{loss}}
+The training process is guided by the loss function. They show how good or how bad the network is at predicting the output. The results then serve as a guide for the learnable parameters. Loss function measures the difference between the predicted and expected outputs. Main goal of the network then becomes to minimise the loss function. One of the commonly used losses for regression task such as this one is the mean squared error (MSE or sometimes called L2 loss). This loss function is calculated as an average of the squared difference between the predicted values and the ground truth. To define this function mathematically:
+\begin{equation}
+	MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i -  \hat{y_i})^2
+\end{equation}
+In this equation $n$ is used to define number of samples, $y_i$ is the ground truth and $\hat{y_i}$ the predicted value of the $i^{th}$ sample. Being a convex function, the MSE has a unique global minimum, which helps the optimization process as the optimization methods do not get stuck in the local minima. While being a computationally simple , it is vulnerable to outliers. The issue is created by the square nature of this function. In case of existing outlier the function gets heavily influenced and may not perform as well.
+\\
+\subsubsection{Performance metrics}
+After the network was trained on the training data, it has to face new, unseen data. This ability is then measured using performance metrics. They are mainly used after the network has been trained. Performance metrics are also used to compare different networks. We can use some loss functions for performance metrics. In this thesis we will use mean absolute error (MAE or L1 loss). The principle is similar to MSE, but instead of squaring the difference we will use the absolute value to always have error larger than 0, meaning 0 will be a perfect fit. Mathematical definition of the MAE is as follows:
+\begin{equation}
+	MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i -  \hat{y_i}|,
+\end{equation}
+in which $n$ is used to define number of samples, $y_i$ is the ground truth and $\hat{y_i}$ the predicted value of the $i^{th}$ sample.
+
+\subsubsection{Overfitting}
+One of the dangers of using neural networks is the possibility of overfitting. This issue is created when a complex network is trained with insufficient data. Complexity of architecture helps the network to find and learn more complex relationships, but in a case when inadequate amount of data is used for training, the network does not find the relationships we want, but instead learns exact values to have the best results for provided images. Consequence of this issue is, that the training loss is extremely small, but the performance metrics show inadequately larger error.
+\\\\
+
 Our model is mainly built on the following layers:
 
 \subsubsection{Convolution layer}
@@ -63,13 +95,12 @@ This layer iterates over input field and looks at subfield with size of filter s
 	\label{maxPooling}
 \end{figure}
 
-\subsubsection{Overfitting}
-\section{Keras \cite{keras}}
+\section{Used software}
+\subsubsection{Keras \cite{keras}}
 Keras is an open-source neural network library written in Python. Thanks to its user-friendly interface and modular design is Keras one of the leading frameworks in neural network development. Its simple yet flexible architecture allows for easy prototyping and experimentation, making it an ideal choice for both beginners and experienced practitioners in the field of deep learning.
-\section{OpenCV \cite{opencv}}
+\subsubsection{OpenCV \cite{opencv}}
 Open Source Computer Vision Library (OpenCV for short) is a comprehensive open-source library originally developed by Intel. It is mainly used for various tasks in fields such as computer vision or machine learning. In the time of writing this thesis, OpenCV provides over 2500 optimized algorithms. These are able to effectively perform many tasks such as face detection, object tracking, image preprocessing and many more. Providing interfaces in multiple programming languages such as Python, C++, Java and MATLAB it is very popular with community as well as recognisable and famous companies.%Add reference?
 
-\section{Photogrammetry}
 
 %\begin{figure}
 %	%vlozenie samotneho obrazku vycentrovaneho a vhodnej velkosti
