@@ -21,4 +21,4 @@
 *.synctex.gz
 
 #BigNChunky
-BoMN/models/checkpoint.model.keras
+BoMN/models/
