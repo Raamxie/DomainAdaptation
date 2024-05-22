@@ -1,42 +1,43 @@
 \contentsline {chapter}{Introduction}{1}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Overview}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Measuring}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Hand measurement}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Digital measuring on 3D model}{3}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.1}Anthropometry}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Manual measurement}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Virtual measuring on 3D model}{4}{subsection.1.1.2}%
 \contentsline {subsubsection}{Photogrammetry scanner}{4}{section*.9}%
 \contentsline {subsubsection}{3D scanner}{4}{section*.10}%
-\contentsline {subsection}{\numberline {1.1.3}Using point clouds}{4}{subsection.1.1.3}%
 \contentsline {section}{\numberline {1.2}SMPL}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Neural network}{5}{section.1.3}%
-\contentsline {subsubsection}{Hyperparameter}{5}{section*.11}%
-\contentsline {subsubsection}{Loss functions \cite {loss}}{5}{section*.12}%
-\contentsline {subsubsection}{Performance metrics}{6}{section*.13}%
-\contentsline {subsubsection}{Overfitting}{6}{section*.14}%
-\contentsline {subsubsection}{Convolution layer}{6}{section*.15}%
-\contentsline {subsubsection}{Max Pooling layer}{7}{section*.16}%
-\contentsline {section}{\numberline {1.4}Used software}{8}{section.1.4}%
-\contentsline {subsubsection}{Keras \cite {keras}}{8}{section*.17}%
-\contentsline {subsubsection}{OpenCV \cite {opencv}}{8}{section*.18}%
-\contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Pose estimation}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Neural Anthropometer}{9}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Proposed solution}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problem specification}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Obstacles}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Datasets}{12}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}SURREACT}{12}{subsection.3.3.1}%
-\contentsline {subsubsection}{Description}{12}{section*.19}%
-\contentsline {subsection}{\numberline {3.3.2}BodyM}{12}{subsection.3.3.2}%
-\contentsline {subsubsection}{Description}{12}{section*.20}%
-\contentsline {subsubsection}{Measurements}{14}{section*.21}%
-\contentsline {subsubsection}{Issues}{14}{section*.22}%
-\contentsline {chapter}{\numberline {4}Development}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Setting up network}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Figuring out measurements}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Optimalizations}{15}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Including BodyM in training}{15}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Adding height}{15}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Adding lateral image}{15}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Combinations}{15}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Results}{17}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{19}{chapter.6}%
+\contentsline {section}{\numberline {1.3}Neural Networks}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Hyperparameter}{5}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Loss functions}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Performance metrics}{6}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Overfitting}{6}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Layers}{7}{subsection.1.3.5}%
+\contentsline {paragraph}{Convolution layer}{7}{section*.11}%
+\contentsline {paragraph}{Max Pooling layer}{7}{section*.12}%
+\contentsline {paragraph}{Flatten layer}{8}{section*.13}%
+\contentsline {paragraph}{Dense layer}{8}{section*.14}%
+\contentsline {chapter}{\numberline {2}Related Work}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}History}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Pose Estimation}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Domain Adaptation}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Instance-Based Methods}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Feature-Based Methods}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Parameter-Based Methods}{13}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Hybrid Methods}{13}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Neural Anthropometer}{13}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Proposed solution}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem specification}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Obstacles}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Datasets}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}SURREACT}{16}{subsection.3.3.1}%
+\contentsline {subsubsection}{Description}{16}{section*.15}%
+\contentsline {subsection}{\numberline {3.3.2}BodyM}{16}{subsection.3.3.2}%
+\contentsline {subsubsection}{Description}{16}{section*.16}%
+\contentsline {subsubsection}{Measurements}{16}{section*.17}%
+\contentsline {subsubsection}{Issues}{18}{section*.18}%
+\contentsline {chapter}{\numberline {4}Implementation}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Used software}{19}{section.4.1}%
+\contentsline {subsubsection}{Keras}{19}{section*.19}%
+\contentsline {subsubsection}{OpenCV }{19}{section*.20}%
+\contentsline {chapter}{\numberline {5}Results}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}%

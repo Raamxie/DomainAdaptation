@@ -1,80 +1,101 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 
-\bibitem[Bradski, 2000]{opencv}
-Bradski, G. (2000).
-\newblock {The OpenCV Library}.
-\newblock {\em Dr. Dobb's Journal of Software Tools}.
+\bibitem{smpl}
+M.~Loper, N.~Mahmood, J.~Romero, G.~Pons-Moll, and M.~J. Black, ``{SMPL}: A
+  skinned multi-person linear model,'' {\em ACM Trans. Graphics (Proc. SIGGRAPH
+  Asia)}, vol.~34, pp.~248:1--248:16, Oct. 2015.
 
-\bibitem[Chollet et~al., 2015]{keras}
-Chollet, F. et~al. (2015).
-\newblock Keras.
-\newblock \url{https://github.com/keras-team/keras}.
+\bibitem{BodyM}
+N.~Ruiz, M.~Bellver, T.~Bolkart, A.~Arora, M.~C. Lin, J.~Romero, and R.~Bala,
+  ``Human body measurement estimation with adversarial augmentation,'' 2022.
 
-\bibitem[Gholamalinezhad and Khosravi, 2020]{pooling}
-Gholamalinezhad, H. and Khosravi, H. (2020).
-\newblock Pooling methods in deep neural networks, a review.
+\bibitem{3dScan}
+A.~Haleem, M.~Javaid, R.~P. Singh, S.~Rab, R.~Suman, L.~Kumar, and I.~H. Khan,
+  ``Exploring the potential of 3d scanning in industry 4.0: An overview,'' {\em
+  International Journal of Cognitive Computing in Engineering}, vol.~3,
+  pp.~161--171, 2022.
 
-\bibitem[Haleem et~al., 2022]{3dScan}
-Haleem, A., Javaid, M., Singh, R.~P., Rab, S., Suman, R., Kumar, L., and Khan,
-  I.~H. (2022).
-\newblock Exploring the potential of 3d scanning in industry 4.0: An overview.
-\newblock {\em International Journal of Cognitive Computing in Engineering},
-  3:161--171.
+\bibitem{loss}
+J.~Terven, D.~M. Cordova-Esparza, A.~Ramirez-Pedraza, and E.~A. Chavez-Urbiola,
+  ``Loss functions and metrics in deep learning,'' 2023.
 
-\bibitem[Harris et~al., 2020]{numpy}
-Harris, C.~R., Millman, K.~J., van~der Walt, S.~J., Gommers, R., Virtanen, P.,
-  Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N.~J., Kern, R.,
-  Picus, M., Hoyer, S., van Kerkwijk, M.~H., Brett, M., Haldane, A., del
-  R{\'{i}}o, J.~F., Wiebe, M., Peterson, P., G{\'{e}}rard-Marchant, P.,
-  Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., and Oliphant,
-  T.~E. (2020).
-\newblock Array programming with {NumPy}.
-\newblock {\em Nature}, 585(7825):357--362.
+\bibitem{convolutional}
+K.~O'Shea and R.~Nash, ``An introduction to convolutional neural networks,''
+  2015.
 
-\bibitem[Loper et~al., 2015]{smpl}
-Loper, M., Mahmood, N., Romero, J., Pons-Moll, G., and Black, M.~J. (2015).
-\newblock {SMPL}: A skinned multi-person linear model.
-\newblock {\em ACM Trans. Graphics (Proc. SIGGRAPH Asia)}, 34(6):248:1--248:16.
+\bibitem{pooling}
+H.~Gholamalinezhad and H.~Khosravi, ``Pooling methods in deep neural networks,
+  a review,'' 2020.
 
-\bibitem[Nair and Hinton, 2010]{relu}
-Nair, V. and Hinton, G.~E. (2010).
-\newblock Rectified linear units improve restricted boltzmann machines.
-\newblock In {\em Proceedings of the 27th international conference on machine
-  learning (ICML-10)}, pages 807--814.
+\bibitem{relu}
+V.~Nair and G.~E. Hinton, ``Rectified linear units improve restricted boltzmann
+  machines,'' in {\em Proceedings of the 27th international conference on
+  machine learning (ICML-10)}, pp.~807--814, 2010.
 
-\bibitem[O'Shea and Nash, 2015]{convolutional}
-O'Shea, K. and Nash, R. (2015).
-\newblock An introduction to convolutional neural networks.
+\bibitem{adolphe}
+D.~Tafreshi, ``Adolphe quetelet and the legacy of the “average man” in
+  psychology.,'' {\em History of Psychology}, vol.~25, no.~1, p.~34, 2022.
 
-\bibitem[Ruiz et~al., 2022]{BodyM}
-Ruiz, N., Bellver, M., Bolkart, T., Arora, A., Lin, M.~C., Romero, J., and
-  Bala, R. (2022).
-\newblock Human body measurement estimation with adversarial augmentation.
+\bibitem{anthrohistory}
+S.~Ulijaszek and J.~Komlos, ``12 from a history of anthropometry to
+  anthropometric history,'' {\em Human variation: From the laboratory to the
+  field}, p.~183, 2010.
 
-\bibitem[Skorvankova et~al., 2021]{super}
-Skorvankova, D., Riečický, A., and Madaras, M. (2021).
-\newblock Automatic estimation of anthropometric human body measurements.
+\bibitem{domainAdaptation}
+A.~Farahani, S.~Voghoei, K.~Rasheed, and H.~R. Arabnia, ``A brief review of
+  domain adaptation,'' {\em Advances in data science and information
+  engineering: proceedings from ICDATA 2020 and IKE 2020}, pp.~877--894, 2021.
 
-\bibitem[Tejeda and Mayer, 2021]{source}
-Tejeda, Y.~G. and Mayer, H.~A. (2021).
-\newblock A neural anthropometer learning from body dimensions computed on
-  human 3d meshes.
-\newblock {\em 2021 IEEE Symposium Series on Computational Intelligence
-  (SSCI)}, pages 1--8.
+\bibitem{instanceMethod}
+J.~Huang, A.~Gretton, K.~Borgwardt, B.~Sch\"{o}lkopf, and A.~Smola,
+  ``Correcting sample selection bias by unlabeled data,'' in {\em Advances in
+  Neural Information Processing Systems} (B.~Sch\"{o}lkopf, J.~Platt, and
+  T.~Hoffman, eds.), vol.~19, MIT Press, 2006.
 
-\bibitem[Terven et~al., 2023]{loss}
-Terven, J., Cordova-Esparza, D.~M., Ramirez-Pedraza, A., and Chavez-Urbiola,
-  E.~A. (2023).
-\newblock Loss functions and metrics in deep learning.
+\bibitem{featureMethod}
+M.~Long, Y.~Cao, J.~Wang, and M.~Jordan, ``Learning transferable features with
+  deep adaptation networks,'' in {\em International conference on machine
+  learning}, pp.~97--105, PMLR, 2015.
 
-\bibitem[Varol et~al., 2021]{surreact}
-Varol, G., Laptev, I., Schmid, C., and Zisserman, A. (2021).
-\newblock Synthetic humans for action recognition from unseen viewpoints.
-\newblock In {\em IJCV}.
+\bibitem{featureMethod2}
+Y.~Ganin and V.~Lempitsky, ``Unsupervised domain adaptation by
+  backpropagation,'' in {\em Proceedings of the 32nd International Conference
+  on Machine Learning} (F.~Bach and D.~Blei, eds.), vol.~37 of {\em Proceedings
+  of Machine Learning Research}, (Lille, France), pp.~1180--1189, PMLR, 07--09
+  Jul 2015.
 
-\bibitem[Xu et~al., 2021]{pointcloudMultiple}
-Xu, T., An, D., Jia, Y., and Yue, Y. (2021).
-\newblock A review: Point cloud-based 3d human joints estimation.
-\newblock {\em Sensors}, 21(5).
+\bibitem{parameterMethod}
+E.~Tzeng, J.~Hoffman, N.~Zhang, K.~Saenko, and T.~Darrell, ``Deep domain
+  confusion: Maximizing for domain invariance,'' {\em arXiv preprint
+  arXiv:1412.3474}, 2014.
+
+\bibitem{source}
+Y.~G. Tejeda and H.~A. Mayer, ``A neural anthropometer learning from body
+  dimensions computed on human 3d meshes,'' {\em 2021 IEEE Symposium Series on
+  Computational Intelligence (SSCI)}, pp.~1--8, 2021.
+
+\bibitem{super}
+D.~Skorvankova, A.~Riečický, and M.~Madaras, ``Automatic estimation of
+  anthropometric human body measurements,'' 12 2021.
+
+\bibitem{surreact}
+G.~Varol, I.~Laptev, C.~Schmid, and A.~Zisserman, ``Synthetic humans for action
+  recognition from unseen viewpoints,'' in {\em IJCV}, 2021.
+
+\bibitem{numpy}
+C.~R. Harris, K.~J. Millman, S.~J. van~der Walt, R.~Gommers, P.~Virtanen,
+  D.~Cournapeau, E.~Wieser, J.~Taylor, S.~Berg, N.~J. Smith, R.~Kern, M.~Picus,
+  S.~Hoyer, M.~H. van Kerkwijk, M.~Brett, A.~Haldane, J.~F. del R{\'{i}}o,
+  M.~Wiebe, P.~Peterson, P.~G{\'{e}}rard-Marchant, K.~Sheppard, T.~Reddy,
+  W.~Weckesser, H.~Abbasi, C.~Gohlke, and T.~E. Oliphant, ``Array programming
+  with {NumPy},'' {\em Nature}, vol.~585, pp.~357--362, Sept. 2020.
+
+\bibitem{keras}
+F.~Chollet {\em et~al.}, ``Keras.'' \url{https://github.com/keras-team/keras},
+  2015.
+
+\bibitem{opencv}
+G.~Bradski, ``{The OpenCV Library},'' {\em Dr. Dobb's Journal of Software
+  Tools}, 2000.
 
 \end{thebibliography}
