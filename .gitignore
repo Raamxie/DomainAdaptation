@@ -21,4 +21,4 @@
 *.synctex.gz
 
 #BigNChunky
-BoMN/models/
+**/BoMN/models/

@@ -1,0 +1,91 @@
+BoMN - testA
+
+Chest                   4.121389
+Waist                   4.290322
+Pelvis                  3.870780
+Bicep                   1.899006
+Thigh                   2.657164
+Shoulder to wrist       2.126558
+Leg                     3.288090
+Calf                    1.914425
+Wrist                   0.980072
+Shoulder to shoulder    1.495386
+
+Mean: 2.6643195
+
+
+BoMN - testB
+
+Chest                   5.048358
+Waist                   5.827333
+Pelvis                  4.693540
+Bicep                   1.983165
+Thigh                   3.031262
+Shoulder to wrist       2.205704
+Leg                     3.629483
+Calf                    2.209930
+Wrist                   1.037224
+Shoulder to shoulder    1.641816
+
+Mean: 3.1307817
+
+BoMN - A+B
+Chest                   4.499478
+Waist                   4.917234
+Pelvis                  4.206364
+Bicep                   1.933332
+Thigh                   2.809749
+Shoulder to wrist       2.158841
+Leg                     3.427337
+Calf                    2.034954
+Wrist                   1.003383
+Shoulder to shoulder    1.555112
+
+Mean: 2.8545785
+
+========================================================
+BoMN+Side - testA
+
+Chest                   4.590295
+Waist                   4.634333
+Pelvis                  3.983065
+Bicep                   2.268839
+Thigh                   3.057487
+Shoulder to wrist       2.482316
+Leg                     3.677842
+Calf                    2.298090
+Wrist                   1.074219
+Shoulder to shoulder    1.959388
+
+Mean: 3.0025876
+
+BoMN+Side - testB
+
+Chest                   7.509659
+Waist                   8.547660
+Pelvis                  6.493800
+Bicep                   2.539605
+Thigh                   3.937717
+Shoulder to wrist       2.500919
+Leg                     3.908118
+Calf                    2.637143
+Wrist                   1.209674
+Shoulder to shoulder    2.103087
+
+
+Mean: 4.1387386
+
+BoMN+Side - A+B
+
+Chest                   5.781030
+Waist                   6.230489
+Pelvis                  5.007133
+Bicep                   2.379277
+Thigh                   3.416513
+Shoulder to wrist       2.489905
+Leg                     3.771766
+Calf                    2.436381
+Wrist                   1.129468
+Shoulder to shoulder    2.017999
+
+Mean: 3.4659963
