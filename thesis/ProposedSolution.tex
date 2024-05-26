@@ -17,7 +17,7 @@ SURREACT \cite{surreact} is a synthetic dataset built on SMPL model. The main go
 The dataset introduced by ~\cite{super} is an extension of the SURREACT dataset, incorporating the data generation techniques and a custom annotation method. This thesis utilizes a modified version of this dataset. The original dataset comprises 50,000 human scans, meshes, annotations, and other data of subjects in the T-Pose. In contrast, our customized version offers 79,999 frontal and 79,999 lateral images with annotations, featuring subjects in the A-Pose.  They are saved in RGBA format with dimensions of 320x240 without background thus eliminating the need of segmentation. Measurements are saved in .npy file format requiring us to use NumPy~\cite{numpy} to read these values.
 
 \begin{table}
-	\caption[...]{Definition of annotated anthropometric body measurements. Note that the 3D model is expected to capture the human body in the default T-pose, with Y-axis representing the vertical axis, and Z-axis pointing towards the camera.}
+	\caption[...]{Definition of annotated anthropometric body measurements. Note that the 3D model is expected to capture the human body in the default T-pose, with Y-axis representing the vertical axis, and Z-axis pointing towards the camera~\cite{super}.}
 	\label{tab:cas}
 	\begin{center}
 		\footnotesize

@@ -69,6 +69,22 @@ E.~Tzeng, J.~Hoffman, N.~Zhang, K.~Saenko, and T.~Darrell, ``Deep domain
   confusion: Maximizing for domain invariance,'' {\em arXiv preprint
   arXiv:1412.3474}, 2014.
 
+\bibitem{hybridMethod}
+J.~Hoffman, E.~Tzeng, T.~Park, J.-Y. Zhu, P.~Isola, K.~Saenko, A.~Efros, and
+  T.~Darrell, ``Cycada: Cycle-consistent adversarial domain adaptation,'' in
+  {\em International conference on machine learning}, pp.~1989--1998, Pmlr,
+  2018.
+
+\bibitem{synthDataRobust}
+J.~Tremblay, A.~Prakash, D.~Acuna, M.~Brophy, V.~Jampani, C.~Anil, T.~To,
+  E.~Cameracci, S.~Boochoon, and S.~Birchfield, ``Training deep networks with
+  synthetic data: Bridging the reality gap by domain randomization,'' {\em
+  CoRR}, vol.~abs/1804.06516, 2018.
+
+\bibitem{synthDataReview}
+Y.~Lu, M.~Shen, H.~Wang, X.~Wang, C.~van Rechem, T.~Fu, and W.~Wei, ``Machine
+  learning for synthetic data generation: A review,'' 2024.
+
 \bibitem{source}
 Y.~G. Tejeda and H.~A. Mayer, ``A neural anthropometer learning from body
   dimensions computed on human 3d meshes,'' {\em 2021 IEEE Symposium Series on

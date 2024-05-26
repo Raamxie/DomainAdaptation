@@ -13,12 +13,22 @@ The legacy of Quetelet's work highlights the important epistemic challenges that
 Since the 18th century, the military began employing anthropometric measurements, primarily focusing on stature, to identify suitable candidates~\cite{anthrohistory}.
 ...
 \section{Pose Estimation}
-Pose estimation is a computer vision task that involves detecting and locating key points on objects or persons in images or videos. These key points correspond to specific body parts or landmarks, such as joints. The goal is to accurately determine the spatial position and orientation (pose) of the person within the image or video frame. Pose estimation has various applications, including human-computer interaction, gesture recognition, action recognition, augmented reality, and robotics. It's a fundamental technology that enables machines to understand and interact with the physical world more intuitively.
+Pose estimation is a computer vision task that involves detecting and locating key points on objects or persons in images or videos. These key points correspond to specific body parts or landmarks, such as joints. The goal is to accurately determine the spatial position and orientation (pose) of the person within the image or video frame. Pose estimation has various applications, including human-computer interaction, gesture recognition, action recognition, augmented reality, and robotics. It's a fundamental technology that enables machines to understand and interact with the physical world more intuitively. 
+
+
+
+
+
+
+
 
 \section{Domain Adaptation}
 When training a machine learning model, such as a neural network, it is crucial for the performance of the model that the training and testing data are similar and follow the same distribution~\cite{domainAdaptation}. However, this condition is often not met. One reason for this is the limited amount of training data, as demonstrated in this thesis. Another reason is the slight differences between the test data and the data the network was trained on. For instance, this can occur with medical devices where output devices may have varying colour representations. Considering factors like time complexity and data availability, domain adaptation can be an optimal solution to address these discrepancies.
 
-Domain adaptation is a type of transfer learning, used to mitigate domain shift between source (training data) and target (data used for testing) domain. Multiple approaches have been developed to address this issue:
+Domain adaptation is a type of transfer learning, used to mitigate domain shift between source (training data) and target (data used for testing) domain.  The assumption behind domain adaptation is, that there exists a difference in domains (source and target), but not in the task. Furthermore, the domains should not be too different and should have similar probability distributions. These limitations impact the performance, up to point where network's performance may be worse than before applying domain adaptation if used incorrectly. On the other hand, there are multiple advantages to using domain adaptation. For example, the cost of collecting and labelling new data can be mitigated. In addition, the resulting network is able to generalise better on the target domain. Multiple domain adaptation approaches have been developed to address this issue:
+
+
+
 
 \subsection{Instance-Based Methods}
  Instance-based methods reweigh or select instances from the source domain to better match the target domain's distribution. One of the notable approaches, Kernel Mean Matching~\cite{instanceMethod} (or KMM for short),  aims to adjust the distribution of the source domain by assigning weights to source instances. This process minimizes the difference between the  source and target distributions in a high-dimensional feature space.
@@ -33,6 +43,32 @@ Domain adaptation is a type of transfer learning, used to mitigate domain shift 
 
 \subsection{Hybrid Methods}
 Hybrid methods integrate multiple adaptation strategies to leverage their complementary strengths. CyCADA (Cycle-Consistent Adversarial Domain Adaptation)~\cite{hybridMethod} combines adversarial training, cycle-consistency, and feature alignment. CyCADA uses generative adversarial networks (GANs) to translate images from the source domain to the target domain and vice versa, ensuring that the translations are cycle-consistent. This approach helps align the feature distributions while preserving the semantic content, leading to improved adaptation performance.
+
+CyCADA uses principles proposed by CycleGAN~\cite{CycleGAN}. Firstly, it employs a generators and discriminators to create cycle consistency. The generators are used to map images from the source domain to the target domain and then back to the original domain.
+
+
+
+
+
+
+
+
+
+
+\section{Data synthesis}
+Neural networks have caused a shift in task solving in numerous fields. These tasks can be rather complex and require a large quantity of quality prepared datasets. To create such dataset, the data has to be collected and further correctly labelled. This copious task is however not so simple. There are many obstacles that have to be overcome to create usable dataset, of which some are:
+
+\paragraph{Cost} Creating datasets can be expensive as they have to be large, often requiring multiple workers to collect and label data. In some cases special devices and environment may be required to be able to obtain such data, which further increases the cost.
+\paragraph{Time complexity} As the type of data vary from task to task, the data may be complicated to obtain, such as taking photographs in different regions or measuring values using complex machinery or many others. The data collection is, however, only half of the task. The other half consists of correctly labelling the data. Depending upon the task, it can sometimes require professionals to assess the data.
+\paragraph{Privacy} In many medical applications the task requires personal data to make correct predictions. This raises concerns about private information leaking and thus the data has to be dealt with in way it follows all privacy regulations. Moreover, there must be enough willing patients to be able to procure such dataset, which can raise the monetary cost of such dataset. Medicine is not the only field in which personal information may be required to create suitable dataset.
+\paragraph{Robustness} In order for the network to be able to correctly generalise, the dataset should be as general as is possible, including extreme and unusual cases as well. If this is not the case, the network may struggle with such cases or can develop a bias to the most common example. This is often the most complicated task, and it is rarely able to fully contain the whole spectrum.
+\paragraph{Data availability} Not all data is available all the time and thus obtaining can be impossible at that specific time. Most commonly this issue rises when the subject of the dataset is rare (for example certain illnesses or animals etc.) or is currently not available (wrong season or not appropriate conditions).
+
+\subsection{Synthetic data}
+To counteract these obstacles, some data can be created synthetically. This type of data is artificially generated instead of collected manually. The generation is based on models and algorithms which aim to create samples that are adjusted to meet specific requirements, but also contain features and variation the real data may be missing. The main aim of this data is to make the network more robust, helping it to be precise even in situations that were not included in the real data \cite{synthDataRobust}. Other than better precision, generating data can be far less expensive than collecting it. 
+
+There are currently multiple approaches that are used for generation of synthetic data~\cite{synthDataReview}. We will present some methods that could be used with issue
+
 
 \section{Neural Anthropometer}
 An important article is the~\cite{source} which proposes a method to tackle this task. Its Neural Anthropometer provides a valuable approach which will we use as backbone our convolutional neural network architecture. We do not need everything used in this article as we already have annotated synthetic dataset provided by~\cite{super}. To keep the network as small as possible due to resource consumption and training difficulty increase with size. The proposed architecture starts with a binary image silhouette input. This is then processed by a convolutional layer. Number of channels was based on number of values on output. The output tensor is then passed through ReLU~\cite{relu} along with batch optimization. Subsequently, a max pooling layer is used followed by a  convolutional layer. The output is then once again processed by max pooling layer with configuration same as before.  The result is then flattened to a tensor which is passed to a fully connected layer and a ReLU. As the last layer a regressor is used to provide the measurements estimation.

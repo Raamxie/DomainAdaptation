@@ -21,23 +21,30 @@
 \contentsline {section}{\numberline {2.2}Pose Estimation}{12}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Domain Adaptation}{12}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Instance-Based Methods}{12}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Feature-Based Methods}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Feature-Based Methods}{13}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Parameter-Based Methods}{13}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Hybrid Methods}{13}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Neural Anthropometer}{13}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Proposed solution}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problem specification}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Obstacles}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Datasets}{16}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}SURREACT}{16}{subsection.3.3.1}%
-\contentsline {subsubsection}{Description}{16}{section*.15}%
-\contentsline {subsection}{\numberline {3.3.2}BodyM}{16}{subsection.3.3.2}%
-\contentsline {subsubsection}{Description}{16}{section*.16}%
-\contentsline {subsubsection}{Measurements}{16}{section*.17}%
-\contentsline {subsubsection}{Issues}{18}{section*.18}%
-\contentsline {chapter}{\numberline {4}Implementation}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Used software}{19}{section.4.1}%
-\contentsline {subsubsection}{Keras}{19}{section*.19}%
-\contentsline {subsubsection}{OpenCV }{19}{section*.20}%
-\contentsline {chapter}{\numberline {5}Results}{21}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}%
+\contentsline {section}{\numberline {2.4}Data synthesis}{14}{section.2.4}%
+\contentsline {paragraph}{Cost}{14}{section*.15}%
+\contentsline {paragraph}{Time complexity}{14}{section*.16}%
+\contentsline {paragraph}{Privacy}{14}{section*.17}%
+\contentsline {paragraph}{Robustness}{14}{section*.18}%
+\contentsline {paragraph}{Data availability}{14}{section*.19}%
+\contentsline {subsection}{\numberline {2.4.1}Synthetic data}{15}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Neural Anthropometer}{15}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Proposed solution}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem specification}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Obstacles}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Datasets}{18}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}SURREACT}{18}{subsection.3.3.1}%
+\contentsline {subsubsection}{Description}{18}{section*.20}%
+\contentsline {subsection}{\numberline {3.3.2}BodyM}{18}{subsection.3.3.2}%
+\contentsline {subsubsection}{Description}{18}{section*.21}%
+\contentsline {subsubsection}{Measurements}{18}{section*.22}%
+\contentsline {subsubsection}{Issues}{20}{section*.23}%
+\contentsline {chapter}{\numberline {4}Implementation}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Used software}{21}{section.4.1}%
+\contentsline {subsubsection}{Keras}{21}{section*.24}%
+\contentsline {subsubsection}{OpenCV }{21}{section*.25}%
+\contentsline {chapter}{\numberline {5}Results}{23}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}%
