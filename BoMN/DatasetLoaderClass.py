@@ -16,7 +16,7 @@ class DatasetLoader(Sequence):
         self.side = side
         self.height = height
 
-        super().__init__(workers=2, use_multiprocessing=True)
+        super().__init__(workers=5, use_multiprocessing=True)
         self.IDs = []
         self._load_data(samples, data_location, image_location, dataset)
         self.on_epoch_end()
@@ -45,7 +45,7 @@ class DatasetLoader(Sequence):
     def __getitem__(self, index):
         X = np.empty(shape=(self.batch_size, 320, 240))
         if self.side:
-            X2 = np.empty(shape=(self.batch_size, 320, 240))
+            X = np.empty(shape=(self.batch_size, 320, 240, 2))
         y = {
             'chest_out': [],
             'waist_out': [],
@@ -67,11 +67,9 @@ class DatasetLoader(Sequence):
             current_measurement = sample_properties[3]
             current_filename = f"{self.prefix}{sample_properties[2]:06d}.png"
 
-            X[i,] = cv2.imread(os.path.join(sample_properties[0] + "images_front/" + current_filename),
-                               cv2.IMREAD_GRAYSCALE)
+            X[i, :, :, 0] = cv2.imread(os.path.join(sample_properties[0] + "images_front/" + current_filename), cv2.IMREAD_GRAYSCALE)
             if self.side:
-                X2[i,] = cv2.imread(os.path.join(sample_properties[0] + "images_side/" + current_filename),
-                                    cv2.IMREAD_GRAYSCALE)
+                X[i, :, :, 1] = cv2.imread(os.path.join(sample_properties[0] + "images_side/" + current_filename), cv2.IMREAD_GRAYSCALE)
 
             if sample_properties[1] == "Surreact":
                 y['chest_out'].append([current_measurement[0]])
@@ -104,14 +102,9 @@ class DatasetLoader(Sequence):
         for key, value in y.items():
             y[key] = np.array(value)
 
-        if self.side and self.height:
-            height = np.array(height)
-            return [X, X2, height], y
         if self.height:
             height = np.array(height)
             return [X, height], y
-        if self.side:
-            return [X, X2], y
 
         return X, y
 

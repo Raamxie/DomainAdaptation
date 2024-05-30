@@ -15,9 +15,29 @@ A.~Haleem, M.~Javaid, R.~P. Singh, S.~Rab, R.~Suman, L.~Kumar, and I.~H. Khan,
   International Journal of Cognitive Computing in Engineering}, vol.~3,
   pp.~161--171, 2022.
 
+\bibitem{structuredLight}
+J.~Salvi, S.~Fernandez, T.~Pribanic, and X.~Llado, ``A state of the art in
+  structured light patterns for surface profilometry,'' {\em Pattern
+  recognition}, vol.~43, no.~8, pp.~2666--2680, 2010.
+
 \bibitem{loss}
 J.~Terven, D.~M. Cordova-Esparza, A.~Ramirez-Pedraza, and E.~A. Chavez-Urbiola,
   ``Loss functions and metrics in deep learning,'' 2023.
+
+\bibitem{backprop}
+D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams, ``Learning internal
+  representations by error propagation, parallel distributed processing,
+  explorations in the microstructure of cognition, ed. de rumelhart and j.
+  mcclelland. vol. 1. 1986,'' {\em Biometrika}, vol.~71, pp.~599--607, 1986.
+
+\bibitem{gradientDescent}
+S.~Ruder, ``An overview of gradient descent optimization algorithms,'' {\em
+  arXiv preprint arXiv:1609.04747}, 2016.
+
+\bibitem{gradientDescentExplain}
+S.~H. Haji and A.~M. Abdulazeez, ``Comparison of optimization techniques based
+  on gradient descent algorithm: A review,'' {\em PalArch's Journal of
+  Archaeology of Egypt/Egyptology}, vol.~18, no.~4, pp.~2715--2743, 2021.
 
 \bibitem{convolutional}
 K.~O'Shea and R.~Nash, ``An introduction to convolutional neural networks,''
@@ -32,19 +52,204 @@ V.~Nair and G.~E. Hinton, ``Rectified linear units improve restricted boltzmann
   machines,'' in {\em Proceedings of the 27th international conference on
   machine learning (ICML-10)}, pp.~807--814, 2010.
 
-\bibitem{adolphe}
-D.~Tafreshi, ``Adolphe quetelet and the legacy of the “average man” in
-  psychology.,'' {\em History of Psychology}, vol.~25, no.~1, p.~34, 2022.
+\bibitem{QUETELET}
+G.~Eknoyan, ``Adolphe quetelet (1796--1874)—the average man and indices of
+  obesity,'' 2008.
 
-\bibitem{anthrohistory}
-S.~Ulijaszek and J.~Komlos, ``12 from a history of anthropometry to
-  anthropometric history,'' {\em Human variation: From the laboratory to the
-  field}, p.~183, 2010.
+\bibitem{bmiUsage}
+G.~A. Bray, ``Beyond bmi,'' {\em Nutrients}, vol.~15, no.~10, p.~2254, 2023.
+
+\bibitem{sus}
+S.~A. Cole {\em et~al.}, {\em Suspect identities: A history of fingerprinting
+  and criminal identification}.
+\newblock Harvard University Press, 2009.
+
+\bibitem{anthroHist2}
+J.~Wang, J.~Thornton, S.~Kolesnik, and R.~Pierson~Jr, ``Anthropometry in body
+  composition: an overview,'' {\em Annals of the New York Academy of Sciences},
+  vol.~904, no.~1, pp.~317--326, 2000.
+
+\bibitem{nutrition}
+A.~Ardhiansyah and A.~Nasution, ``Pose-independent digital anthropometry based
+  on perpendicular two-dimensional imagery,'' in {\em 2023 8th International
+  Conference on Instrumentation, Control, and Automation (ICA)}, pp.~247--252,
+  2023.
+
+\bibitem{treedys}
+``Treedy's website.''
+
+\bibitem{bmiPredict}
+M.~L. Pollock, E.~E. Laughridge, B.~Coleman, A.~Linnerud, and A.~Jackson,
+  ``Prediction of body density in young and middle-aged women,'' {\em Journal
+  of Applied Physiology}, vol.~38, no.~4, pp.~745--749, 1975.
+
+\bibitem{bmiHW}
+D.~D. Bois and E.~D. Bois, ``A height-weight formula to estimate the surface
+  area of man,'' {\em Proceedings of the Society for Experimental Biology and
+  Medicine}, vol.~13, no.~4, pp.~77--78, 1916.
+
+\bibitem{bmi}
+D.~Bois, ``A formula to estimate the approximate surface area if height and
+  weight be known. 1916,'' {\em Nutrition}, vol.~5, p.~303, 1989.
+
+\bibitem{bodyInertia}
+E.~P. Hanavan {\em et~al.}, {\em A mathematical model of the human body},
+  vol.~32.
+\newblock Aerospace Medical Research Laboratories, Aerospace Medical Division,
+  Air~…, 1964.
+
+\bibitem{bodyInertia2}
+R.~Contini, R.~J. Drillis, and M.~Bluestein, ``Determination of body segment
+  parameters,'' {\em Human Factors}, vol.~5, no.~5, pp.~493--504, 1963.
+
+\bibitem{bodyMotion}
+L.~Tesio and V.~Rota, ``The motion of body center of mass during walking: a
+  review oriented to clinical applications,'' {\em Frontiers in neurology},
+  vol.~10, p.~460283, 2019.
+
+\bibitem{skeletonHeight}
+D.~Thomas, ``Methods of estimating the height from parts of the skeleton,''
+  {\em Medical Record (1866-1922)}, vol.~46, no.~10, p.~293, 1894.
+
+\bibitem{brainStature}
+J.~Marshall, ``Relations between the weight of the brain and its parts, and the
+  stature and mass of the body, in man,'' {\em Journal of Anatomy and
+  Physiology}, vol.~26, no.~Pt 4, p.~445, 1892.
+
+\bibitem{femurStature}
+J.~Beddoe, ``On the stature of the older races of england, as estimated from
+  the long bones,'' {\em The Journal of the Anthropological Institute of Great
+  Britain and Ireland}, vol.~17, pp.~201--209, 1888.
+
+\bibitem{statureHistory}
+K.~Pearson, ``Iv. mathematical contributions to the theory of evolution.—v.
+  on the reconstruction of the stature of prehistoric races,'' {\em
+  Philosophical Transactions of the Royal Society of London. Series A,
+  Containing Papers of a Mathematical or Physical Character}, no.~192,
+  pp.~169--244, 1899.
+
+\bibitem{regressionStature}
+L.~W. Konigsberg, S.~M. Hens, L.~M. Jantz, and W.~L. Jungers, ``Stature
+  estimation and calibration: Bayesian and maximum likelihood perspectives in
+  physical anthropology,'' {\em American Journal of Physical Anthropology: The
+  Official Publication of the American Association of Physical
+  Anthropologists}, vol.~107, no.~S27, pp.~65--92, 1998.
+
+\bibitem{regressionStudents}
+L.~Madrigal, {\em Statistics for anthropology}.
+\newblock Cambridge University Press, 2012.
+
+\bibitem{regressionBig}
+M.~Trotter and G.~C. Gleser, ``Estimation of stature from long bones of
+  american whites and negroes,'' {\em American journal of physical
+  anthropology}, vol.~10, no.~4, pp.~463--514, 1952.
+
+\bibitem{statureComparisons}
+E.~T. Brandt, ``Stature wars: Which stature estimation methods are most
+  applicable to modern populations?,'' 2009.
+
+\bibitem{regressionBulk}
+R.~Verma, K.~Krishan, D.~Rani, A.~Kumar, and V.~Sharma, ``Stature estimation in
+  forensic examinations using regression analysis: a likelihood ratio
+  perspective,'' {\em Forensic Science International: Reports}, vol.~2,
+  p.~100069, 2020.
+
+\bibitem{regressionHandFoot}
+K.~Krishan, T.~Kanchan, and A.~Sharma, ``Multiplication factor versus
+  regression analysis in stature estimation from hand and foot dimensions,''
+  {\em Journal of forensic and legal medicine}, vol.~19, no.~4, pp.~211--214,
+  2012.
+
+\bibitem{regressionHand}
+M.~Vukotic, ``Body height and its estimation utilizing hand length measurements
+  in montenegrin: National survey..,'' {\em International Journal of
+  Morphology}, vol.~40, no.~2, 2022.
+
+\bibitem{handNew}
+P.~Indah, A.~Sari, M.~Suryoputro, and H.~Purnomo, ``Prediction of elderly
+  anthropometric dimension based on age, gender, origin, and body mass index,''
+  in {\em IOP Conference Series: Materials Science and Engineering}, vol.~105,
+  p.~012024, IOP Publishing, 2016.
+
+\bibitem{handNew2}
+O.~Miguel-Hurtado, R.~Guest, S.~V. Stevenage, G.~J. Neil, and S.~Black,
+  ``Comparing machine learning classifiers and linear/logistic regression to
+  explore the relationship between hand dimensions and demographic
+  characteristics,'' {\em PloS one}, vol.~11, no.~11, p.~e0165521, 2016.
+
+\bibitem{regressionFoot}
+E.~T. Brandt, ``Stature wars: Which stature estimation methods are most
+  applicable to modern populations?,'' 2009.
+
+\bibitem{regressionBodyFat}
+M.~R. Salamat, A.~Shanei, A.~H. Salamat, M.~Khoshhali, and M.~Asgari,
+  ``Anthropometric predictive equations for estimating body composition,'' {\em
+  Advanced biomedical research}, vol.~4, no.~1, p.~34, 2015.
+
+\bibitem{estimationImages}
+C.~BenAbdelkader and Y.~Yacoob, ``Statistical body height estimation from a
+  single image,'' in {\em 2008 8th IEEE international conference on automatic
+  face \& gesture recognition}, pp.~1--7, IEEE, 2008.
+
+\bibitem{image}
+C.~Barron and I.~A. Kakadiaris, ``Estimating anthropometry and pose from a
+  single image,'' in {\em Proceedings IEEE Conference on Computer Vision and
+  Pattern Recognition. CVPR 2000 (Cat. No. PR00662)}, vol.~1, pp.~669--676,
+  IEEE, 2000.
+
+\bibitem{image2}
+D.~M. Hansen, B.~K. Mortensen, P.~Duizer, J.~R. Andersen, and T.~B. Moeslund,
+  ``Automatic annotation of humans in surveillance video,'' in {\em Fourth
+  Canadian Conference on Computer and Robot Vision (CRV'07)}, pp.~473--480,
+  IEEE, 2007.
+
+\bibitem{image2DMeasurements}
+P.~Meunier and S.~Yin, ``Performance of a 2d image-based anthropometric
+  measurement and clothing sizing system,'' {\em Applied ergonomics}, vol.~31,
+  no.~5, pp.~445--451, 2000.
+
+\bibitem{image2DMeasurements2}
+P.~C.-Y. Hung, C.~P. Witana, and R.~S. Goonetilleke, ``Anthropometric
+  measurements from photographic images,'' {\em Computing Systems}, vol.~29,
+  no.~764-769, p.~3, 2004.
+
+\bibitem{images}
+Y.~Liu, A.~Sowmya, and H.~Khamis, ``Single camera multi-view anthropometric
+  measurement of human height and mid-upper arm circumference using linear
+  regression,'' {\em PloS one}, vol.~13, no.~4, p.~e0195600, 2018.
+
+\bibitem{pointcloudProcess}
+X.~Li and S.~Iyengar, ``On computing mapping of 3d objects: A survey,'' {\em
+  ACM Computing Surveys (CSUR)}, vol.~47, no.~2, pp.~1--45, 2014.
+
+\bibitem{digitalAnthro}
+S.~B. Heymsfield, B.~Bourgeois, B.~K. Ng, M.~J. Sommer, X.~Li, and J.~A.
+  Shepherd, ``Digital anthropometry: a critical review,'' {\em European journal
+  of clinical nutrition}, vol.~72, no.~5, pp.~680--687, 2018.
+
+\bibitem{3Dextraction}
+R.~P. Pargas, N.~J. Staples, and J.~S. Davis, ``Automatic measurement
+  extraction for apparel from a three-dimensional body scan,'' {\em Optics and
+  Lasers in Engineering}, vol.~28, no.~2, pp.~157--172, 1997.
+
+\bibitem{kinect}
+B.~Tomi, M.~S. Sunar, F.~Mohamed, T.~Saitoh, M.~K.~B. Mokhtar, and S.~M. Luis,
+  ``Dynamic body circumference measurement technique for a more realistic
+  virtual fitting room experience,'' in {\em 2018 IEEE Conference on
+  e-Learning, e-Management and e-Services (IC3e)}, pp.~56--60, IEEE, 2018.
+
+\bibitem{pointcloudNN}
+N.~N. Kaashki, P.~Hu, and A.~Munteanu, ``Anet: A deep neural network for
+  automatic 3d anthropometric measurement extraction,'' {\em IEEE Transactions
+  on Multimedia}, vol.~25, pp.~831--844, 2021.
 
 \bibitem{domainAdaptation}
 A.~Farahani, S.~Voghoei, K.~Rasheed, and H.~R. Arabnia, ``A brief review of
   domain adaptation,'' {\em Advances in data science and information
   engineering: proceedings from ICDATA 2020 and IKE 2020}, pp.~877--894, 2021.
+
+\bibitem{domainAdaptationGod}
+L.~Zhang and X.~Gao, ``Transfer adaptation learning: A decade survey,'' 2020.
 
 \bibitem{instanceMethod}
 J.~Huang, A.~Gretton, K.~Borgwardt, B.~Sch\"{o}lkopf, and A.~Smola,
@@ -64,16 +269,20 @@ Y.~Ganin and V.~Lempitsky, ``Unsupervised domain adaptation by
   of Machine Learning Research}, (Lille, France), pp.~1180--1189, PMLR, 07--09
   Jul 2015.
 
-\bibitem{parameterMethod}
-E.~Tzeng, J.~Hoffman, N.~Zhang, K.~Saenko, and T.~Darrell, ``Deep domain
-  confusion: Maximizing for domain invariance,'' {\em arXiv preprint
-  arXiv:1412.3474}, 2014.
+\bibitem{asvm}
+J.~Yang, R.~Yan, and A.~G. Hauptmann, ``Cross-domain video concept detection
+  using adaptive svms,'' in {\em Proceedings of the 15th ACM international
+  conference on Multimedia}, pp.~188--197, 2007.
 
 \bibitem{hybridMethod}
 J.~Hoffman, E.~Tzeng, T.~Park, J.-Y. Zhu, P.~Isola, K.~Saenko, A.~Efros, and
   T.~Darrell, ``Cycada: Cycle-consistent adversarial domain adaptation,'' in
   {\em International conference on machine learning}, pp.~1989--1998, Pmlr,
   2018.
+
+\bibitem{CycleGAN}
+J.-Y. Zhu, T.~Park, P.~Isola, and A.~A. Efros, ``Unpaired image-to-image
+  translation using cycle-consistent adversarial networks,'' 2020.
 
 \bibitem{synthDataRobust}
 J.~Tremblay, A.~Prakash, D.~Acuna, M.~Brophy, V.~Jampani, C.~Anil, T.~To,
@@ -84,6 +293,10 @@ J.~Tremblay, A.~Prakash, D.~Acuna, M.~Brophy, V.~Jampani, C.~Anil, T.~To,
 \bibitem{synthDataReview}
 Y.~Lu, M.~Shen, H.~Wang, X.~Wang, C.~van Rechem, T.~Fu, and W.~Wei, ``Machine
   learning for synthetic data generation: A review,'' 2024.
+
+\bibitem{mnasnet}
+M.~Tan, B.~Chen, R.~Pang, V.~Vasudevan, M.~Sandler, A.~Howard, and Q.~V. Le,
+  ``Mnasnet: Platform-aware neural architecture search for mobile,'' 2019.
 
 \bibitem{source}
 Y.~G. Tejeda and H.~A. Mayer, ``A neural anthropometer learning from body
