@@ -284,15 +284,47 @@ J.~Hoffman, E.~Tzeng, T.~Park, J.-Y. Zhu, P.~Isola, K.~Saenko, A.~Efros, and
 J.-Y. Zhu, T.~Park, P.~Isola, and A.~A. Efros, ``Unpaired image-to-image
   translation using cycle-consistent adversarial networks,'' 2020.
 
+\bibitem{synthDataReview}
+Y.~Lu, M.~Shen, H.~Wang, X.~Wang, C.~van Rechem, T.~Fu, and W.~Wei, ``Machine
+  learning for synthetic data generation: A review,'' 2024.
+
 \bibitem{synthDataRobust}
 J.~Tremblay, A.~Prakash, D.~Acuna, M.~Brophy, V.~Jampani, C.~Anil, T.~To,
   E.~Cameracci, S.~Boochoon, and S.~Birchfield, ``Training deep networks with
   synthetic data: Bridging the reality gap by domain randomization,'' {\em
   CoRR}, vol.~abs/1804.06516, 2018.
 
-\bibitem{synthDataReview}
-Y.~Lu, M.~Shen, H.~Wang, X.~Wang, C.~van Rechem, T.~Fu, and W.~Wei, ``Machine
-  learning for synthetic data generation: A review,'' 2024.
+\bibitem{synthData}
+A.~Figueira and B.~Vaz, ``Survey on synthetic data generation, evaluation
+  methods and gans,'' {\em Mathematics}, vol.~10, no.~15, p.~2733, 2022.
+
+\bibitem{synthEasy}
+C.~Shorten and T.~M. Khoshgoftaar, ``A survey on image data augmentation for
+  deep learning,'' {\em Journal of big data}, vol.~6, no.~1, pp.~1--48, 2019.
+
+\bibitem{syntheticBasic}
+L.~Taylor and G.~Nitschke, ``Improving deep learning with generic data
+  augmentation,'' in {\em 2018 IEEE symposium series on computational
+  intelligence (SSCI)}, pp.~1542--1547, IEEE, 2018.
+
+\bibitem{combineImages}
+H.~Inoue, ``Data augmentation by pairing samples for images classification,''
+  {\em arXiv preprint arXiv:1801.02929}, 2018.
+
+\bibitem{combineImprove}
+C.~Summers and M.~J. Dinneen, ``Improved mixed-example data augmentation,'' in
+  {\em 2019 IEEE winter conference on applications of computer vision (WACV)},
+  pp.~1262--1270, IEEE, 2019.
+
+\bibitem{erasing}
+Z.~Zhong, L.~Zheng, G.~Kang, S.~Li, and Y.~Yang, ``Random erasing data
+  augmentation,'' in {\em Proceedings of the AAAI conference on artificial
+  intelligence}, vol.~34, pp.~13001--13008, 2020.
+
+\bibitem{smote}
+N.~V. Chawla, K.~W. Bowyer, L.~O. Hall, and W.~P. Kegelmeyer, ``Smote:
+  synthetic minority over-sampling technique,'' {\em Journal of artificial
+  intelligence research}, vol.~16, pp.~321--357, 2002.
 
 \bibitem{mnasnet}
 M.~Tan, B.~Chen, R.~Pang, V.~Vasudevan, M.~Sandler, A.~Howard, and Q.~V. Le,

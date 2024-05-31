@@ -38,20 +38,20 @@
 \contentsline {paragraph}{Availability}{17}{section*.20}%
 \contentsline {subsection}{\numberline {2.4.1}Synthetic Data}{18}{subsection.2.4.1}%
 \contentsline {section}{\numberline {2.5}BMnet}{18}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Neural Anthropometer}{18}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Proposed solution}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problem specification}{19}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Obstacles}{19}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Datasets}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}SURREACT}{20}{subsection.3.3.1}%
-\contentsline {subsubsection}{Description}{20}{section*.21}%
-\contentsline {subsection}{\numberline {3.3.2}BodyM}{20}{subsection.3.3.2}%
-\contentsline {subsubsection}{Description}{20}{section*.22}%
-\contentsline {subsubsection}{Measurements}{20}{section*.23}%
-\contentsline {subsubsection}{Issues}{22}{section*.24}%
-\contentsline {chapter}{\numberline {4}Implementation}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Used software}{23}{section.4.1}%
-\contentsline {subsubsection}{Keras}{23}{section*.25}%
-\contentsline {subsubsection}{OpenCV }{23}{section*.26}%
-\contentsline {chapter}{\numberline {5}Results}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{27}{chapter.6}%
+\contentsline {section}{\numberline {2.6}Neural Anthropometer}{19}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Proposed solution}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problem specification}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Obstacles}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Datasets}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}SURREACT}{22}{subsection.3.3.1}%
+\contentsline {subsubsection}{Description}{22}{section*.21}%
+\contentsline {subsection}{\numberline {3.3.2}BodyM}{22}{subsection.3.3.2}%
+\contentsline {subsubsection}{Description}{22}{section*.22}%
+\contentsline {subsubsection}{Measurements}{22}{section*.23}%
+\contentsline {subsubsection}{Issues}{24}{section*.24}%
+\contentsline {chapter}{\numberline {4}Implementation}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Used software}{25}{section.4.1}%
+\contentsline {subsubsection}{Keras}{25}{section*.25}%
+\contentsline {subsubsection}{OpenCV }{25}{section*.26}%
+\contentsline {chapter}{\numberline {5}Results}{27}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}%

@@ -8,46 +8,47 @@ Warning--can't use both volume and number fields in bodyInertia
 Warning--empty journal in statureComparisons
 Warning--can't use both volume and number fields in handNew
 Warning--empty journal in regressionFoot
+Warning--can't use both volume and number fields in erasing
 Warning--empty journal in super
-You've used 66 entries,
+You've used 73 entries,
             1876 wiz_defined-function locations,
-            908 strings with 16793 characters,
-and the built_in function-call counts, 18280 in all, are:
-= -- 1744
-> -- 830
+            950 strings with 17945 characters,
+and the built_in function-call counts, 20529 in all, are:
+= -- 1979
+> -- 897
 < -- 0
-+ -- 302
-- -- 236
-* -- 1295
-:= -- 2567
-add.period$ -- 68
-call.type$ -- 66
-change.case$ -- 63
++ -- 327
+- -- 254
+* -- 1445
+:= -- 2856
+add.period$ -- 75
+call.type$ -- 73
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 932
-empty$ -- 1699
-format.name$ -- 236
-if$ -- 4461
+cite$ -- 79
+duplicate$ -- 1058
+empty$ -- 1916
+format.name$ -- 254
+if$ -- 5022
 int.to.chr$ -- 0
-int.to.str$ -- 66
-missing$ -- 58
-newline$ -- 204
-num.names$ -- 69
-pop$ -- 254
+int.to.str$ -- 73
+missing$ -- 65
+newline$ -- 225
+num.names$ -- 76
+pop$ -- 280
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 693
+skip$ -- 791
 stack$ -- 0
-substring$ -- 1089
-swap$ -- 403
+substring$ -- 1276
+swap$ -- 463
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 171
-width$ -- 68
-write$ -- 629
-(There were 6 warnings)
+warning$ -- 6
+while$ -- 194
+width$ -- 75
+write$ -- 699
+(There were 7 warnings)
