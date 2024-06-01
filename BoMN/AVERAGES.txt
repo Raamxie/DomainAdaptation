@@ -62,3 +62,49 @@ Shoulder to shoulder     9.756857
 Mean: 7.3832994
 
 
+
+
+
+
+Chest                   2.664831
+Waist                   2.793806
+Pelvis                  2.123273
+Bicep                   1.318927
+Thigh                   1.689868
+Shoulder to wrist       0.944051
+Leg                     1.338805
+Calf                    1.183252
+Wrist                   0.668813
+Shoulder to shoulder    0.896125
+dtype: float32
+1.5621752
+
+
+
+Chest                   10.796069
+Waist                   12.233193
+Pelvis                   9.850460
+Bicep                    3.925130
+Thigh                    5.986379
+Shoulder to wrist        1.489775
+Leg                      2.316119
+Calf                     3.372875
+Wrist                    1.165817
+Shoulder to shoulder     1.991736
+dtype: float32
+5.3127556\
+
+
+Chest                   5.981369
+Waist                   6.643906
+Pelvis                  5.275013
+Bicep                   2.381937
+Thigh                   3.442314
+Shoulder to wrist       1.166638
+Leg                     1.737428
+Calf                    2.076348
+Wrist                   0.871529
+Shoulder to shoulder    1.342999
+dtype: float32
+3.091948
+

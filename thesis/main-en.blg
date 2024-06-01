@@ -3,52 +3,68 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main-en.aux
 The style file: ieeetr.bst
 Database file #1: literatura.bib
+"(" immediately follows a field name---line 396 of file literatura.bib
+ :  title={Suspect identities: A history of fingerprinting and criminal identification},hourglass_module
+ :                                                                                                      ()
+I'm skipping whatever remains of this entry
+"," immediately follows a field name---line 604 of file literatura.bib
+ :  volume={2},Zhu
+ :                , Jun-Yan, Taesung Park, Phillip Isola, and Alexei A. Efros. "Unpaired image-to-image translation using cycle-consistent adversarial networks." In Proceedings of the IEEE international conference on computer vision, pp. 2223-2232. 2017.
+I'm skipping whatever remains of this entry
+Repeated entry---line 897 of file literatura.bib
+ : @inproceedings{cyclegan
+ :                        ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "stochasticBackpropagation"
+Warning--empty author and editor in sus
+Warning--empty publisher in sus
+Warning--empty year in sus
 Warning--can't use both volume and number fields in bodyInertia
 Warning--empty journal in statureComparisons
+Warning--empty year in regressionBulk
 Warning--can't use both volume and number fields in handNew
 Warning--empty journal in regressionFoot
 Warning--can't use both volume and number fields in erasing
 Warning--empty journal in super
-You've used 73 entries,
+You've used 78 entries,
             1876 wiz_defined-function locations,
-            950 strings with 17945 characters,
-and the built_in function-call counts, 20529 in all, are:
-= -- 1979
-> -- 897
+            973 strings with 18636 characters,
+and the built_in function-call counts, 21914 in all, are:
+= -- 2115
+> -- 945
 < -- 0
-+ -- 327
-- -- 254
-* -- 1445
-:= -- 2856
-add.period$ -- 75
-call.type$ -- 73
-change.case$ -- 70
++ -- 345
+- -- 267
+* -- 1559
+:= -- 3043
+add.period$ -- 79
+call.type$ -- 78
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 79
-duplicate$ -- 1058
-empty$ -- 1916
-format.name$ -- 254
-if$ -- 5022
+cite$ -- 88
+duplicate$ -- 1128
+empty$ -- 2053
+format.name$ -- 267
+if$ -- 5351
 int.to.chr$ -- 0
-int.to.str$ -- 73
-missing$ -- 65
-newline$ -- 225
-num.names$ -- 76
-pop$ -- 280
+int.to.str$ -- 78
+missing$ -- 69
+newline$ -- 239
+num.names$ -- 80
+pop$ -- 298
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 791
+skip$ -- 832
 stack$ -- 0
-substring$ -- 1276
-swap$ -- 463
+substring$ -- 1395
+swap$ -- 488
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 194
-width$ -- 75
-write$ -- 699
-(There were 7 warnings)
+warning$ -- 10
+while$ -- 209
+width$ -- 80
+write$ -- 742
+(There were 3 error messages)

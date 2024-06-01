@@ -30,28 +30,28 @@
 \contentsline {subsection}{\numberline {2.3.3}Classifier Adaptation Methods}{16}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Deep Network Adaptation Methods}{16}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Adversarial Adaptation Methods}{16}{subsection.2.3.5}%
-\contentsline {section}{\numberline {2.4}Data Acquisition}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Data Acquisition}{16}{section.2.4}%
 \contentsline {paragraph}{Cost}{17}{section*.16}%
 \contentsline {paragraph}{Time}{17}{section*.17}%
 \contentsline {paragraph}{Privacy}{17}{section*.18}%
 \contentsline {paragraph}{Robustness}{17}{section*.19}%
 \contentsline {paragraph}{Availability}{17}{section*.20}%
-\contentsline {subsection}{\numberline {2.4.1}Synthetic Data}{18}{subsection.2.4.1}%
-\contentsline {section}{\numberline {2.5}BMnet}{18}{section.2.5}%
+\contentsline {subsection}{\numberline {2.4.1}Synthetic Data}{17}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}BMnet}{19}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Neural Anthropometer}{19}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Proposed solution}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problem specification}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Obstacles}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Datasets}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}SURREACT}{22}{subsection.3.3.1}%
-\contentsline {subsubsection}{Description}{22}{section*.21}%
-\contentsline {subsection}{\numberline {3.3.2}BodyM}{22}{subsection.3.3.2}%
-\contentsline {subsubsection}{Description}{22}{section*.22}%
-\contentsline {subsubsection}{Measurements}{22}{section*.23}%
-\contentsline {subsubsection}{Issues}{24}{section*.24}%
-\contentsline {chapter}{\numberline {4}Implementation}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Used software}{25}{section.4.1}%
-\contentsline {subsubsection}{Keras}{25}{section*.25}%
-\contentsline {subsubsection}{OpenCV }{25}{section*.26}%
-\contentsline {chapter}{\numberline {5}Results}{27}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {3}Solution}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Proposed solution}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Obstacles}{21}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Datasets}{21}{subsection.3.1.2}%
+\contentsline {subsubsection}{SURREACT}{22}{section*.21}%
+\contentsline {subsubsection}{BodyM}{22}{section*.22}%
+\contentsline {subsection}{\numberline {3.1.3}Neural Networks}{25}{subsection.3.1.3}%
+\contentsline {subsubsection}{Conv-BoDiEs}{25}{section*.23}%
+\contentsline {subsubsection}{ResNet50V2}{25}{section*.24}%
+\contentsline {subsubsection}{CenterNet}{25}{section*.25}%
+\contentsline {subsection}{\numberline {3.1.4}Used software}{25}{subsection.3.1.4}%
+\contentsline {subsubsection}{Keras}{25}{section*.26}%
+\contentsline {subsubsection}{OpenCV }{25}{section*.27}%
+\contentsline {section}{\numberline {3.2}Implementation}{26}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Results}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}%

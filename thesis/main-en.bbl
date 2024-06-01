@@ -60,9 +60,8 @@ G.~Eknoyan, ``Adolphe quetelet (1796--1874)—the average man and indices of
 G.~A. Bray, ``Beyond bmi,'' {\em Nutrients}, vol.~15, no.~10, p.~2254, 2023.
 
 \bibitem{sus}
-S.~A. Cole {\em et~al.}, {\em Suspect identities: A history of fingerprinting
-  and criminal identification}.
-\newblock Harvard University Press, 2009.
+{\em Suspect identities: A history of fingerprinting and criminal
+  identification}.
 
 \bibitem{anthroHist2}
 J.~Wang, J.~Thornton, S.~Kolesnik, and R.~Pierson~Jr, ``Anthropometry in body
@@ -151,8 +150,7 @@ E.~T. Brandt, ``Stature wars: Which stature estimation methods are most
 \bibitem{regressionBulk}
 R.~Verma, K.~Krishan, D.~Rani, A.~Kumar, and V.~Sharma, ``Stature estimation in
   forensic examinations using regression analysis: a likelihood ratio
-  perspective,'' {\em Forensic Science International: Reports}, vol.~2,
-  p.~100069, 2020.
+  perspective,'' {\em Forensic Science International: Reports}, vol.~2.
 
 \bibitem{regressionHandFoot}
 K.~Krishan, T.~Kanchan, and A.~Sharma, ``Multiplication factor versus
@@ -196,12 +194,6 @@ C.~Barron and I.~A. Kakadiaris, ``Estimating anthropometry and pose from a
   single image,'' in {\em Proceedings IEEE Conference on Computer Vision and
   Pattern Recognition. CVPR 2000 (Cat. No. PR00662)}, vol.~1, pp.~669--676,
   IEEE, 2000.
-
-\bibitem{image2}
-D.~M. Hansen, B.~K. Mortensen, P.~Duizer, J.~R. Andersen, and T.~B. Moeslund,
-  ``Automatic annotation of humans in surveillance video,'' in {\em Fourth
-  Canadian Conference on Computer and Robot Vision (CRV'07)}, pp.~473--480,
-  IEEE, 2007.
 
 \bibitem{image2DMeasurements}
 P.~Meunier and S.~Yin, ``Performance of a 2d image-based anthropometric
@@ -302,6 +294,11 @@ A.~Figueira and B.~Vaz, ``Survey on synthetic data generation, evaluation
 C.~Shorten and T.~M. Khoshgoftaar, ``A survey on image data augmentation for
   deep learning,'' {\em Journal of big data}, vol.~6, no.~1, pp.~1--48, 2019.
 
+\bibitem{fancypca}
+L.~Taylor and G.~Nitschke, ``Improving deep learning with generic data
+  augmentation,'' in {\em 2018 IEEE symposium series on computational
+  intelligence (SSCI)}, pp.~1542--1547, IEEE, 2018.
+
 \bibitem{syntheticBasic}
 L.~Taylor and G.~Nitschke, ``Improving deep learning with generic data
   augmentation,'' in {\em 2018 IEEE symposium series on computational
@@ -326,6 +323,26 @@ N.~V. Chawla, K.~W. Bowyer, L.~O. Hall, and W.~P. Kegelmeyer, ``Smote:
   synthetic minority over-sampling technique,'' {\em Journal of artificial
   intelligence research}, vol.~16, pp.~321--357, 2002.
 
+\bibitem{smote2}
+A.~Fern{\'a}ndez, S.~Garcia, F.~Herrera, and N.~V. Chawla, ``Smote for learning
+  from imbalanced data: progress and challenges, marking the 15-year
+  anniversary,'' {\em Journal of artificial intelligence research}, vol.~61,
+  pp.~863--905, 2018.
+
+\bibitem{smote3}
+H.~Han, W.-Y. Wang, and B.-H. Mao, ``Borderline-smote: a new over-sampling
+  method in imbalanced data sets learning,'' in {\em International conference
+  on intelligent computing}, pp.~878--887, Springer, 2005.
+
+\bibitem{smote4}
+R.~Blagus and L.~Lusa, ``Smote for high-dimensional class-imbalanced data,''
+  {\em BMC bioinformatics}, vol.~14, pp.~1--16, 2013.
+
+\bibitem{progressivegan}
+T.~Karras, T.~Aila, S.~Laine, and J.~Lehtinen, ``Progressive growing of gans
+  for improved quality, stability, and variation,'' {\em arXiv preprint
+  arXiv:1710.10196}, 2017.
+
 \bibitem{mnasnet}
 M.~Tan, B.~Chen, R.~Pang, V.~Vasudevan, M.~Sandler, A.~Howard, and Q.~V. Le,
   ``Mnasnet: Platform-aware neural architecture search for mobile,'' 2019.
@@ -338,6 +355,12 @@ Y.~G. Tejeda and H.~A. Mayer, ``A neural anthropometer learning from body
 \bibitem{super}
 D.~Skorvankova, A.~Riečický, and M.~Madaras, ``Automatic estimation of
   anthropometric human body measurements,'' 12 2021.
+
+\bibitem{apose}
+B.~Penders, R.~Brecheisen, A.~Gerver, G.~van Zonneveld, and W.-J. Gerver,
+  ``Validating paediatric morphometrics: body proportion measurement using
+  photogrammetric anthropometry,'' {\em Journal of pediatric endocrinology and
+  metabolism}, vol.~28, no.~11-12, pp.~1357--1362, 2015.
 
 \bibitem{surreact}
 G.~Varol, I.~Laptev, C.~Schmid, and A.~Zisserman, ``Synthetic humans for action

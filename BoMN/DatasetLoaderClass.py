@@ -16,7 +16,7 @@ class DatasetLoader(Sequence):
         self.side = side
         self.height = height
 
-        super().__init__(workers=5, use_multiprocessing=True)
+        super().__init__(workers=7, use_multiprocessing=True)
         self.IDs = []
         self._load_data(samples, data_location, image_location, dataset)
         self.on_epoch_end()
@@ -67,9 +67,13 @@ class DatasetLoader(Sequence):
             current_measurement = sample_properties[3]
             current_filename = f"{self.prefix}{sample_properties[2]:06d}.png"
 
-            X[i, :, :, 0] = cv2.imread(os.path.join(sample_properties[0] + "images_front/" + current_filename), cv2.IMREAD_GRAYSCALE)
+
             if self.side:
+                X[i, :, :, 0] = cv2.imread(os.path.join(sample_properties[0] + "images_front/" + current_filename), cv2.IMREAD_GRAYSCALE)
                 X[i, :, :, 1] = cv2.imread(os.path.join(sample_properties[0] + "images_side/" + current_filename), cv2.IMREAD_GRAYSCALE)
+
+            else:
+                X[i,] = cv2.imread(os.path.join(sample_properties[0]+ "images_front/" + current_filename), cv2.IMREAD_GRAYSCALE)
 
             if sample_properties[1] == "Surreact":
                 y['chest_out'].append([current_measurement[0]])

@@ -1,28 +1,34 @@
-\chapter{Proposed solution}
+\chapter{Solution}
 
-\section{Problem specification}
-The goal of this thesis is to expand on body measurements estimation with the use of neural networks. Mainly to explore different data augmentation methods to provide better results when training is done on synthetic dataset.
+\section{Proposed solution}
+In this section we will provide an overview of assets used in this thesis. The aim of the thesis is to explore the task of body measurements estimation. Using state-of-the-art deep learning methods we aim to evaluate usage of synthetic data compared to real human body data. This should provide valuable information about domain gap and advantages of augmenting real data with synthetic images for training purposes. In this thesis we have trained multiple networks (see section \ref{networks}) on different datasets (see section \ref{datasets}).
 
-\section{Obstacles}
-One of the issues when working with human body measurements is the lack of real world data. The process of measuring is time-consuming and requires privacy measures to take place to protect subjects' personal information. This can be avoided by using synthetic datasets.\\
-Moreover the time complexity to train a neural network can be reduced by using powerful device which is not available.
-\newpage
+\subsection{Obstacles}
 
-In this section, we'll explore the datasets utilized within this thesis. Our focus will be on 2D front-facing and profile human binary silhouettes. This form was chosen upon the data provided by the BodyM dataset. The subjects are positioned in an a-pose, ensuring greater consistency in the samples.
-\section{Datasets}
-\subsection{SURREACT}
-\subsubsection{Description}
+One significant challenge in working with human body measurements is the lack of real-world data. The measurement process is time-consuming and requires extensive privacy measures to protect subjects' personal information. This issue can be addressed by using synthetic datasets.
+
+Another challenge is the complexity of the task, which requires larger networks with numerous training parameters. Training these networks efficiently requires substantial computing power. Unfortunately, we did not have access to such devices, resulting in single training sessions taking multiple days.
+
+
+\subsection{Datasets}
+\label{datasets}
+In this section, we will examine the datasets used in this thesis. Our focus is on 2D frontal and lateral human binary silhouettes. This data structure was selected based on the data provided by the BodyM dataset. The subjects are positioned in an anatomical pose~\cite{apose}, ensuring consistency and stability in their postures.
+
+\subsubsection{SURREACT}
 SURREACT \cite{surreact} is a synthetic dataset built on SMPL model. The main goal of the work was to explore benefits of using synthetic data for  human action recognition.  The study aimed to answer whether the synthetic data could potentially improve accuracy of already existing methods. This theory was confirmed and even shown improvements over other state-of-the-art action recognition methods. This is however not as important for this thesis as we are not going to use the features that were added.
 
-The dataset introduced by ~\cite{super} is an extension of the SURREACT dataset, incorporating the data generation techniques and a custom annotation method. This thesis utilizes a modified version of this dataset. The original dataset comprises 50,000 human scans, meshes, annotations, and other data of subjects in the T-Pose. In contrast, our customized version offers 79,999 frontal and 79,999 lateral images with annotations, featuring subjects in the A-Pose.  They are saved in RGBA format with dimensions of 320x240 without background thus eliminating the need of segmentation. Measurements are saved in .npy file format requiring us to use NumPy~\cite{numpy} to read these values.
+The dataset created by Škorvánková et al.~\cite{super} is an extension of the SURREACT dataset, incorporating the data generation techniques and a custom annotation method. This thesis utilizes a modified version of this dataset - Surreact-APose. The original dataset comprises 50,000 human scans, meshes, annotations, and other data of subjects in the T-Pose. In contrast, our customized version offers 79,999 frontal and 79,999 lateral images with annotations, featuring subjects in the anatomical pose.  They are saved in RGBA format with dimensions of 320x240 without background thus eliminating the need of segmentation. Measurements are saved in .npy file format, providing speed in loading when compared to using .txt or .csv files. To read them, we are required to use NumPy~\cite{numpy}.
+
+Measurements provided by this dataset can be found in table \ref{measurementsSurreact}
 
 \begin{table}
-	\caption[...]{Definition of annotated anthropometric body measurements. Note that the 3D model is expected to capture the human body in the default T-pose, with Y-axis representing the vertical axis, and Z-axis pointing towards the camera~\cite{super}.}
-	\label{tab:cas}
+	\caption[Measurements provided by Surreact-APose dataset]{Definition of annotated anthropometric body measurements. Note that the 3D model is expected to capture the human body in anatomical pose, with Y-axis representing the vertical axis, and Z-axis pointing towards the camera~\cite{super}.}
+	\label{measurementsSurreact}
 	\begin{center}
 		\footnotesize
 		\begin{tabularx}{\textwidth}{lX}\hline
 			Body measurement & Definition\\\hline
+			\hline
 			Head circumference & circumference taken on the Y-axis at the level in the middle between the head skeleton joint and the top of the head (the intersection plane is slightly rotated along X-axis to match the natural head posture)\\
 			Neck circumference & circumference taken at the Y-axis level in 1/3 distance between the neck joint and the head joint (the intersection plane is slightly rotated along X-axis to match the natural posture)\\
 			Shoulder-to-shoulder & distance between left and right shoulder skeleton joint\\
@@ -43,33 +49,73 @@ The dataset introduced by ~\cite{super} is an extension of the SURREACT dataset,
 	\end{center}
 \end{table}
 
-\subsection{BodyM}
-\subsubsection{Description}
-This public body measurement dataset~\cite{BodyM} contains measurement and image data from real human subjects. The subjects were photographed in a well-lit indoor setup, resulting in the data being less prone to segmentation inaccuracies. Subjects also wore tight-fitting clothing to better reflect the measurements. After the pictures were taken, the subjects were scanned using Treedy photogrammetric scanner and fitted to the SMPL mesh. Measurements were then taken on said meshes. It also promises a wide ethnicity distribution  
-\subsubsection{Measurements}
-Information provided by BodyM dataset  paper are following:
+\begin{table}
+	\caption[Mean values of Surreact-APose dataset]{The mean values of measurements in the Surreact-APose dataset. Averages are stated in cm and rounded to two decimal places}
+	\label{avgMeasurementsSurreact}
+	\begin{center}
+		\begin{tabular}{c c}\hline
+			Body measurement & Mean\\\hline
+			\hline
+			Head circumference &60.57\\
+			Neck circumference &36.35\\
+			Shoulder-to-shoulder & 35.87\\
+			Arm span & 175.35\\
+			Shoulder-to-wrist & 51.11\\
+			Torso length & 50.90\\
+			Bicep circumference &29.88\\
+			Wrist circumference &17.16\\
+			Chest circumference & 99.71\\
+			Waist circumference & 88.39\\
+			Pelvis circumference &104.81\\
+			Leg length & 78.05\\
+			Inner leg length & 72.87\\
+			Thigh circumference &52.31\\
+			Knee circumference & 37.74\\
+			Calf length &40.39\\\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 
-\begin{center}
-	\begin{tabular}{c}
-		\hline
-		Body measurement\\
-		\hline
-		\hline
-		Ankle girth\\
-		Arm-length\\
-		Bicep girth\\ 
-		Calf girth\\ 
-		Chest girth\\ 
-		Forearm girth\\
-		Head-to-heel length\\
-		hip girth\\
-		leg-length\\
-		shoulder-breadth\\
-		shoulder-to-crotch length\\
-		thigh girth\\
-		waist girth\\
-		wrist girth 
-	\end{tabular}
-\end{center}
-\subsubsection{Issues}
+\subsubsection{BodyM}
+This public body measurement dataset~\cite{BodyM} contains measurement and image data from real human subjects. The subjects were photographed in a well-lit indoor setup, resulting in the data being less prone to segmentation inaccuracies. Subjects also wore tight-fitting clothing to better reflect the measurements. After the pictures were taken, the subjects were scanned using Treedy photogrammetric scanner and fitted to the SMPL mesh. Measurements were then taken on said meshes. It also promises a wide ethnicity distribution  
+
+\begin{table}
+	\caption[Mean values of BodyM dataset]{The mean values of measurements in the BodyM dataset. Averages are stated in cm and rounded to two decimal places}
+	\label{measurementsBodyM}
+	\begin{center}
+		\begin{tabular}{c c}
+			\hline
+			Body measurement & Mean\\
+			\hline
+			\hline
+			Ankle girth & 24.1\\
+			Arm-length & 49.43\\
+			Bicep girth & 30.28\\ 
+			Calf girth & 37.23\\ 
+			Chest girth & 101.42\\ 
+			Forearm girth & 26.38\\
+			Head-to-heel length & 171.61\\
+			hip girth & 102.21\\
+			leg-length & 78.1\\
+			shoulder-breadth & 35.65\\
+			shoulder-to-crotch length & 64.65\\
+			thigh girth & 53.83\\
+			waist girth & 89.26\\
+			wrist girth & 16.63\\ 
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 The paper has not provided us with any information regarding the measurement location. This requires us to believe that the measurements were taken in accordance to the norm.
+
+\subsection{Neural Networks}
+\label{networks}
+\subsubsection{Conv-BoDiEs}
+\subsubsection{ResNet50V2}
+\subsubsection{CenterNet}
+
+\subsection{Used software}
+\subsubsection{Keras}
+Keras~\cite{keras} is an open-source neural network library written in Python. Thanks to its user-friendly interface and modular design is Keras one of the leading frameworks in neural network development. Its simple yet flexible architecture allows for easy prototyping and experimentation, making it an ideal choice for both beginners and experienced practitioners in the field of deep learning.
+\subsubsection{OpenCV }
+Open Source Computer Vision Library (OpenCV for short)~\cite{opencv} is a comprehensive open-source library originally developed by Intel. It is mainly used for various tasks in fields such as computer vision or machine learning. At the time of writing this thesis, OpenCV provides over 2500 optimized algorithms. These can effectively perform many tasks such as face detection, object tracking, image preprocessing and many more. Providing interfaces in multiple programming languages such as Python, C++, Java and MATLAB it is very popular with the community as well as recognisable and famous companies.
