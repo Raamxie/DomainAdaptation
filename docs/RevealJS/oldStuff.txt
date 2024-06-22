@@ -1,0 +1,365 @@
+                <section>
+                    <h3>Quick recap</h3>
+                    <ul style="list-style-type: none">
+                        <li>Estimate human body measurements</li>
+                        <li>Use synthetic dataset for training</li>
+                        <li>Explore effects of different input data</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Data</h3>
+                    <div style="display: grid; grid-template-columns: max-content max-content; justify-content: center">
+                        <img src="Blank-removebg.png" class="grid-item">
+                        <img src="SurreactSide.png", class="grid-item">
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <h3>Used network types</h3>
+                    <p>BoMN (inspired by Tejeda, Mayer)</p>
+                    <p>ResNetV2</p>
+                </section>
+                <section>
+                    <h3>BoMN</h3>
+                    <table class="r-fit-text" style="font-size: smaller">
+                        <thead style="font-size: smaller">
+                        <tr>
+                            <th></th>
+                            <th>Arm</th>
+                            <th>Bicep</th>
+                            <th>Calf</th>
+                            <th>Chest</th>
+                            <th>Leg</th>
+                            <th>Pelvis</th>
+                            <th>Shoulders</th>
+                            <th>Thigh</th>
+                            <th>Waist</th>
+                            <th>Wrist</th>
+                        </tr>
+                        </thead>
+                        <tbody style="font-size: smaller">
+                        <tr>
+                            <td>Surreact - Error (CM)</td>
+                            <th>0.1</th>
+                            <th>0.2</th>
+                            <th>0.1</th>
+                            <th>0.5</th>
+                            <th>0.2</th>
+                            <th>0.3</th>
+                            <th>0.2</th>
+                            <th>0.4</th>
+                            <th>0.5</th>
+                            <th>0.1</th>
+                        </tr>
+                        <tr>
+                            <td>BodyM - Error (CM)</td>
+                            <th>9.2</th>
+                            <th>5.1</th>
+                            <th>8.3</th>
+                            <th>13.0</th>
+                            <th>11.0</th>
+                            <th>22.0</th>
+                            <th>5.3</th>
+                            <th>7.7</th>
+                            <th>12.3</th>
+                            <th>3.6</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h3>BoMN + Side</h3>
+                    <table class="r-fit-text" style="font-size: smaller">
+                        <thead style="font-size: smaller">
+                        <tr>
+                            <th></th>
+                            <th>Arm</th>
+                            <th>Bicep</th>
+                            <th>Calf</th>
+                            <th>Chest</th>
+                            <th>Leg</th>
+                            <th>Pelvis</th>
+                            <th>Shoulders</th>
+                            <th>Thigh</th>
+                            <th>Waist</th>
+                            <th>Wrist</th>
+                        </tr>
+                        </thead>
+                        <tbody style="font-size: smaller">
+                        <tr>
+                            <td>Surreact - Error (CM)</td>
+                            <th>0.2</th>
+                            <th>0.2</th>
+                            <th>0.2</th>
+                            <th>0.6</th>
+                            <th>0.3</th>
+                            <th>0.4</th>
+                            <th>0.2</th>
+                            <th>0.2</th>
+                            <th>0.5</th>
+                            <th>0.1</th>
+                        </tr>
+                        <tr>
+                            <td>BodyM - Error (CM)</td>
+                            <th>16.5</th>
+                            <th>10.7</th>
+                            <th>11.6</th>
+                            <th>45.1</th>
+                            <th>25.6</th>
+                            <th>30.8</th>
+                            <th>76.6</th>
+                            <th>18.7</th>
+                            <th>32.3</th>
+                            <th>5.9</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+
+        <section>
+            <h3>BoMN + Height</h3>
+            <table class="r-fit-text" style="font-size: smaller">
+                <thead style="font-size: smaller">
+                <tr>
+                    <th></th>
+                    <th>Arm</th>
+                    <th>Bicep</th>
+                    <th>Calf</th>
+                    <th>Chest</th>
+                    <th>Leg</th>
+                    <th>Pelvis</th>
+                    <th>Shoulders</th>
+                    <th>Thigh</th>
+                    <th>Waist</th>
+                    <th>Wrist</th>
+                </tr>
+                </thead>
+                <tbody style="font-size: smaller">
+                <tr>
+                    <td>Surreact - Error (CM)</td>
+                    <th>0.1</th>
+                    <th>0.3</th>
+                    <th>0.1</th>
+                    <th>0.6</th>
+                    <th>0.2</th>
+                    <th>0.3</th>
+                    <th>0.2</th>
+                    <th>0.45</th>
+                    <th>0.5</th>
+                    <th>0.1</th>
+                </tr>
+                <tr>
+                    <td>BodyM - Error (CM)</td>
+                    <th>4.3</th>
+                    <th>4.0</th>
+                    <th>4.9</th>
+                    <th>11.0</th>
+                    <th>6.0</th>
+                    <th>15.9</th>
+                    <th>3.5</th>
+                    <th>7.1</th>
+                    <th>9.5</th>
+                    <th>1.8</th>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>ResNetV2 + Side</h3>
+            <table class="r-fit-text" style="font-size: smaller">
+                <thead style="font-size: smaller">
+                <tr>
+                    <th></th>
+                    <th>Arm</th>
+                    <th>Bicep</th>
+                    <th>Calf</th>
+                    <th>Chest</th>
+                    <th>Leg</th>
+                    <th>Pelvis</th>
+                    <th>Shoulders</th>
+                    <th>Thigh</th>
+                    <th>Waist</th>
+                    <th>Wrist</th>
+                </tr>
+                </thead>
+                <tbody style="font-size: smaller">
+                <tr>
+                    <td>Surreact - Error (CM)</td>
+                    <th>0.1</th>
+                    <th>0.2</th>
+                    <th>0.1</th>
+                    <th>0.5</th>
+                    <th>0.3</th>
+                    <th>0.4</th>
+                    <th>0.1</th>
+                    <th>0.4</th>
+                    <th>0.5</th>
+                    <th>0.1</th>
+                </tr>
+                <tr>
+                    <td>BodyM - Error (CM)</td>
+                    <th>9.2</th>
+                    <th>5.1</th>
+                    <th>8.3</th>
+                    <th>13.0</th>
+                    <th>11.0</th>
+                    <th>22.0</th>
+                    <th>5.3</th>
+                    <th>7.7</th>
+                    <th>12.3</th>
+                    <th>3.6</th>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section>
+            <h3>ResNetV2 + Height</h3>
+            <table class="r-fit-text" style="font-size: smaller">
+                <thead style="font-size: smaller">
+                <tr>
+                    <th></th>
+                    <th>Arm</th>
+                    <th>Bicep</th>
+                    <th>Calf</th>
+                    <th>Chest</th>
+                    <th>Leg</th>
+                    <th>Pelvis</th>
+                    <th>Shoulders</th>
+                    <th>Thigh</th>
+                    <th>Waist</th>
+                    <th>Wrist</th>
+                </tr>
+                </thead>
+                <tbody style="font-size: smaller">
+                <tr>
+                    <td>Surreact - Error (CM)</td>
+                    <th>0.1</th>
+                    <th>0.2</th>
+                    <th>0.1</th>
+                    <th>0.5</th>
+                    <th>0.2</th>
+                    <th>0.3</th>
+                    <th>0.2</th>
+                    <th>0.4</th>
+                    <th>0.5</th>
+                    <th>0.1</th>
+                </tr>
+                <tr>
+                    <td>BodyM - Error (CM)</td>
+                    <th>5.0</th>
+                    <th>4.6</th>
+                    <th>5.0</th>
+                    <th>9.1</th>
+                    <th>7.4</th>
+                    <th>13.8</th>
+                    <th>9.8</th>
+                    <th>7.2</th>
+                    <th>9.9</th>
+                    <th>2.3</th>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+        <section>
+            <h3>Comparison BodyM</h3>
+            <table class="r-fit-text" style="font-size: smaller">
+                <thead style="font-size: smaller">
+                <tr>
+                    <th></th>
+                    <th>Arm</th>
+                    <th>Bicep</th>
+                    <th>Calf</th>
+                    <th>Chest</th>
+                    <th>Leg</th>
+                    <th>Pelvis</th>
+                    <th>Shoulders</th>
+                    <th>Thigh</th>
+                    <th>Waist</th>
+                    <th>Wrist</th>
+                </tr>
+                </thead>
+                <tbody style="font-size: smaller">
+                <tr>
+                    <td>BoMN</td>
+                    <th>9.2</th>
+                    <th>5.1</th>
+                    <th>8.3</th>
+                    <th>13.0</th>
+                    <th>11.0</th>
+                    <th>22.0</th>
+                    <th>5.3</th>
+                    <th>7.7</th>
+                    <th>12.3</th>
+                    <th>3.6</th>
+                </tr>
+                <tr>
+                    <td>BoMN+Side</td>
+                    <th style="color: red">16.5</th>
+                    <th style="color: red">10.7</th>
+                    <th style="color: red">11.6</th>
+                    <th style="color: red">45.1</th>
+                    <th style="color: red">25.6</th>
+                    <th style="color: red">30.8</th>
+                    <th style="color: red">76.6</th>
+                    <th style="color: red">18.7</th>
+                    <th style="color: red">32.3</th>
+                    <th style="color: red">5.9</th>
+                </tr>
+                <tr>
+                    <td>BoMN+Height</td>
+                    <th style="color: green">4.3</th>
+                    <th style="color: green">4.0</th>
+                    <th style="color: green">4.9</th>
+                    <th>11.0</th>
+                    <th style="color: green">6.0</th>
+                    <th>15.9</th>
+                    <th style="color: green">3.5</th>
+                    <th style="color: green">7.1</th>
+                    <th style="color: green">9.5</th>
+                    <th style="color: green">1.8</th>
+                </tr>
+                <tr>
+                    <td>ResNet+Side</td>
+                    <th>9.2</th>
+                    <th>5.1</th>
+                    <th>8.3</th>
+                    <th>13.0</th>
+                    <th>11.0</th>
+                    <th>22.0</th>
+                    <th>5.3</th>
+                    <th>7.7</th>
+                    <th>12.3</th>
+                    <th>3.6</th>
+                </tr>
+                <tr>
+                    <td>ResNet+Height</td>
+                    <th>5.0</th>
+                    <th>4.6</th>
+                    <th>5.0</th>
+                    <th style="color: green">9.1</th>
+                    <th>7.4</th>
+                    <th style="color: green">13.8</th>
+                    <th>9.8</th>
+                    <th>7.2</th>
+                    <th>9.9</th>
+                    <th>2.3</th>
+                </tr>
+                <tr></tr>
+                </tbody>
+            </table>
+            <footer><p style="font-size: small">Measured in CM</p></footer>
+        </section>
+
+        <section data-background-iframe="http://localhost:6006/?tagFilter=epoch&darkMode=true#timeseries"
+                 data-background-interactive>

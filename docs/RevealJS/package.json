@@ -42,17 +42,17 @@
     "core-js": "^3.33.1",
     "fitty": "^2.3.7",
     "glob": "^10.3.10",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-connect": "^5.7.0",
     "gulp-eslint": "^6.0.0",
-    "gulp-header": "^2.0.9",
+    "gulp-header": "^1.8.9",
     "gulp-tap": "^2.0.0",
     "gulp-zip": "^5.1.0",
     "highlight.js": "^11.9.0",
     "marked": "^4.3.0",
-    "node-qunit-puppeteer": "^2.1.2",
+    "node-qunit-puppeteer": "^2.1.0",
     "qunit": "^2.20.0",
     "rollup": "^4.1.5",
     "sass": "^1.69.5",
@@ -102,7 +102,11 @@
     }
   },
   "dependencies": {
+    "chart.js": "^4.4.2",
     "gsap": "^3.12.5",
-    "reveal.js-appearance": "^1.3.3"
+    "reveal.js-appearance": "^1.3.3",
+    "reveal.js-d3js": "^1.0.0",
+    "reveal.js-simplemenu": "^2.0.1",
+    "reveal.js-verticator": "^1.2.6"
   }
 }

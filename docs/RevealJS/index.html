@@ -2,68 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
     <title>reveal.js</title>
 
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/blood.css">
-    <link rel="stylesheet" href="css/customStyles.scss">
+    <link href="dist/reset.css" rel="stylesheet">
+    <link href="dist/reveal.css" rel="stylesheet">
+    <link href="dist/theme/blood.css" rel="stylesheet">
 
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <link href="plugin/highlight/monokai.css" rel="stylesheet">
+
+    <script src="plugin/notes/notes.js"></script>
     <script src="plugin/reveal-onetimer/onetimer.js"></script>
-    <script type="text/javascript" src="dist/reveal.js"></script>
+    <script src="dist/reveal.js" type="text/javascript"></script>
     <script src="plugin/appearance/appearance.js"></script>
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="dist/reveal.js" type="text/javascript"></script>
+    <script src="node_modules/reveal.js-simplemenu/plugin/simplemenu/simplemenu.js"></script>
+    <script src="node_modules/reveal.js-verticator/plugin/verticator/verticator.js"></script>
 </head>
 
 
 <body>
 <div class="reveal">
+
     <div class="slides">
         <section style="text-align: left">
-            <h3 class="r-stretch">Comparing Synthetic and Real Data for Anthropometric Measurements Estimation <br></h3>
+            <h2>Comparing Synthetic and Real Data for Anthropometric Measurements Estimation <br></h2>
+            <div class="r-stretch"></div>
             <h5>Michal Baránek</h5>
             <h5>Mgr. Dana Škorvánková</h5>
 
+
+            <aside class="notes">
+                Dobrý deň
+            </aside>
         </section>
 
+        <section data-name="Introduction">
 
-        <section>
-            <h3>Introduction</h3>
-            <section>
-                <h3 style="visibility: hidden">hello</h3>
-                <br>
+            <section data-auto-animate>
+                <h3>Anthropometry</h3>
                 <div style="display: grid;
 						grid-template-columns: max-content 1fr 1fr;
-						grid-template-rows: 12vh 12vh;
+						grid-template-rows: 400px 400px;
 						grid-template-areas:'Text Image1 Image2'
 											'Text Image3 Image2';
-						justify-content: center">
+						justify-content: center;max-height: 85%">
                     <div style="grid-area: Text">
                         <div class="fragment fade-up" data-fragment-index="1" style="text-align: left">
-                            <div class="fragment shrink" data-fragment-index="3">
-                                <div class="fragment semi-fade-out" data-fragment-index="3">
-                                    <h6>Anthropometry</h6>
+                            <div class="fragment shrink" data-fragment-index="4">
+                                <div class="fragment semi-fade-out" data-fragment-index="4">
                                     <ul class="r-stretch">
-
-                                        <li class="fragment fade-up" data-fragment-index="2">Human body</li>
+                                        <li class="fragment fade-up" data-fragment-index="1">Human Body</li>
+                                        <li class="fragment fade-up" data-fragment-index="2">Measurements and
+                                            proportions
+                                        </li>
 
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="fragment fade-up" data-fragment-index="3" style="text-align: left">
-                            <div class="fragment shrink" data-fragment-index="8">
-                                <div class="fragment semi-fade-out" data-fragment-index="8">
+                        <div class="fragment fade-up" data-fragment-index="4" style="text-align: left">
+                            <div class="fragment shrink" data-fragment-index="10">
+                                <div class="fragment semi-fade-out" data-fragment-index="10">
                                     <h6>Importance</h6>
                                     <ul class="r-stretch">
-                                        <li class="fragment fade-up" data-fragment-index="4">Fashion industry</li>
-                                        <li class="fragment fade-up" data-fragment-index="5">Motion capture</li>
-                                        <li class="fragment fade-up" data-fragment-index="6">Virtual reality</li>
+                                        <li class="fragment fade-up" data-fragment-index="5">Fashion industry</li>
+                                        <li class="fragment fade-up" data-fragment-index="6">Motion capture</li>
+                                        <li class="fragment fade-up" data-fragment-index="7">Virtual reality</li>
+                                        <li class="fragment fade-up" data-fragment-index="8">Ergonomics</li>
+                                        <li class="fragment fade-up" data-fragment-index="9">Medicine</li>
+
                                     </ul>
 
 
@@ -71,38 +85,69 @@
                             </div>
                         </div>
                     </div>
-                    <img src="measuring.jpg" class="fragment navigate-up grid-item" data-fragment-index="4"
-                         style="grid-area: Image1; height: 100%; justify-self: center" alt="Tailor measuring woman">
-                    <img src="Mocap2.png" class="fragment navigate-up grid-item" data-fragment-index="5"
-                         style="grid-area: Image2;height: 100%; justify-self: center"
-                         alt="Xixiyu Sakana wearing mocap suit">
-                    <img src="VR.jpg" class="fragment navigate-up" data-fragment-index="6"
-                         style="grid-area: Image3; height: 100%; justify-self: center" alt="Woman wearing VR glasses">
+                    <img alt="Woman choosing what to wear" class="fragment navigate-up grid-item"
+                         data-fragment-index="5"
+                         src="clothes.jpg" style="grid-area: Image1; height: auto; justify-self: center">
+                    <img alt="Xixiyu Sakana wearing mocap suit" class="fragment navigate-up grid-item"
+                         data-fragment-index="6"
+                         src="Mocap2.png"
+                         style="grid-area: Image2; height: auto; justify-self: center">
+                    <img alt="Woman wearing VR glasses" class="fragment navigate-up" data-fragment-index="7"
+                         src="VR.jpg" style="grid-area: Image3; height: auto; justify-self: center">
 
 
                 </div>
-            </section>
-            <section>
 
-                <div class="fade-in-then-out">
-                    <p>Traditional measuring methods are obsolete</p>
+                <aside class="notes">
+                    Antropometria je vedná disciplína zaoberajúca sa ľudským telom.*click*<br>
+                    <br>
+                    Jej cieľom je meranie a pochopenie ľudských proporcií. *click*<br>
+                    <br>
+                    Využitie antropometrie je rôznorodé, no najväčší dopad má pravdepodobne na odevný priemysel *click*.
+                    Ten využíva miery tela na výrobu oblečenia na mieru, či bežného spotrebiteľského tovaru.<br>
+                    V dnešnej dobe sa pri tvorbe animácií, či už do kinematiky alebo do hier využíva takzvaný motion
+                    capture *click*, vďaka ktorému sa dajú použiť skutočný herci namiesto zdĺhavého a komplikovaného
+                    procesu animovania.<br>
+                    Podobne je to aj pri virtuálnej realite *click*, kde sa miery tela môžu použiť na kalibráciu
+                    zariadení.<br>
+                    Daľšie využitie je pri výrobe produktov, ktoré používame. Ergonómia zabezpečuje pohodlné a efektívne
+                    využívanie.<br>
+                    Antropometria je taktiež využiteľná v medicíne, kde sa môže využiť napríklad pri identifikácií
+                    podvyživených batoľat.<br>
+                    Toto je len niekoľko príkladov, ktoré však poukazujú na rozmanité využitie a potrebu antropometrie v
+                    našich životoch.
+                </aside>
+            </section>
+            <section data-auto-animate>
+                <h3>Anthropometry</h3>
+                <h3 class="fragment fade-up" data-fragment-index="1">Measuring</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr">
+                    <div><h6 class="fragment fade-up" data-fragment-index="2">Hand measuring</h6>
+                        <div>
+                            <ul>
+                                <li class="fragment fade-up">Slow</li>
+                                <li class="fragment fade-up">Usage specific</li>
+                                <li class="fragment fade-up">Complicated to perform alone</li>
+                                <li class="fragment fade-up">Prone to human error</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <img alt="Woman wearing VR glasses" class="fragment navigate-up" data-fragment-index="2"
+                         src="measuring.jpg" style="height: 800px; justify-self: center">
+
                 </div>
+
+                <aside class="notes">TBA</aside>
             </section>
 
-            <section>
-
-                <div class="fade-in-then-out">
-                    <p>Let's use neural networks instead</p>
-                </div>
-            </section>
-
-            <section>
-                <h3 style="visibility: hidden">hello</h3>
-                <div>
+            <section data-auto-animate>
+                <h3>Neural networks</h3>
+                <br>
+                <div style="display: grid; grid-template-columns: 1fr 1fr">
                     <div class="fragment fade-up" data-fragment-index="1">
-                        <aside class="notes">Accuracy - máme presné miesto merania, time - viac mier tela naraz</aside>
                         <h6>Advantages</h6>
-                        <ul class="r-stretch">
+                        <ul class="r-stretch grid-item">
                             <li class="fragment fade-up" data-fragment-index="2">Price</li>
                             <li class="fragment fade-up" data-fragment-index="3">Comfort</li>
                             <li class="fragment fade-up" data-fragment-index="4">Privacy</li>
@@ -111,75 +156,59 @@
                             <li class="fragment fade-up" data-fragment-index="7">Time</li>
                         </ul>
                     </div>
-                </div>
-            </section>
-            <section>
-                <h3 style="visibility: hidden">hello</h3>
-                <div class="fragment fade-up" data-fragment-index="1">
-                    <h6>Disadvantages</h6>
-                    <ul style="padding-left: 100px" class="r-stretch">
-                        <li class="fragment fade-up" data-fragment-index="3">Body deformations</li>
-                        <li class="fragment fade-up" data-fragment-index="4">Misuse</li>
-                    </ul>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr">
-                        <figure class="fragment" data-fragment-index="3" style="height: 15vh">
-                            <img src="images/Deformations/handsfree.jpg" class="grid-item" alt="Woman without arms">
-                        </figure>
-                        <figure class="fragment" data-fragment-index="4">
-                            <img src="images/surveilance.webp" class="grid-item" style="margin-bottom: 0;height: 15vh"
-                                 alt="Man with surveillance camera feed">
-                            <figcaption><p style="font-size: 0.2em; margin-top: 0">AP Photo/Mark Schiefelbein
-                                <p></figcaption>
-                        </figure>
-
+                    <div class="fragment fade-up" data-fragment-index="1">
+                        <h6>Disadvantages</h6>
+                        <ul class="r-stretch grid-item" style="padding-left: 100px">
+                            <li class="fragment fade-up" data-fragment-index="8">Body deformations</li>
+                            <li class="fragment fade-up" data-fragment-index="9">Misuse</li>
+                        </ul>
                     </div>
+
+                    <figure class="fragment" data-fragment-index="8" style="height: auto">
+                        <img alt="Woman without arms" class="grid-item" src="handsfree.jpg">
+                    </figure>
+                    <figure class="fragment" data-fragment-index="9">
+                        <img alt="Man with surveillance camera feed" class="grid-item" src="surveilance.webp"
+                             style="margin-bottom: 0px;height: 375px">
+                        <figcaption><p style="font-size: 0.4em; margin-top: 0">AP Photo/Mark Schiefelbein
+                            <p></figcaption>
+                    </figure>
                 </div>
+
+                <aside class="notes">TBA</aside>
             </section>
-        </section>
 
-        <section>
-
-            <div>
-                <h6>Goal</h6>
-                <div class="fade-up">
-                    <ul class="r-stretch">
-                        <li class="fragment fade-up" data-fragment-index="1">Analyse domain gap</li>
-                        <li class="fragment fade-up" data-fragment-index="2">Explore methods of data augmentation</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h3>Obstacles</h3>
-            <section>
-                <h6 class="fragment fade-up" data-fragment-index="1">Data availability</h6>
-                <ul style="padding-left: 100px" class="r-stretch">
+            <section data-auto-animate>
+                <h3>Obstacles</h3>
+                <h6 class="fragment fade-up" data-fragment-index="1" data-id="data availability">Data availability</h6>
+                <ul class="r-stretch" style="padding-left: 100px">
                     <li class="fragment fade-up" data-fragment-index="2">Not enough ground truth data</li>
                     <li class="fragment fade-up" data-fragment-index="3">Costly to obtain</li>
                     <li class="fragment fade-up" data-fragment-index="4">Privacy</li>
                 </ul>
-            </section>
-
-            <section>
-                <h6 class="fragment fade-up" data-fragment-index="1">Data availability - Solution</h6>
-                <ul style="padding-left: 100px" class="r-stretch">
-                    <li class="fragment fade-up" data-fragment-index="2">Use synthetic dataset</li>
-                    <li class="fragment fade-up" data-fragment-index="3">Train network</li>
-                    <li class="fragment fade-up" data-fragment-index="4"><b>Adapt to perform on real data</b></li>
-                </ul>
+                <h3 class="fragment fade-up" data-fragment-index="5">Use synthetic dataset</h3>
             </section>
 
         </section>
 
+        <section class="center" data-name="Goal">
 
-        <section>
-            <h3>Datasets</h3>
-            <section>
-                <h6 class="fragment fade-up" data-fragment-index="1">Surreact</h6>
+            <div class="r-fit-text">
+                <h3>Goal</h3>
+                <p class="fragment fade-up" data-fragment-index="1">Analyse domain gap</p>
+                <p class="fragment fade-up" data-fragment-index="2">Explore methods of data augmentation</p>
+            </div>
+        </section>
+
+
+        <section data-name="Dataset Overview">
+
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
+                <h6 class="fragment fade-up" data-fragment-index="1">Surreact-APose</h6>
                 <div style="display: flex">
                     <div style="flex: 70%">
-                        <ul style="padding-left: 100px" class="r-stretch">
+                        <ul class="r-stretch" style="padding-left: 100px">
                             <li class="fragment fade-up" data-fragment-index="2">Synthetic dataset</li>
                             <li class="fragment fade-up" data-fragment-index="3">Generated using SMPL</li>
                             <li class="fragment fade-up" data-fragment-index="4">16 + 1 measurements</li>
@@ -190,23 +219,25 @@
                         </ul>
                     </div>
                     <div style="flex: 30%;">
-                        <img src="Surreact%20Example.png" alt="Surreact example" class="fragment"
-                             data-fragment-index="1">
+                        <img alt="Surreact example" class="fragment r-stretch" data-fragment-index="1"
+                             src="Surreact%20Example.png" style="height: 700px">
                     </div>
                 </div>
-                <footer><p style="font-size: small" class="fragment" data-fragment-index="1">Gül Varol, Ivan Laptev and
+                <footer><p class="fragment r-stretch" data-fragment-index="1" style="font-size: medium">Gül Varol, Ivan
+                    Laptev and
                     Cordelia Schmid, Andrew Zisserman, Synthetic Humans for Action Recognition from Unseen Viewpoints,
                     IJCV 2021.</p>
-                    <p style="font-size: small" class="fragment" data-fragment-index="1">Skorvankova, Dana & Riečický,
+                    <p class="fragment" data-fragment-index="1" style="font-size: small">Skorvankova, Dana & Riečický,
                         Adam & Madaras,
                         Martin. (2021). Automatic Estimation of Anthropometric Human Body Measurements. </p></footer>
             </section>
 
-            <section>
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
                 <h6 class="fragment fade-up" data-fragment-index="1">BodyM</h6>
                 <div style="display: flex">
                     <div style="flex: 70%">
-                        <ul style="padding-left: 100px" class="r-stretch">
+                        <ul class="r-stretch" style="padding-left: 100px">
                             <li class="fragment fade-up" data-fragment-index="2">Measured on photogrammetry scans</li>
                             <li class="fragment fade-up" data-fragment-index="3">14 + 2 measurements</li>
                             <li class="fragment fade-up" data-fragment-index="4">8978 front + 8978 side images</li>
@@ -215,101 +246,110 @@
                         </ul>
                     </div>
                     <div style="flex: 30%;">
-                        <img src="BodyM%20Example.png" alt="BodyM example" class="fragment" data-fragment-index="1">
+                        <img alt="BodyM example" class="fragment" data-fragment-index="1" src="BodyM%20Example.png">
                     </div>
                 </div>
-                <footer><p style="font-size: small" class="fragment" data-fragment-index="1">Human Body Measurement
+                <footer><p class="fragment" data-fragment-index="1" style="font-size: medium">Human Body Measurement
                     Estimation with Adversarial
                     Augmentation by <br>Nataniel Ruiz, Miriam Bellver, Timo Bolkart, Ambuj Arora, Ming C. Lin, Javier
                     Romero and Raja Bala </p></footer>
             </section>
 
-            <section>
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
                 <h6 class="fragment fade-up" data-fragment-index="1">BodyM Issues</h6>
                 <div style=" display: grid; grid-template-columns: repeat(2,1fr)">
                     <ul class="grid-item">
-                        <li class="fragment fade-up" data-fragment-index="2">Unclear measurements</li>
-                        <li class="fragment fade-up" data-fragment-index="3">Complicated structure</li>
+                        <li class="fragment fade-up" data-fragment-index="2">Undefined measurements</li>
+                        <li class="fragment fade-up" data-fragment-index="3">Complex structure</li>
                         <li class="fragment fade-up" data-fragment-index="4">Not enough data</li>
                         <li class="fragment fade-up" data-fragment-index="5">Invalid data</li>
                     </ul>
 
-                    <div class="grid-item fragment" style="grid-row: span 2" data-fragment-index="3">
-                        <img src="BodyM%20Structure.svg" alt="BodyM dataset structure" width="308" height="360">
-                    </div>
-                    <div class="grid-item fragment" data-fragment-index="2">
-                        <img src="BadMeasurements.png" alt="Example of how unclear measurements are" width="163"
-                             height="228">
+                    <div class="grid-item fragment" data-fragment-index="3" style="grid-row: span 2">
+                        <img alt="BodyM dataset structure" height=700 src="BodyM%20Structure.svg">
                     </div>
                 </div>
             </section>
-            <h3 style="visibility: hidden">hi</h3>
-            <section>
-                <h3 style="visibility: hidden">hi</h3>
-                <h6 class="r-stretch">Incomplete Data</h6>
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
+                <h6>Incomplete Data</h6>
                 <div style="display: grid; grid-template-columns: auto auto auto">
-                    <img src="images/BadData/Incomplete/0b76da5015c803aa52d261c68ef80d2d.png"
-                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="500"
-                         style="height: 30vh; justify-self: center">
-                    <img src="images/BadData/Incomplete/2bdf0d2809368c3baa494c98f1fec717.png"
-                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="1000"
-                         style="height: 30vh; justify-self: center">
-                    <img src="images/BadData/Incomplete/2e3c673b5f04b177f41487e357ba2df2.png"
-                         alt="Missing parts of body" class="grid-item animate__fadeInUp" data-delay="1500"
-                         style="height: 30vh; justify-self: center">
-                </div>
-            </section>
-
-            <section>
-                <h3 style="visibility: hidden">hi</h3>
-                <h6 class="r-stretch">Variable Pose</h6>
-                <div style="display: grid; grid-template-columns: auto auto">
-                    <img src="images/BadData/Uneven/fe386748bb89af86c6e307d592c752a9.png" alt="A pose with spread legs"
+                    <img alt="Missing parts of body"
                          class="grid-item animate__fadeInUp" data-delay="500"
-                         style="height: 30vh; justify-self: center">
-                    <img src="images/BadData/Uneven/fec4f8fcca82714e71cc052fb89d899e.png" alt="A pose wih legs together"
+                         src="0b76da5015c803aa52d261c68ef80d2d.png"
+                         style="height: auto; justify-self: center">
+                    <img alt="Missing parts of body"
                          class="grid-item animate__fadeInUp" data-delay="1000"
-                         style="height: 30vh; justify-self: center">
+                         src="2bdf0d2809368c3baa494c98f1fec717.png"
+                         style="height: auto; justify-self: center">
+                    <img alt="Missing parts of body"
+                         class="grid-item animate__fadeInUp" data-delay="1500"
+                         src="2e3c673b5f04b177f41487e357ba2df2.png"
+                         style="height: auto; justify-self: center">
                 </div>
             </section>
 
-            <section>
-                <h3 style="visibility: hidden">hi</h3>
-                <h6 class="r-stretch">Unidentifiable Data</h6>
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
+                <h6>Variable Pose</h6>
+                <div style="display: grid; grid-template-columns: auto auto" style="max-height: 700px">
+                    <img alt="A pose with spread legs" class="grid-item animate__fadeInUp"
+                         data-delay="500" src="fe386748bb89af86c6e307d592c752a9.png"
+                         style="height: 84vh; justify-self: center">
+                    <img alt="A pose wih legs together" class="grid-item animate__fadeInUp"
+                         data-delay="1000" src="fec4f8fcca82714e71cc052fb89d899e.png"
+                         style="height: 84vh; justify-self: center">
+                </div>
+                <br>
+                <br>
+            </section>
+
+            <section data-auto-animate>
+                <h3 data-id="Title">Datasets</h3>
+                <h6>Unidentifiable Data</h6>
                 <div style="display: grid; grid-template-columns: auto auto">
-                    <img src="images/BadData/Random/54d6140d2d9fa8b0d991cf8d8e198964.png"
-                         alt="Something perhaps human looking" class="grid-item animate__fadeInUp" data-delay="500"
-                         style="height: 30vh; justify-self: center">
-                    <img src="images/BadData/Random/77ba0e0750cacae5168a331bec851543.png"
-                         alt="Something perhaps human looking" class="grid-item animate__fadeInUp" data-delay="1000"
-                         style="height: 30vh; justify-self: center">
+                    <img alt="Something perhaps human looking"
+                         class="grid-item animate__fadeInUp" data-delay="500"
+                         src="54d6140d2d9fa8b0d991cf8d8e198964.png"
+                         style="height: 84vh; justify-self: center">
+                    <img alt="Something perhaps human looking"
+                         class="grid-item animate__fadeInUp" data-delay="1000"
+                         src="77ba0e0750cacae5168a331bec851543.png"
+                         style="height: 84vh; justify-self: center">
                 </div>
             </section>
         </section>
 
-        <section>
-            <h3>Measurements</h3>
-            <section>
-                <h3 style="visibility: hidden">Measurements</h3>
-                <h6>Surreact</h6>
-                <img src="Measurements.png" class="fragment" alt="Surreact measurements" style="height: 35vh">
-            </section>
+        <section data-name="Measurement">
 
-            <section>
-                <h3 style="visibility: hidden">Measurements</h3>
-                <h6>BodyM</h6>
-                <img src="BodyM.svg" class="fragment" alt="Surreact measurements" style="height: 35vh">
+            <section data-auto-animate>
+                <h3>Measurements</h3>
+                <div style="display: grid; grid-template-columns: auto auto">
+                    <h6 class="grid-item fragment fade-up" style="justify-self: center; align-self: center">
+                        Surreact</h6>
+                    <img alt="Surreact measurements" class="fragment grid-item" src="Measurements.png"
+                         style="height: 80vh">
+                </div>
             </section>
 
             <section data-auto-animate>
-                <h3 style="visibility: hidden">Measurements</h3>
-                <h6 style="margin-bottom: 0">Comparison</h6>
-                <div style="display: grid; grid-template-columns: auto auto auto" class="r-stretch">
-                    <img src="Blank.png" alt="Surreact example" class="grid-item r-stretch" style="height: 35vh"
-                         data-id="img">
+                <h3>Measurements</h3>
+                <div style="display: grid; grid-template-columns: auto auto">
+                    <h6 class="grid-item fragment fade-up" style="justify-self: center; align-self: center">BodyM</h6>
+                    <img alt="Surreact measurements" class="fragment grid-item" src="BodyM.svg" style="height: 80vh">
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h3>Measurements</h3>
+                <h6 style="margin-bottom: 10px">Comparison</h6>
+                <div class="r-stretch" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+                    <img alt="Surreact example" class="grid-item r-stretch" data-id="img" src="BlankUpscaled.png"
+                         style="height: 50vh; justify-self: center; align-self: center">
                     <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important">
                         <li style="font-size: large; text-align: center"><strong>Surreact</strong></li>
-                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr1">
+                        <hr data-id="hr1" style="margin-top: 10px; margin-bottom: 10px; color: #eee">
                         <li style="font-size: large; text-align: center; margin: 3%"><b>head circumference</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%"><b>neck circumference</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder to shoulder</b></li>
@@ -329,34 +369,35 @@
                     </ul>
                     <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
                         <li style="font-size: large; text-align: center"><strong>BodyM</strong></li>
-                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr2">
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>ankle</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>arm length</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>bicep</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>calf</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>chest</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>forearm</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>hip</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>leg length</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder breath</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder to crotch</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>thigh</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>waist</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%"><b>wrist</b></li>
+                        <hr data-id="hr2" style="margin-top: 10px; margin-bottom: 10px; color: #eee">
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>ankle girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>arm-length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>bicep girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>calf girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>chest girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>forearm girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>hip girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>leg-length</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder-breath</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>shoulder-to-crotch length</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>thigh girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>waist girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%"><b>wrist girth</b></li>
                     </ul>
 
                 </div>
             </section>
 
             <section data-auto-animate>
-                <h3 style="visibility: hidden">Measurements</h3>
-                <h6 style="margin-bottom: 0">Comparison</h6>
-                <div style="display: grid; grid-template-columns: auto auto auto" class="r-stretch">
-                    <img src="MeasurementsBodyOnly.png" alt="Surreact example" class="grid-item r-stretch"
-                         style="height: 35vh" data-id="img">
+                <h3>Measurements</h3>
+                <h6 style="margin-bottom: 10px">Comparison</h6>
+                <div class="r-stretch" style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+                    <img alt="Surreact example" class="grid-item r-stretch" data-id="img" src="MeasurementsBodyOnly.png"
+                         style="height: 50vh; justify-self: center; align-self: center">
                     <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
                         <li style="font-size: large; text-align: center"><strong>Surreact</strong></li>
-                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr1">
+                        <hr data-id="hr1" style="margin-top: 10px; margin-bottom: 10px; color: #eee">
                         <li style="font-size: large; text-align: center; margin: 3%; color: #54c1ad !important;"><b>chest
                             circumference</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: #c256ac !important;"><b>waist
@@ -371,8 +412,6 @@
                             to wrist</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: #92a8db !important;"><b>leg
                             length</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #6c6c6c !important;"><b>calf
-                            length</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: #fc75cf !important;"><b>wrist
                             circumference</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: #000000 !important;"><b>shoulder
@@ -383,6 +422,8 @@
                         <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>arm span</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>knee
                             circumference</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red !important;"><b>calf
+                            length</b></li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>neck
                             circumference</b></li>
                         <li style="font-size: large; text-align: center; color: red; margin: 3% 3% 0.5%;"><b>inner leg
@@ -390,180 +431,552 @@
                     </ul>
                     <ul class="grid-item" style="list-style-type: none; border: 3px solid #eee !important;">
                         <li style="font-size: large; text-align: center"><strong>BodyM</strong></li>
-                        <hr style="margin-top: 10px; margin-bottom: 10px; color: #eee" data-id="hr2">
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #54c1ad !important;"><b>chest</b>
+                        <hr data-id="hr2" style="margin-top: 10px; margin-bottom: 10px; color: #eee">
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #54c1ad !important;"><b>chest
+                            girth</b>
                         </li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #c256ac !important;"><b>waist</b>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c256ac !important;"><b>waist
+                            girth</b>
                         </li>
                         <li style="font-size: large; text-align: center; margin: 3%; color: #d3cf6b !important;">
-                            <b>hip</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #c65b11 !important;"><b>bicep</b>
+                            <b>hip girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #c65b11 !important;"><b>bicep
+                            girth</b>
                         </li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #3e7685 !important;"><b>thigh</b>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #3e7685 !important;"><b>thigh
+                            girth</b>
                         </li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #a6d18c !important;"><b>arm
-                            length</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #92a8db !important;"><b>leg
-                            length</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #6c6c6c !important;">
-                            <b>calf</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #fc75cf !important;"><b>wrist</b>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #a6d18c !important;"><b>arm-length</b>
                         </li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: #000000 !important;"><b>shoulder
-                            breath</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>ankle</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>shoulder to
-                            crotch</b></li>
-                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>forearm</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #92a8db !important;"><b>leg-length</b>
+                        </li>
+
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #fc75cf !important;"><b>wrist
+                            girth</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: #000000 !important;"><b>shoulder-breadth</b>
+                        </li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red !important;">
+                            <b>calf girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>ankle girth</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red">
+                            <b>shoulder-to-crotch</b></li>
+                        <li style="font-size: large; text-align: center; margin: 3%; color: red"><b>forearm girth</b>
+                        </li>
                     </ul>
 
                 </div>
             </section>
         </section>
 
+        <section data-name="Preprocessing">
+            <section data-auto-animate>
+                <h3>Data Preprocessing</h3>
+                <h6>Image format</h6>
+                <div style="display: grid; grid-template-columns:1fr 1fr 1fr; height: 80vh">
+                    <p style="align-self: center">Adjust colour space</p>
+                    <figure>
+                        <img src="Original.png" style="align-self: center; height: 80%">
+                        <figcaption><p style="font-size: 0.6em; margin-top: 0">Original
+                            <p></figcaption>
+                    </figure>
 
-        <section>
-            <h3>Network overview</h3>
-            <section><img src="BoMN_Architecture.svg" alt="Model layout"></section>
+                    <figure>
+                        <img src="first.png" style="align-self: center; height: 80%">
+                        <figcaption><p style="font-size: 0.6em; margin: 0 0">Removed colours
+                            <p></figcaption>
+                    </figure>
+
+                    <p style="align-self: center">Adjust dimensions</p>
+                    <figure>
+                        <img src="crop.png" style="align-self: center; height: 80%">
+                        <figcaption><p style="font-size: 0.6em; margin-top: 0">Remove empty borders
+                            <p></figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="expand.png" style="align-self: center; height: 80%">
+                        <figcaption><p style="font-size: 0.6em; margin-top: 0">Create new empty borders
+                            <p></figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h3>Data Preprocessing</h3>
+                <h6>Data loading</h6>
+                <br>
+                <div style="text-align: left">
+                    <ul>
+                        <li>Not enough memory for whole dataset</li>
+                        <li>Data shuffling</li>
+                        <li>Customisable input data</li>
+                        <li>Pseudo-random shuffling</li>
+                    </ul>
+                </div>
+
+            </section>
+        </section>
+
+        <section data-name="Networks">
+            <section>
+                <h3>Neural Networks Architecures</h3>
+                <br>
+                <div style="display: grid; grid-template-columns: 1fr 1fr">
+                    <div>
+                        <h6><b>Conv-BoDiEs</b></h6>
+                        <div style="text-align: left">
+                            <ul>
+                                <li>Based on Neural Anthropometer</li>
+                                <li>Simple architecture</li>
+                                <li>Convolutional network</li>
+                                <li>Alternating convolutional and max pooling layers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h6><b>ResNet50V2</b></h6>
+                        <div style="text-align: left">
+                            <ul>
+                                <li>Improved ResNet</li>
+                                <li>Complex architecture</li>
+                                <li>Convolutional network with residual blocks</li>
+                                <li>Bottleneck layers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Neural Network Augmentations</h3>
+                <div class="r-stretch">
+
+                    <h3 class="fragment fade-up" style="margin-top: 300px; margin-bottom: 50px">Height value</h3>
+                    <h3 class="fragment fade-up" style="margin: 50px">Lateral image</h3>
+                    <h3 class="fragment fade-up">Combination</h3>
+                </div>
+
+            </section>
 
         </section>
 
-
-        <section>
-            <h3>Current work</h3>
+        <section data-name="Results">
             <section data-auto-animate>
-                <h3 style="visibility: hidden">hello</h3>
-                <h6 class="fragment fade-up" data-fragment-index="1">Prepared dataset</h6>
-                <ul style="padding-left: 100px" class="r-stretch">
-                    <li class="fragment fade-up" data-fragment-index="2">Preprocessed images</li>
-                    <li class="fragment fade-up" data-fragment-index="3">Fixed incorrectly saved data</li>
-                    <li class="fragment fade-up" data-fragment-index="4">Created custom data loading</li>
-                </ul>
-                <img src="PreprocessPipeline.svg" alt="Edit pipeline" class="fragment fade-up" data-fragment-index="2">
-            </section>
-
-            <section>
-                <h6>Started training</h6>
-
-            </section>
-
-            <section>
-                <h6>Training on pure Surreact</h6>
-                <table class="r-fit-text" style="font-size: smaller">
-                    <thead style="font-size: smaller">
+                <h3>Results</h3>
+                <h6>Synthetic + Real dataset</h6>
+                <br>
+                <table style="font-size: 45%; border-bottom: 1px solid; border-collapse: separate">
+                    <caption style="caption-side: bottom; margin-top: 50px; font-weight: bold">Values are in CM
+                    </caption>
+                    <thead>
                     <tr>
                         <th></th>
-                        <th>Arm</th>
-                        <th>Bicep</th>
-                        <th>Calf</th>
-                        <th>Chest</th>
-                        <th>Leg</th>
-                        <th>Pelvis</th>
-                        <th>Shoulders</th>
-                        <th>Thigh</th>
-                        <th>Waist</th>
-                        <th>Wrist</th>
+                        <th></th>
+                        <th>Chest circumference</th>
+                        <th>Waist circumference</th>
+                        <th>Pelvis circumference</th>
+                        <th>Bicep circumference</th>
+                        <th>Thigh circumference</th>
+                        <th>Shoulder-to-wrist</th>
+                        <th>Leg length</th>
+                        <th>Wrist circumference</th>
+                        <th>Shoulder-to-shoulder</th>
+                        <th>Average error</th>
                     </tr>
                     </thead>
-                    <tbody style="font-size: smaller">
+                    <tbody>
                     <tr>
-                        <td>Surreact - Error(CM)</td>
-                        <th>3.7</th>
-                        <th>4.0</th>
-                        <th>3.3</th>
-                        <th>10.8</th>
-                        <th>5.6</th>
-                        <th>8.8</th>
-                        <th>4.2</th>
-                        <th>5.0</th>
-                        <th>13.8</th>
-                        <th>1.6</th>
+                        <th></th>
+                        <td>Average value</td>
+                        <td>101.42</td>
+                        <td>89.26</td>
+                        <td>102.21</td>
+                        <td>30.28</td>
+                        <td>53.83</td>
+                        <td>49.43</td>
+                        <td>78.1</td>
+                        <td>16.63</td>
+                        <td>35.65</td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>BodyM - Error(CM)</td>
-                        <th>3.1</th>
-                        <th>3.5</th>
-                        <th>4.7</th>
-                        <th>12.4</th>
-                        <th>5.7</th>
-                        <th>9.2</th>
-                        <th>3.1</th>
-                        <th>4.9</th>
-                        <th>9.9</th>
-                        <th>1.7</th>
+                        <th>Conv-BoDiEs</th>
+                        <td>Baseline</td>
+                        <td>4.50</td>
+                        <td>4.92</td>
+                        <td>4.21</td>
+                        <td>1.93</td>
+                        <td>2.81</td>
+                        <td>2.16</td>
+                        <td>3.43</td>
+                        <td>1</td>
+                        <td>1.56</td>
+                        <td>2.95</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Height value</td>
+                        <td>4.38</td>
+                        <td>4.64</td>
+                        <td>4.14</td>
+                        <td>1.84</td>
+                        <td>2.78</td>
+                        <td>2.08</td>
+                        <td>3.32</td>
+                        <td>0.96</td>
+                        <td>1.52</td>
+                        <td>2.85</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Lateral img</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">4.64</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">5.32</td>
+                        <td>4.50</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.15</td>
+                        <td>3.03</td>
+                        <td>2.24</td>
+                        <td>3.55</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">0.97</td>
+                        <td>1.59</td>
+                        <td>3.11</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Combination</td>
+                        <td>4.62</td>
+                        <td>5.25</td>
+                        <td>4.56</td>
+                        <td>2.10</td>
+                        <td>3.05</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.27</td>
+                        <td>3.55</td>
+                        <td>0.96</td>
+                        <td>1.60</td>
+                        <td>3.11</td>
+                    </tr>
+                    <tr>
+                        <th>ResNet50V2</th>
+                        <td>Baseline</td>
+                        <td>7.23</td>
+                        <td>5.03</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">4.67</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.15</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">3.85</td>
+                        <td>2.2</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">5.37</td>
+                        <td>0.93</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">1.72</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">3.69</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Height value</td>
+                        <td>3.18</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">3.35</td>
+                        <td>2.57</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.28</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.8</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.92</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.32</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.65</td>
+                        <td>0.97</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.78</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Lateral img</td>
+                        <td>4.19</td>
+                        <td>4.71</td>
+                        <td>4.28</td>
+                        <td>1.89</td>
+                        <td>2.8</td>
+                        <td>2.03</td>
+                        <td>3.34</td>
+                        <td>0.89</td>
+                        <td>1.37</td>
+                        <td>2.84</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Combination</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">3.05</td>
+                        <td>3.37</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">2.53</td>
+                        <td>1.4</td>
+                        <td>1.92</td>
+                        <td>0.95</td>
+                        <td>1.38</td>
+                        <td>0.7</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.97</td>
+                        <td>1.81</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+
+            </section>
+
+            <section data-auto-animate>
+                <h3>Results</h3>
+                <h6>Real Dataset</h6>
+                <br>
+                <table style="font-size: 45%; border-bottom: 1px solid; border-collapse: separate">
+                    <caption style="caption-side: bottom; margin-top: 50px; font-weight: bold">Values are in CM
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Chest circumference</th>
+                        <th>Waist circumference</th>
+                        <th>Pelvis circumference</th>
+                        <th>Bicep circumference</th>
+                        <th>Thigh circumference</th>
+                        <th>Shoulder-to-wrist</th>
+                        <th>Leg length</th>
+                        <th>Wrist circumference</th>
+                        <th>Shoulder-to-shoulder</th>
+                        <th>Average error</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <td>Average value</td>
+                        <td>101.42</td>
+                        <td>89.26</td>
+                        <td>102.21</td>
+                        <td>30.28</td>
+                        <td>53.83</td>
+                        <td>49.43</td>
+                        <td>78.1</td>
+                        <td>16.63</td>
+                        <td>35.65</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Conv-BoDiEs</th>
+                        <td>Baseline</td>
+                        <td>4.52</td>
+                        <td>4.79</td>
+                        <td>4.26</td>
+                        <td>1.85</td>
+                        <td>2.74</td>
+                        <td>2.17</td>
+                        <td>3.43</td>
+                        <td>0.95</td>
+                        <td>1.47</td>
+                        <td>2.91</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Height value</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">4.59</td>
+                        <td>4.89</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">4.35</td>
+                        <td>1.90</td>
+                        <td>2.84</td>
+                        <td>2.19</td>
+                        <td>3.43</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">1.00</td>
+                        <td>1.50</td>
+                        <td>2.96</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Lateral img</td>
+                        <td>4.51</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">5.13</td>
+                        <td>4.33</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.07</td>
+                        <td>2.98</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.33</td>
+                        <td>3.64</td>
+                        <td>0.98</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">1.58</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">3.06</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Combination</td>
+                        <td>4.47</td>
+                        <td>5.12</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">4.35</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">2.07</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">3.00</td>
+                        <td>2.25</td>
+                        <td class="fragment highlight-red" data-fragment-index="1">3.66</td>
+                        <td>0.98</td>
+                        <td>1.50</td>
+                        <td>3.05</td>
+                    </tr>
+                    <tr>
+                        <th>ResNet50V2</th>
+                        <td>Baseline</td>
+                        <td>4.13</td>
+                        <td>4.40</td>
+                        <td>3.94</td>
+                        <td>1.64</td>
+                        <td>2.52</td>
+                        <td>1.97</td>
+                        <td>3.11</td>
+                        <td>0.82</td>
+                        <td>1.32</td>
+                        <td>2.65</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Height value</td>
+                        <td>3.12</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">3.33</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">2.57</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.26</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.82</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.91</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.30</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.63</td>
+                        <td>0.92</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">1.76</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Lateral img</td>
+                        <td>4.09</td>
+                        <td>4.66</td>
+                        <td>4.02</td>
+                        <td>1.68</td>
+                        <td>2.67</td>
+                        <td>1.93</td>
+                        <td>3.17</td>
+                        <td>0.82</td>
+                        <td>1.32</td>
+                        <td>2.71</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>Combination</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">3.00</td>
+                        <td>3.39</td>
+                        <td>2.58</td>
+                        <td>1.32</td>
+                        <td>1.90</td>
+                        <td>0.94</td>
+                        <td>1.36</td>
+                        <td>0.65</td>
+                        <td class="fragment highlight-green" data-fragment-index="1">0.90</td>
+                        <td>1.78</td>
                     </tr>
                     </tbody>
                 </table>
-                <footer><p style="font-size: small">Errors are in cm</footer>
             </section>
-            <section>
-                <h3 style="visibility: hidden">hello</h3>
-                <h6>Training on pure Surreact</h6>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr">
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_shoulder_to_wrist_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Arm</p></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_bicep_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Bicep</p></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_calf_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Calf</p></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_chest_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Chest</p></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_leg_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Leg</p></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="TestResults/SurreactOverfit/epoch_pelvis_out_mae.svg" alt="Graph of training process" class="grid-item" style="margin-bottom: 0">
-                        <figcaption><p style="font-size: small; margin: 0">Pelvis</p></figcaption>
-                    </figure>
+
+            <section data-auto-animate>
+                <h3>Results</h3>
+                <h6>Testing Data Influence</h6>
+                <br>
+                <p style="text-align: left">Test dataset consisted of 2 groups of real data:</p>
+                <div style="text-align: left">
+                    <ul>
+                        <li>Test A: Subjects were photographed and scanned by lab technicians</li>
+                        <br>
+                        <li>Test B: Subjects were scanned in the lab, but the photographs were taken in a less
+                            controlled environments
+                        </li>
+                    </ul>
                 </div>
-                <footer>
-                    <p style="font-size: small; color: #076ca6; margin: 0">Validation</p>
-                    <p style="font-size: small; color: #f66d42; margin: 0">Train</p>
-                </footer>
+
+                <table style="font-size: 75%;border-bottom: 1px solid; border-collapse: separate">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2" style="text-align: center; vertical-align: middle;">top 25</th>
+                        <th colspan="2" style="text-align: center; vertical-align: middle;">top 50</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <td>test A</td>
+                        <td>test B</td>
+                        <td>test A</td>
+                        <td>test B</td>
+                    </tr>
+                    <tr>
+                        <th>Baseline</th>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>23</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <th>Height value</th>
+                        <td>14</td>
+                        <td>11</td>
+                        <td>23</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <th>Lateral image</th>
+                        <td>3</td>
+                        <td>22</td>
+                        <td>10</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Combination</th>
+                        <td>3</td>
+                        <td>22</td>
+                        <td>12</td>
+                        <td>38</td>
+                    </tr>
+                    </tbody>
+                </table>
             </section>
 
+            <section data-auto-animate class="center">
+                <h3>Results</h3>
+                <h6>Most problematic images</h6>
 
-        </section>
-
-        <section>
-            <h3>Future work</h3>
-            <section>
-                <div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink"
-                                                                          data-fragment-index="2">ASAP</h3></div>
-                <ul style="padding-left: 100px" class="r-stretch">
-                    <li class="fragment fade-up" data-fragment-index="3">Fix neural network</li>
-                    <li class="fragment fade-up" data-fragment-index="4">Compare performance on datasets</li>
-                    <li class="fragment fade-up" data-fragment-index="5">Continue preparing network with frontal and lateral images</li>
-                    <li class="fragment fade-up" data-fragment-index="6">Train network augmented with real data</li>
-                </ul>
-            </section>
-            <section>
-                <h3 style="visibility: hidden">Future work</h3>
-                <div class="fragment fade-in" data-fragment-index="1"><h3 class="fragment shrink"
-                                                                          data-fragment-index="2">More approaches</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000412.png">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000815.png">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000669.png">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000412Side.png">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000815Side.png">
+                    <img class="grid-item" style="justify-self: center" src="Avatar_000669Side%20copy.png">
                 </div>
-                <ul style="padding-left: 100px" class="r-stretch">
-                    <li class="fragment fade-up" data-fragment-index="2">Enhance data with height</li>
-                    <li class="fragment fade-up" data-fragment-index="3">Combinations of mentioned approaches</li>
-                </ul>
             </section>
         </section>
 
-        <section>
-            <h1 style="font-size: xxx-large">Questions</h1>
+        <section data-name="Conclusion">
+            <section class="center">
+                <h3>Conclusion</h3>
+                <br>
+                <br>
+                <p class="fragment fade-up">Studied the task of body measurements estimation</p>
+                <p class="fragment fade-up">Explored domain gap</p>
+                <p class="fragment fade-up">Tried different augmentations</p>
+                <p class="fragment fade-up">Trained a neural network</p>
+            </section>
+        </section>
+
+
+        <section class="center">
+            <h1 class="r-fit-text">Questions?</h1>
+        </section>
+
+        <section class="center">
+            <h1 class="r-fit-text">Thank you</h1>
         </section>
 
         <section>
-            <h1 class="r-fit-text">Thanks for your patience</h1>
+            <section>
+                <h3>Thesis question</h3>
+            </section>
         </section>
 
     </div>
@@ -580,12 +993,31 @@
     // - https://revealjs.com/initialization/
     // - https://revealjs.com/config/
     Reveal.initialize({
-        slideNumber: 'c.t',
+        width: 1920,
+        height: 1080,
+        margin: 0.15,
+        minScale: 0.2,
+        maxScale: 1.0,
+        slideNumber: false,
+        autoAnimate: true,
+        center: false,
+        autoAnimateUnmatched: true,
         hideInactiveCursor: true,
         preloadIframes: true,
         pdfMaxPagesPerSlide: 1,
         pdfSeparateFragments: false,
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, Appearance]
+        simplemenu: {
+
+            barhtml: {
+                header: "<div class='menubar'><ul class='menu'></ul><div>",
+                footer: ""
+            }
+        },
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, Simplemenu, Verticator],
+        dependencies: [
+            {src: 'https://d3js.org/d3.v4.min.js'},
+            {src: 'node_modules/reveal.js-d3js/d3js.js'},
+        ]
 
     });
 </script>
