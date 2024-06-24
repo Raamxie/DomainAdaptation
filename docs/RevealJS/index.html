@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
-    <title>reveal.js</title>
+    <title>Bachelor's Thesis</title>
 
     <link href="dist/reset.css" rel="stylesheet">
     <link href="dist/reveal.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 <div class="reveal">
 
     <div class="slides">
-        <section style="text-align: left">
+        <section style="text-align: left" data-visibility="uncounted">
             <h2>Comparing Synthetic and Real Data for Anthropometric Measurements Estimation <br></h2>
             <div class="r-stretch"></div>
             <h5>Michal Baránek</h5>
@@ -38,7 +38,7 @@
 
 
             <aside class="notes">
-                Dobrý deň
+                Oops
             </aside>
         </section>
 
@@ -72,8 +72,8 @@
                                 <div class="fragment semi-fade-out" data-fragment-index="10">
                                     <h6>Importance</h6>
                                     <ul class="r-stretch">
-                                        <li class="fragment fade-up" data-fragment-index="5">Fashion industry</li>
-                                        <li class="fragment fade-up" data-fragment-index="6">Motion capture</li>
+                                        <li class="fragment fade-up" data-autoslide="1000" data-fragment-index="5">Fashion industry</li>
+                                        <li class="fragment fade-up" data-autoslide="1000" data-fragment-index="6">Motion capture</li>
                                         <li class="fragment fade-up" data-fragment-index="7">Virtual reality</li>
                                         <li class="fragment fade-up" data-fragment-index="8">Ergonomics</li>
                                         <li class="fragment fade-up" data-fragment-index="9">Medicine</li>
@@ -965,18 +965,19 @@
             </section>
         </section>
 
-
-        <section class="center">
-            <h1 class="r-fit-text">Questions?</h1>
-        </section>
-
-        <section class="center">
-            <h1 class="r-fit-text">Thank you</h1>
+        <section class="center" data-visibility="uncounted">
+            <h1>Thank you</h1>
         </section>
 
         <section>
-            <section>
+            <section data-visibility="uncounted">
                 <h3>Thesis question</h3>
+                <p>Záver práce dospel k tomu, že medzi reálnymi snímkami ľudí
+                    a syntetickými dátami sú rozdiely - "As the results have shown a domain gap between the synthetic
+                    and real datasets, future applications should try various data augmentation methods to truly show the
+                    potential synthetic data could hold in training neural networks". V rozprave by mohol autor
+                    navrhnúť, ako by sa dali syntetické dáta ešte vylepšiť, aby sa domain gap znížil.</p>
+
             </section>
         </section>
 
@@ -999,7 +1000,7 @@
         margin: 0.15,
         minScale: 0.2,
         maxScale: 1.0,
-        slideNumber: false,
+        slideNumber: "c/t",
         autoAnimate: true,
         center: false,
         autoAnimateUnmatched: true,
@@ -1010,7 +1011,7 @@
         simplemenu: {
 
             barhtml: {
-                header: "<div class='menubar'><ul class='menu'></ul><div>",
+                header: "<div class='menubar'><div class='slide-number'></div><ul class='menu'></ul><div>",
                 footer: ""
             }
         },
@@ -1018,8 +1019,11 @@
         dependencies: [
             {src: 'https://d3js.org/d3.v4.min.js'},
             {src: 'node_modules/reveal.js-d3js/d3js.js'},
-        ]
-
+        ],
+        totalTime:600,
+        keyboard:{
+            32: 'next'
+        }
     });
 </script>
 </body>
